@@ -1,12 +1,12 @@
 // Import document classes.
-import { sw-sagaActor } from "./documents/actor.mjs";
-import { sw-sagaItem } from "./documents/item.mjs";
+import { swSagaActor } from "./documents/actor.mjs";
+import { swSagaItem } from "./documents/item.mjs";
 // Import sheet classes.
-import { sw-sagaActorSheet } from "./sheets/actor-sheet.mjs";
-import { sw-sagaItemSheet } from "./sheets/item-sheet.mjs";
+import { swSagaActorSheet } from "./sheets/actor-sheet.mjs";
+import { swSagaItemSheet } from "./sheets/item-sheet.mjs";
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
-import { SW-SAGA } from "./helpers/config.mjs";
+import { SWSAGA } from "./helpers/config.mjs";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -16,14 +16,14 @@ Hooks.once('init', async function() {
 
   // Add utility classes to the global game object so that they're more easily
   // accessible in global contexts.
-  game.sw-saga = {
-    sw-sagaActor,
-    sw-sagaItem,
+  game.swSaga = {
+    swSagaActor,
+    swSagaItem,
     rollItemMacro
   };
 
   // Add custom constants for configuration.
-  CONFIG.SW-SAGA = SW-SAGA;
+  CONFIG.SWSAGA = SWSAGA;
 
   /**
    * Set an initiative formula for the system
@@ -35,14 +35,15 @@ Hooks.once('init', async function() {
   };
 
   // Define custom Document classes
-  CONFIG.Actor.documentClass = sw-sagaActor;
-  CONFIG.Item.documentClass = sw-sagaItem;
+  CONFIG.Actor.documentClass = swSagaActor;
+  CONFIG.Item.documentClass = swSagaItem;
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("sw-saga", sw-sagaActorSheet, { makeDefault: true });
+  Actors.registerSheet("swSaga", swSagaActorSheet, { makeDefault: true });
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("sw-saga", sw-sagaItemSheet, { makeDefault: true });
+  Items.registerSheet("swSaga", swSagaItemSheet, { makeDefault: true });
+  
 
   // Preload Handlebars templates.
   return preloadHandlebarsTemplates();
@@ -93,7 +94,7 @@ async function createItemMacro(data, slot) {
   const item = data.data;
 
   // Create the macro command
-  const command = `game.sw-saga.rollItemMacro("${item.name}");`;
+  const command = `game.swSaga.rollItemMacro("${item.name}");`;
   let macro = game.macros.entities.find(m => (m.name === item.name) && (m.command === command));
   if (!macro) {
     macro = await Macro.create({
@@ -101,7 +102,7 @@ async function createItemMacro(data, slot) {
       type: "script",
       img: item.img,
       command: command,
-      flags: { "sw-saga.itemMacro": true }
+      flags: { "swSaga.itemMacro": true }
     });
   }
   game.user.assignHotbarMacro(macro, slot);

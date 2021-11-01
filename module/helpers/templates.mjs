@@ -7,8 +7,8 @@
   return loadTemplates([
 
     // Actor partials.
-    "systems/sw-saga/templates/actor/parts/actor-features.html",
-    "systems/sw-saga/templates/actor/parts/actor-items.html",
-    "systems/sw-saga/templates/actor/parts/actor-effects.html",
+    "systems/swSaga/templates/actor/parts/actor-features.html",
+    "systems/swSaga/templates/actor/parts/actor-items.html",
+    "systems/swSaga/templates/actor/parts/actor-effects.html",
   ]);
 };

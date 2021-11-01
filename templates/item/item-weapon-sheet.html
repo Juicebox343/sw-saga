@@ -1,0 +1,35 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+    </div>
+  </header>
+
+  <section>
+    <tr>
+      <th>{{localize "swSaga.weapon.skillUsed" }}</th>
+      <th>{{localize "swSaga.weapon.damage" }}</th>
+      <th>{{localize "swSaga.weapon.stunDamage" }}</th>
+      <th>{{localize "swSaga.weapon.weight" }}</th>
+      <th>{{localize "swSaga.weapon.damageType" }}</th>
+      <th>{{localize "swSaga.weapon.availability" }}</th>
+      <th>{{localize "swSaga.weapon.weaponWield" }}</th>
+      <th>{{localize "swSaga.weapon.weaponGroup" }}</th>
+      <th>{{localize "swSaga.weapon.range" }}</th>
+    </tr>
+  </section>
+</form>
+
+
+<!-- "templates": ["itemDescription"],
+"cost": 0,
+"damage": 0,
+"stunDamage": 0,
+"weight": 0,
+"damageType": "",
+"skillUsed": "",
+"availability": "",
+"range": [0, 0, 0, 0],
+"weaponWield": "ranged",
+"weaponGroup": "simple" -->

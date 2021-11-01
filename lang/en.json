@@ -1,9 +1,23 @@
-{
+{ 
+  "swSaga": {
+    "skillUsed":{
+      "none" : "",
+      "dex" : "Dexterity",
+      "str": "Strength",
+      "cha": "Charisma"
+    },
+    "weapon":{
+      "cost": "Item Cost",
+      "damage": "Damage",
+      "stunDamage": "Stun Damage",
+      "weight": "Weight",
+      "damageType": "Damage Type",
+      "skillUsed": "Skill Used",
+      "availability": "Availability",
+      "range": "Ranged Damage",
+      "weaponWield": "Weapon Type",
+      "weaponGroup": "Weapon Group"
+    }
+  }
 
-  "SW-SAGA.EffectCreate": "Create Effect",
-  "SW-SAGA.EffectToggle": "Toggle Effect",
-  "SW-SAGA.EffectEdit": "Edit Effect",
-  "SW-SAGA.EffectDelete": "Delete Effect",
-
-  "SW-SAGA.Add": "Add"
 }

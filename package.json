@@ -1,5 +1,5 @@
 {
-  "name": "sw-saga",
+  "name": "swSaga",
   "version": "1.0.0",
   "description": "CSS compiler for the Star Wars Saga Edition system",
   "scripts": {

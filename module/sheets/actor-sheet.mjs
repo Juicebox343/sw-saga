@@ -4,13 +4,13 @@ import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/ef
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
  */
-export class sw-sagaActorSheet extends ActorSheet {
+export class swSagaActorSheet extends ActorSheet {
 
   /** @override */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["sw-saga", "sheet", "actor"],
-      template: "systems/sw-saga/templates/actor/actor-sheet.html",
+      classes: ["swsaga", "sheet", "actor"],
+      template: "systems/swSaga/templates/actor/actor-sheet.html",
       width: 600,
       height: 600,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "features" }]
@@ -19,7 +19,7 @@ export class sw-sagaActorSheet extends ActorSheet {
 
   /** @override */
   get template() {
-    return `systems/sw-saga/templates/actor/actor-${this.actor.data.type}-sheet.html`;
+    return `systems/swSaga/templates/actor/actor-${this.actor.data.type}-sheet.html`;
   }
 
   /* -------------------------------------------- */

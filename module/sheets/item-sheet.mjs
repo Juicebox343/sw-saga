@@ -2,26 +2,20 @@
  * Extend the basic ItemSheet with some very simple modifications
  * @extends {ItemSheet}
  */
-export class sw-sagaItemSheet extends ItemSheet {
+export class swSagaItemSheet extends ItemSheet {
 
   /** @override */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["sw-saga", "sheet", "item"],
-      width: 520,
-      height: 480,
+      classes: ["swsaga", "sheet", "item"],
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
     });
   }
 
   /** @override */
   get template() {
-    const path = "systems/sw-saga/templates/item";
-    // Return a single sheet for all item types.
-    // return `${path}/item-sheet.html`;
-
-    // Alternatively, you could use the following return statement to do a
-    // unique item sheet by type, like `weapon-sheet.html`.
+    const path = "systems/swSaga/templates/item";
+    console.log(`${path}/item-${this.item.data.type}-sheet.html`)
     return `${path}/item-${this.item.data.type}-sheet.html`;
   }
 
@@ -32,21 +26,15 @@ export class sw-sagaItemSheet extends ItemSheet {
     // Retrieve base data structure.
     const context = super.getData();
 
-    // Use a safe clone of the item data for further operations.
-    const itemData = context.item.data;
-
-    // Retrieve the roll data for TinyMCE editors.
-    context.rollData = {};
-    let actor = this.object?.parent ?? null;
-    if (actor) {
-      context.rollData = actor.getRollData();
+    let sheetData = {
+      owner: this.item.isOwner,
+      editable: this.isEditable,
+      item: context.item,
+      data: context.item.data.data,
+      config: CONFIG.SWSAGA
     }
 
-    // Add the actor's data to context.data for easier access, as well as flags.
-    context.data = itemData.data;
-    context.flags = itemData.flags;
-
-    return context;
+    return sheetData;
   }
 
   /* -------------------------------------------- */
