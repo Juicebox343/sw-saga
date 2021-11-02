@@ -7,6 +7,8 @@ export class swSagaItemSheet extends ItemSheet {
   /** @override */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
+      width: 975,
+      height: 400,
       classes: ["swsaga", "sheet", "item"],
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
     });
@@ -31,7 +33,7 @@ export class swSagaItemSheet extends ItemSheet {
       editable: this.isEditable,
       item: context.item,
       data: context.item.data.data,
-      config: CONFIG.SWSAGA
+      config: CONFIG.swSaga
     }
 
     return sheetData;

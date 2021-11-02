@@ -1,12 +1,7 @@
-export const SWSAGA = {};
+export const swSaga = {};
 
 // Define constants here, such as:
-SWSAGA.foobar = {
-  'bas': 'SWSAGA.bas',
-  'bar': 'SWSAGA.bar'
-};
-
-SWSAGA.skillUsed = {
+swSaga.skillUsed = {
   none: "",
   dex: "swSaga.skillUsed.dex",
   str: "swSaga.skillUsed.str",

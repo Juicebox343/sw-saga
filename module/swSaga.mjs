@@ -6,7 +6,7 @@ import { swSagaActorSheet } from "./sheets/actor-sheet.mjs";
 import { swSagaItemSheet } from "./sheets/item-sheet.mjs";
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
-import { SWSAGA } from "./helpers/config.mjs";
+import { swSaga } from "./helpers/config.mjs";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -23,7 +23,7 @@ Hooks.once('init', async function() {
   };
 
   // Add custom constants for configuration.
-  CONFIG.SWSAGA = SWSAGA;
+  CONFIG.swSaga = swSaga;
 
   /**
    * Set an initiative formula for the system
