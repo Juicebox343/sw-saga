@@ -1,0 +1,4 @@
+#sidebar {
+  background: -o-repeating-linear-gradient(bottom, #009dd8 0%, #36a7e8 5px, #009dd8 0%);
+  background: repeating-linear-gradient(to top, #009dd8 0%, #36a7e8 5px, #009dd8 0%);
+}

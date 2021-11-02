@@ -1,0 +1,48 @@
+body {
+  background-image: none;
+  background: -o-repeating-linear-gradient(bottom, #009dd8 0%, #36a7e8 5px, #009dd8 0%);
+  background: repeating-linear-gradient(to top, #009dd8 0%, #36a7e8 5px, #009dd8 0%);
+}
+
+body:after {
+  content: '';
+  -webkit-animation-name: artifact-animation;
+  animation-name: artifact-animation;
+  text-align: center;
+  opacity: 0;
+  height: 100px;
+  width: 100%;
+  background-image: -o-radial-gradient(rgba(22, 56, 121, 0.459), rgba(176, 234, 255, 0.007) 80%);
+  background-image: radial-gradient(rgba(22, 56, 121, 0.459), rgba(176, 234, 255, 0.007) 80%);
+  -webkit-animation-duration: 7s;
+  animation-duration: 7s;
+  position: absolute;
+  bottom: 0%;
+  left: -30px;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+@-webkit-keyframes artifact-animation {
+  from {
+    bottom: -20%;
+    opacity: .3;
+  }
+  to {
+    bottom: 100%;
+    opacity: .45;
+  }
+}
+
+@keyframes artifact-animation {
+  from {
+    bottom: -20%;
+    opacity: .3;
+  }
+  to {
+    bottom: 100%;
+    opacity: .45;
+  }
+}
