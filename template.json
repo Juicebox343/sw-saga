@@ -1,74 +1,203 @@
 {
   "Actor": {
-    "types": ["character", "npc", "vehicle"],
+    "types": ["character", "npc"],
     "templates": {
       "common": {
         "abilities": {
           "str": {
-            "value": 10,
-            "trained": 0
+            "base": 10,
+            "speciesMod": 0, 
+            "classLevelMod": 0,
+            "ageMod": 0,
+            "equipmentMod": 0,
+            "customMod": 0
           },
           "dex": {
-            "value": 10,
-            "trained": 0
+            "base": 10,
+            "speciesMod": 0, 
+            "classLevelMod": 0,
+            "ageMod": 0,
+            "equipmentMod": 0,
+            "customMod": 0
           },
           "con": {
-            "value": 10,
-            "trained": 0
+            "base": 10,
+            "speciesMod": 0, 
+            "classLevelMod": 0,
+            "ageMod": 0,
+            "equipmentMod": 0,
+            "customMod": 0
           },
           "int": {
-            "value": 10,
-            "trained": 0
+            "base": 10,
+            "speciesMod": 0, 
+            "classLevelMod": 0,
+            "ageMod": 0,
+            "equipmentMod": 0,
+            "customMod": 0  
           },
           "wis": {
-            "value": 10,
-            "trained": 0
+            "base": 10,
+            "speciesMod": 0, 
+            "classLevelMod": 0,
+            "ageMod": 0,
+            "equipmentMod": 0,
+            "customMod": 0
           },
           "cha": {
-            "value": 10,
-            "trained": 0
+            "base": 10,
+            "speciesMod": 0, 
+            "classLevelMod": 0,
+            "ageMod": 0,
+            "equipmentMod": 0,
+            "customMod": 0
+            
           }
         },
         "attributes": {
-          "ac": {
-            "flat": null,
-            "calc": "default",
-            "formula": ""
-          },
           "hp": {
             "value": 30,
             "min": 0,
-            "max": 30,
-            "temp": 0,
-            "tempmax": 0
+            "max": 30
           },
-          "init": {
-            "value": 0,
-            "bonus": 0
-          },
-          "movement": {
-            "burrow": 0,
-            "climb": 0,
-            "fly": 0,
-            "swim": 0,
-            "walk": 6,
-            "units": "squares",
-            "hover": false
-          }
+          "darksideScore" : 0
         },
+        "classes": [],
         "details": {
-          "biography": {
-            "value": "",
-            "public": ""
-          }
+          "biography": "",
+          "destiny": "",
+          "age": 0,
+          "gender": "",
+          "height": 0,
+          "weight": 0,
+          "player": ""
         },
-        "traits": {
-          "size": "med"
-        },
-        "currency": {
-          "credits": 0
+        "equipped": [],
+        "inventory": [],
+        "forcePowers": [],
+        "skills": {
+          "acrobatics": {
+            "value": 0,
+            "attribute": "dex",
+            "trained": false,
+            "useUnTrained": true,
+            "armorPenalty": true,
+            "miscMod": 0
+          },
+          "climb": {
+            "value": 0,
+            "attribute": "str",
+            "trained": false,
+            "useUnTrained": true,
+            "armorPenalty": true,
+            "miscMod": 0
+          },
+          "deception": {
+            "value": 0,
+            "attribute": "cha",
+            "trained": false,
+            "useUnTrained": true,
+            "armorPenalty": false,
+            "miscMod": 0
+          },
+          "endurance": {
+            "value": 0,
+            "attribute": "con",
+            "trained": false,
+            "useUnTrained": true,
+            "armorPenalty": true,
+            "miscMod": 0
+          },
+          "gather information": {
+            "value": 0,
+            "attribute": "cha",
+            "trained": false,
+            "useUnTrained": true,
+            "armorPenalty": false,
+            "miscMod": 0
+          },
+          "initiative": {
+            "value": 0,
+            "attribute": "dex",
+            "trained": false,
+            "useUnTrained": true,
+            "armorPenalty": true,
+            "miscMod": 0
+          },
+          "jump": {
+            "value": 0,
+            "attribute": "str",
+            "trained": false,
+            "useUnTrained": true,
+            "armorPenalty": true,
+            "miscMod": 0
+          },
+          "knowledge (bureaucracy)": {
+            "value": 0,
+            "attribute": "int",
+            "trained": false,
+            "useUnTrained": true,
+            "armorPenalty": false,
+            "miscMod": 0
+          },
+          "knowledge (galactic lore)": {
+            "value": 0,
+            "attribute": "int",
+            "trained": false,
+            "useUnTrained": true,
+            "armorPenalty": false,
+            "miscMod": 0
+          },
+          "knowledge (life sciences)": {
+            "value": 0,
+            "attribute": "int",
+            "trained": false,
+            "useUnTrained": true,
+            "armorPenalty": false,
+            "miscMod": 0
+          },
+          "knowledge (physical sciences)": {
+            "value": 0,
+            "attribute": "int",
+            "trained": false,
+            "useUnTrained": true,
+            "armorPenalty": false,
+            "miscMod": 0
+          },
+          "knowledge (social sciences)": {
+            "value": 0,
+            "attribute": "int",
+            "trained": false,
+            "useUnTrained": true,
+            "armorPenalty": false,
+            "miscMod": 0
+          },
+          "knowledge (tactics)": {
+            "value": 0,
+            "attribute": "int",
+            "trained": false,
+            "useUnTrained": true,
+            "armorPenalty": false,
+            "miscMod": 0
+          },
+          "knowledge (technology)": {
+            "value": 0,
+            "attribute": "int",
+            "trained": false,
+            "useUnTrained": true,
+            "armorPenalty": false,
+            "miscMod": 0
+          },
+          "knowledge (custom)": {
+            "name":"",
+            "value": 0,
+            "attribute": "int",
+            "trained": false,
+            "useUnTrained": true,
+            "armorPenalty": false,
+            "miscMod": 0
+          },
         }
-      }
     },
     "character": {
       "templates": ["common"],
@@ -77,24 +206,18 @@
           "value": 1
         }
       },
-      "traits": {
-        "height": {
-          "value": "",
-          "custom": ""
-        },
-        "weight": {
-          "value": "",
-          "custom": ""
-        },
-        "age": {
-          "value": "",
-          "custom": ""
-        },
-        "gender": {
-          "value": "",
-          "custom": ""
+      "details": {
+        "biography": "",
+        "destiny": "",
+        "age": 0,
+        "gender": "",
+        "height": 0,
+        "weight": 0,
+        "player": ""
+      },
+        "currency": {
+          "credits": 0
         }
-      }
     }
   },
   "Item": {
