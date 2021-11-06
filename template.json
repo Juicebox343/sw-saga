@@ -5,7 +5,7 @@
       "common": {
         "abilities": {
           "str": {
-            "base": 10,
+            "value": 10,
             "speciesMod": 0, 
             "classLevelMod": 0,
             "ageMod": 0,
@@ -13,7 +13,7 @@
             "customMod": 0
           },
           "dex": {
-            "base": 10,
+            "value": 10,
             "speciesMod": 0, 
             "classLevelMod": 0,
             "ageMod": 0,
@@ -21,7 +21,7 @@
             "customMod": 0
           },
           "con": {
-            "base": 10,
+            "value": 10,
             "speciesMod": 0, 
             "classLevelMod": 0,
             "ageMod": 0,
@@ -29,7 +29,7 @@
             "customMod": 0
           },
           "int": {
-            "base": 10,
+            "value": 10,
             "speciesMod": 0, 
             "classLevelMod": 0,
             "ageMod": 0,
@@ -37,7 +37,7 @@
             "customMod": 0  
           },
           "wis": {
-            "base": 10,
+            "value": 10,
             "speciesMod": 0, 
             "classLevelMod": 0,
             "ageMod": 0,
@@ -45,7 +45,7 @@
             "customMod": 0
           },
           "cha": {
-            "base": 10,
+            "value": 10,
             "speciesMod": 0, 
             "classLevelMod": 0,
             "ageMod": 0,
@@ -60,6 +60,7 @@
             "min": 0,
             "max": 30
           },
+          "characterLevel": 1,
           "darksideScore" : 0
         },
         "classes": [],
@@ -67,12 +68,10 @@
         "details": {
           "name": "",
           "biography": "",
-          "destiny": "",
           "age": 0,
           "gender": "",
           "height": 0,
-          "weight": 0,
-          "player": ""
+          "weight": 0
         },
         "equipped": [],
         "inventory": [],
@@ -292,22 +291,23 @@
     "character": {
       "templates": ["common"],
       "attributes": {
-        "characterLevel": 1
+        "destinyPoint": 1,
+        "abilityIncrease": [[],[],[],[],[]],
+        "addtlFeats": [],
+        "baseAttackProgression":{
+          "jedi-soldier": false
+        }
       },
       "details": {
-        "biography": "",
         "destiny": "",
-        "age": 0,
-        "gender": "",
-        "height": 0,
-        "weight": 0,
         "player": ""
       },
         "currency": {
           "credits": 0
         }
     }
-  },
+  }
+},
   "Item": {
     "types": ["weapon", "armor", "equipment", "consumable", "class", "feat", "talent", "species", "forcePower"],
     "templates": {
@@ -317,6 +317,7 @@
     },
     "species":{
       "name": "",
+      "description": "",
       "homeworld": "",
       "languages": [],
       "modifiers": [],
@@ -326,6 +327,7 @@
     },
     "class":{
       "name": "",
+      "description": "",
       "startHP": 18,
       "hitDice": 6,
       "forcePoints": 5,
@@ -337,15 +339,32 @@
       "startingCredits": ""
     },
     "feat": {
-
+      "name": "",
+      "description": "",
+      "prerequisite": {
+        "required": false,
+        "value": []
+      }
     },
     "talent":{
-
+      "name": "",
+      "class": "",
+      "talentree": "",
+      "description": "",
+      "prerequisite": {
+        "required": false,
+        "value": []
+      }
     },
     "forcePower": {
+      "name": "",
+      "description": "",
+      "prerequisite": {
+        "required": false,
+        "value": []
+      }
     },
     "consumables":{
-
     },
     "weapon": {
       "templates": ["itemDescription"],
@@ -378,5 +397,4 @@
       "weight": 0
     }
   }
-}
 }

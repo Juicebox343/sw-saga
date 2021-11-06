@@ -35,17 +35,17 @@ export class swSagaActor extends Actor {
 
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
-    this._prepareCharacterData(actorData);
+    this._prepareCharacterData(actorData)
   }
 
   /**
    * Prepare Character type specific data
    */
   _prepareCharacterData(actorData) {
-    if (actorData.type !== 'character') return;
-
-    // Make modifications to data here. For example:
     const data = actorData.data;
+     for (let [key, ability] of Object.entries(data.abilities)){
+       ability.mod = Math.floor((ability.value - 10 ) /2)
+     }
   }
 
   /**
@@ -66,8 +66,14 @@ export class swSagaActor extends Actor {
   _getCharacterRollData(data) {
     if (this.data.type !== 'character') return;
 
+    if(data.abilities){
+      for (let [k, v] of Object.entries(data.abilities)){
+        data[k] = foundry.utils.deepClone(v);
+      }
+    }
+
     // Add level for easier access, or fall back to 0.
-    if (data.attributes.level) {
+    if (data.attributes.characterLevel) {
       data.lvl = data.attributes.level.value ?? 0;
     }
   }
