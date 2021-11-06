@@ -63,7 +63,9 @@
           "darksideScore" : 0
         },
         "classes": [],
+        "feats": [],
         "details": {
+          "name": "",
           "biography": "",
           "destiny": "",
           "age": 0,
@@ -197,14 +199,100 @@
             "armorPenalty": false,
             "miscMod": 0
           },
+          "mechanics": {
+            "value": 0,
+            "attribute": "int",
+            "trained": false,
+            "useUnTrained": false,
+            "armorPenalty": false,
+            "miscMod": 0
+          },
+          "perception": {
+            "value": 0,
+            "attribute": "wis",
+            "trained": false,
+            "useUnTrained": true,
+            "armorPenalty": false,
+            "miscMod": 0
+          },
+          "persuasion": {
+            "value": 0,
+            "attribute": "cha",
+            "trained": false,
+            "useUnTrained": true,
+            "armorPenalty": false,
+            "miscMod": 0
+          },
+          "pilot": {
+            "value": 0,
+            "attribute": "dex",
+            "trained": false,
+            "useUnTrained": true,
+            "armorPenalty": false,
+            "miscMod": 0
+          },
+          "ride": {
+            "value": 0,
+            "attribute": "dex",
+            "trained": false,
+            "useUnTrained": true,
+            "armorPenalty": true,
+            "miscMod": 0
+          },
+          "stealth": {
+            "value": 0,
+            "attribute": "dex",
+            "trained": false,
+            "useUnTrained": true,
+            "armorPenalty": true,
+            "miscMod": 0
+          },
+          "survival": {
+            "value": 0,
+            "attribute": "wis",
+            "trained": false,
+            "useUnTrained": true,
+            "armorPenalty": false,
+            "miscMod": 0
+          },
+          "swim": {
+            "value": 0,
+            "attribute": "str",
+            "trained": false,
+            "useUnTrained": true,
+            "armorPenalty": true,
+            "miscMod": 0
+          },
+          "treat injury": {
+            "value": 0,
+            "attribute": "wis",
+            "trained": false,
+            "useUnTrained": true,
+            "armorPenalty": false,
+            "miscMod": 0
+          },
+          "use computer": {
+            "value": 0,
+            "attribute": "int",
+            "trained": false,
+            "useUnTrained": true,
+            "armorPenalty": false,
+            "miscMod": 0
+          },
+          "use the force": {
+            "value": 0,
+            "attribute": "cha",
+            "trained": false,
+            "useUnTrained": true,
+            "armorPenalty": false,
+            "miscMod": 0
+          }
         }
     },
     "character": {
       "templates": ["common"],
       "attributes": {
-        "level": {
-          "value": 1
-        }
+        "characterLevel": 1
       },
       "details": {
         "biography": "",
@@ -221,11 +309,43 @@
     }
   },
   "Item": {
-    "types": ["weapon", "armor", "equipment"],
+    "types": ["weapon", "armor", "equipment", "consumable", "class", "feat", "talent", "species", "forcePower"],
     "templates": {
       "itemDescription": {
         "description": ""
       }
+    },
+    "species":{
+      "name": "",
+      "homeworld": "",
+      "languages": [],
+      "modifiers": [],
+      "size": "medium",
+      "speed": 6,
+      "traits": []
+    },
+    "class":{
+      "name": "",
+      "startHP": 18,
+      "hitDice": 6,
+      "forcePoints": 5,
+      "defBonus": [],
+      "startFeats": [],
+      "bonusFeats": [],
+      "talents": [],
+      "trainedSkills": 6,
+      "startingCredits": ""
+    },
+    "feat": {
+
+    },
+    "talent":{
+
+    },
+    "forcePower": {
+    },
+    "consumables":{
+
     },
     "weapon": {
       "templates": ["itemDescription"],
@@ -258,4 +378,5 @@
       "weight": 0
     }
   }
+}
 }
