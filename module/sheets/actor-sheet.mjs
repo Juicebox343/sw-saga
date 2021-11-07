@@ -73,16 +73,15 @@ export class swSagaActorSheet extends ActorSheet {
    */
   _prepareItems(context) {
     // Initialize containers.
-    const gear = [];
+    const inventory = [];
     const feats = [];
-    const 
 
     // Iterate through items, allocating to containers
     for (let i of context.items) {
       i.img = i.img || DEFAULT_TOKEN;
       // Append to gear.
       if (i.type === 'item') {
-        gear.push(i);
+        inventory.push(i);
       }
       // Append to features.
       else if (i.type === 'feature') {
@@ -91,8 +90,8 @@ export class swSagaActorSheet extends ActorSheet {
     }
 
     // Assign and return
-    context.gear = gear;
-    context.feats = features;
+    context.inventory = inventory;
+    context.feats = feats;
    }
 
   /* -------------------------------------------- */
