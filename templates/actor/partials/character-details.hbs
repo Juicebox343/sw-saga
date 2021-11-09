@@ -1,0 +1,50 @@
+<header class="sheet-header">
+  <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="200" width="200"/>
+  <div class='sub-container'>
+    <div class='first-row row'>
+
+      <div class='label-container character-form row-item'>
+        <label for='characterName'>Character</label>
+        <input name="name" id="characterName" type="text" value="{{actor.name}}" placeholder="Name"/>
+      </div>
+
+      <div class='label-container character-form row-item level'>
+        <label for='characterLevel'>Level</label>
+        <input name="data.characterLevel" id="characterLevel" type="text" value="{{data.characterLevel}}" placeholder="Level"/>
+      </div>
+
+      <div class='label-container species-form row-item'>
+        <label for='speciesName'>Species</label>
+        <select id='speciesName' name="data.species">
+          {{#select data.species}}
+          {{#each config.species as |name type|}}
+            <option value="{{type}}">{{localize name}}</option>
+          {{/each}}
+          {{/select}}
+        </select>
+      </div>      
+    </div>
+
+    <div class='second-row row'>
+      <div class='label-container row-item player-form'>
+        <label for='characterAge'>Age</label>
+        <input type='text' id='characterAge' name='data.details.age' value="{{data.details.age}}"/>
+      </div>   
+      <div class='label-container row-item player-form'>
+        <label for='characterGender'>Gender</label>
+        <input type='text' id='characterGender' name='data.details.gender' value="{{data.details.gender}}"/>
+      </div>   
+            <div class='label-container row-item player-form'>
+        <label for='characterHeight'>Height</label>
+        <input type='text' id='characterHeight' name='data.details.height' value="{{data.details.height}}" data-dtype="Number"/>
+      </div>     
+      <div class='label-container row-item player-form'>
+        <label for='characterWeight'>Weight</label>
+        <input type='text' id='characterWeight' name='data.details.weight' value="{{data.details.weight}}" data-dtype="Number"/>
+      </div>      
+    </div>
+    </div>
+    
+  </div>
+  
+</header>

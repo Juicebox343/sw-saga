@@ -7,9 +7,9 @@ import { swSaga } from "./module/config.mjs";
 
 async function preloadHandlebarsTemplates(){
   const templatePaths = [
-    "systems/swSaga/templates/partials/character-details.hbs",
-    "systems/swSaga/templates/partials/stat-block.hbs",
-    "systems/swSaga/templates/partials/condition-track.hbs",
+    "systems/swSaga/templates/actor/partials/character-details.hbs",
+    "systems/swSaga/templates/actor/partials/stat-block.hbs",
+    "systems/swSaga/templates/actor/partials/condition-track.hbs",
   ];
   return loadTemplates(templatePaths);
 }

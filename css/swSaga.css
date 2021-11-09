@@ -5,11 +5,17 @@
   font-style: normal;
 }
 
-.sheet {
+.swsaga.sheet {
   overflow: hidden;
 }
 
-.sheet input[type="text"], .sheet input[type="number"], .sheet input[type="password"], .sheet input[type="date"], .sheet input[type="time"], .sheet select, .sheet textarea {
+.swsaga.sheet input[type="text"],
+.swsaga.sheet input[type="number"],
+.swsaga.sheet input[type="password"],
+.swsaga.sheet input[type="date"],
+.swsaga.sheet input[type="time"],
+.swsaga.sheet select,
+.swsaga.sheet textarea {
   background: none;
   border: none;
   -webkit-box-shadow: none;
@@ -18,43 +24,60 @@
   width: 100%;
   line-height: 180%;
   font-size: 1.1rem;
-  padding: .3rem .8rem;
+  padding: 0.3rem 0.8rem;
   height: 48px;
   margin: 0;
 }
 
-.sheet p, .sheet span, .sheet button, .sheet a, .sheet input, .sheet select, .sheet textarea, .sheet th, .sheet td {
+.swsaga.sheet p,
+.swsaga.sheet span,
+.swsaga.sheet button,
+.swsaga.sheet a,
+.swsaga.sheet input,
+.swsaga.sheet select,
+.swsaga.sheet textarea,
+.swsaga.sheet th,
+.swsaga.sheet td {
   font-family: "Verdana";
 }
 
-.sheet h1, .sheet h2, .sheet h3, .sheet h4, .sheet label {
-  font-family: 'Star Jedi';
+.swsaga.sheet h1,
+.swsaga.sheet h2,
+.swsaga.sheet h3,
+.swsaga.sheet h4,
+.swsaga.sheet label {
+  font-family: "Star Jedi";
   letter-spacing: 1px;
 }
 
-.sheet header.sheet-header {
+.swsaga.sheet .window-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: white;
+}
+
+.swsaga.sheet .window-content .sheet-header {
   -webkit-box-flex: initial;
   -ms-flex: initial;
   flex: initial;
 }
 
-.sheet header.sheet-header h1 {
-  margin: 0;
-}
-
-.sheet header.sheet-header h1 input {
-  margin: 0;
-  width: 100%;
-}
-
-.sheet header.sheet-header img {
+.swsaga.sheet .window-content .sheet-header img {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 125px;
   flex: 0 0 125px;
   height: 125px;
 }
 
-.sheet header.sheet-header .section-container {
+.swsaga.sheet .window-content .sheet-header .sub-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,7 +91,7 @@
   height: 106.5%;
 }
 
-.sheet header.sheet-header > div > div {
+.swsaga.sheet .window-content .sheet-header div > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,28 +100,14 @@
   justify-content: space-between;
 }
 
-.sheet header.sheet-header > div > div div {
+.swsaga.sheet .window-content .sheet-header div > div div {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  margin: .25rem;
+  margin: 0.25rem;
 }
 
-.sheet .window-content {
-  height: 100%;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  overflow: hidden;
-  background: white;
-}
-
-.sheet .window-content .stat-block {
+.swsaga.sheet .window-content .stat-block {
   margin: 1rem 0 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -112,54 +121,54 @@
   justify-content: flex-start;
 }
 
-.sheet .window-content .stat-block div {
-  margin: .25rem 0;
+.swsaga.sheet .window-content .stat-block div {
+  margin: 0.25rem 0;
   width: 125px;
 }
 
-.sheet table {
+.swsaga.sheet table {
   background-color: none;
 }
 
-.sheet table td {
-  margin: .25rem;
+.swsaga.sheet table td {
+  margin: 0.25rem;
 }
 
-form div.label-container {
+.swsaga.sheet form div.label-container {
   position: relative;
 }
 
-form div.label-container label {
+.swsaga.sheet form div.label-container label {
   position: absolute;
   top: -7px;
   left: 8px;
   background: white;
   padding: 0 5px;
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 
-.small-flex {
+.swsaga.sheet .small-flex {
   width: 30px;
 }
 
 @-webkit-keyframes artifact-animation {
   from {
     bottom: -20%;
-    opacity: .3;
+    opacity: 0.3;
   }
   to {
     bottom: 100%;
-    opacity: .45;
+    opacity: 0.45;
   }
 }
 
 @keyframes artifact-animation {
   from {
     bottom: -20%;
-    opacity: .3;
+    opacity: 0.3;
   }
   to {
     bottom: 100%;
-    opacity: .45;
+    opacity: 0.45;
   }
 }

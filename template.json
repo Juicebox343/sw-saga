@@ -287,7 +287,8 @@
             "miscMod": 0
           }
         }
-    },
+    }
+  },
     "character": {
       "templates": ["common"],
       "attributes": {
@@ -312,7 +313,7 @@
     "vehicle": {
       "templates": ["common"]
     }
-  }
+
 },
   "Item": {
     "types": ["weapon", "armor", "equipment", "consumable", "class", "feat", "talent", "species", "forcePower"],

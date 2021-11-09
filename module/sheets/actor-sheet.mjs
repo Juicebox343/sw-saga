@@ -13,7 +13,6 @@ export default class swSagaActorSheet extends ActorSheet {
 
   get template() {
     const path = "systems/swSaga/templates/actor";
-   
     return `${path}/actor-${this.actor.data.type}-sheet.hbs`;
   }
 
@@ -23,7 +22,7 @@ export default class swSagaActorSheet extends ActorSheet {
       owner: this.actor.isOwner,
       editable: this.isEditable,
       actor: context.actor,
-      data: context.actor.data,
+      data: context.actor.data.data,
       weapons: context.items.filter(function(item){return item.type == 'weapon'}),
       config: CONFIG.swSaga
     }

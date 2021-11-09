@@ -20,26 +20,15 @@ export default class swSagaItemSheet extends ItemSheet {
 
   getData() {
     const context = super.getData();
-    console.log(context)
     let sheetData = {
       owner: this.item.isOwner,
       editable: this.isEditable,
       item: context.item,
-      data: context.item.data,
+      data: context.item.data.data,
       config: CONFIG.swSaga
     }
-
+    console.log(sheetData)
     return sheetData;
   }
 
-  /* -------------------------------------------- */
-
-  activateListeners(html) {
-    super.activateListeners(html);
-
-    // Everything below here is only needed if the sheet is editable
-    if (!this.isEditable) return;
-
-    // Roll handlers, click handlers, etc. would go here.
-  }
 }
