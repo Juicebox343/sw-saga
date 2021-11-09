@@ -1,1 +1,165 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@font-face {
+  font-family: 'Star Jedi';
+  src: url("../type/starjedi-webfont.woff2") format("woff2"), url("../type/starjedi-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.sheet {
+  overflow: hidden;
+}
+
+.sheet input[type="text"], .sheet input[type="number"], .sheet input[type="password"], .sheet input[type="date"], .sheet input[type="time"], .sheet select, .sheet textarea {
+  background: none;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: solid 2px black;
+  width: 100%;
+  line-height: 180%;
+  font-size: 1.1rem;
+  padding: .3rem .8rem;
+  height: 48px;
+  margin: 0;
+}
+
+.sheet p, .sheet span, .sheet button, .sheet a, .sheet input, .sheet select, .sheet textarea, .sheet th, .sheet td {
+  font-family: "Verdana";
+}
+
+.sheet h1, .sheet h2, .sheet h3, .sheet h4, .sheet label {
+  font-family: 'Star Jedi';
+  letter-spacing: 1px;
+}
+
+.sheet header.sheet-header {
+  -webkit-box-flex: initial;
+  -ms-flex: initial;
+  flex: initial;
+}
+
+.sheet header.sheet-header h1 {
+  margin: 0;
+}
+
+.sheet header.sheet-header h1 input {
+  margin: 0;
+  width: 100%;
+}
+
+.sheet header.sheet-header img {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 125px;
+  flex: 0 0 125px;
+  height: 125px;
+}
+
+.sheet header.sheet-header .section-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 106.5%;
+}
+
+.sheet header.sheet-header > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.sheet header.sheet-header > div > div div {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  margin: .25rem;
+}
+
+.sheet .window-content {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: hidden;
+  background: white;
+}
+
+.sheet .window-content .stat-block {
+  margin: 1rem 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.sheet .window-content .stat-block div {
+  margin: .25rem 0;
+  width: 125px;
+}
+
+.sheet table {
+  background-color: none;
+}
+
+.sheet table td {
+  margin: .25rem;
+}
+
+form div.label-container {
+  position: relative;
+}
+
+form div.label-container label {
+  position: absolute;
+  top: -7px;
+  left: 8px;
+  background: white;
+  padding: 0 5px;
+  font-size: .7rem;
+}
+
+.small-flex {
+  width: 30px;
+}
+
+@-webkit-keyframes artifact-animation {
+  from {
+    bottom: -20%;
+    opacity: .3;
+  }
+  to {
+    bottom: 100%;
+    opacity: .45;
+  }
+}
+
+@keyframes artifact-animation {
+  from {
+    bottom: -20%;
+    opacity: .3;
+  }
+  to {
+    bottom: 100%;
+    opacity: .45;
+  }
+}

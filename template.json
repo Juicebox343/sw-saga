@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": ["character", "npc"],
+    "types": ["character", "npc", "vehicle"],
     "templates": {
       "common": {
         "abilities": {
@@ -305,6 +305,12 @@
         "currency": {
           "credits": 0
         }
+    },
+    "npc": {
+      "templates": ["common"]
+    },
+    "vehicle": {
+      "templates": ["common"]
     }
   }
 },

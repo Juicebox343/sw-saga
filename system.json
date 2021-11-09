@@ -6,7 +6,7 @@
   "minimumCoreVersion": "0.8.5",
   "compatibleCoreVersion": "0.8.6",
   "author": "Joe Heiser",
-  "esmodules": ["module/swSaga.mjs"],
+  "esmodules": ["swSaga.mjs"],
   "styles": ["css/swSaga.css"],
   "scripts": [],
   "packs": [],

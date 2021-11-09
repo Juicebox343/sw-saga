@@ -17,6 +17,20 @@
       "range": "Ranged Damage",
       "weaponWield": "Weapon Type",
       "weaponGroup": "Weapon Group"
+    },
+    "class":{
+      "jedi": "Jedi",
+      "noble": "Noble",
+      "scoundrel": "Scoundrel",
+      "scout": "Scout",
+      "soldier": "Soldier"
+    },
+    "species":{
+      "bothan": "Bothan",
+      "droid": "Droid",
+      "mira": "Miraluka",
+      "trandoshan": "Trandoshan",
+      "twilek": "Twi'Lek"
     }
   }
 

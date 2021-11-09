@@ -1,10 +1,5 @@
-/**
- * Extend the basic ItemSheet with some very simple modifications
- * @extends {ItemSheet}
- */
-export class swSagaItemSheet extends ItemSheet {
+export default class swSagaItemSheet extends ItemSheet {
 
-  /** @override */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       width: 975,
@@ -14,20 +9,18 @@ export class swSagaItemSheet extends ItemSheet {
     });
   }
 
-  /** @override */
+  /* -------------------------------------------- */
+
   get template() {
     const path = "systems/swSaga/templates/item";
-    console.log(`${path}/item-${this.item.data.type}-sheet.html`)
-    return `${path}/item-${this.item.data.type}-sheet.html`;
+    return `${path}/item-${this.item.data.type}-sheet.hbs`;
   }
 
   /* -------------------------------------------- */
 
-  /** @override */
   getData() {
-    // Retrieve base data structure.
     const context = super.getData();
-
+    console.log(context)
     let sheetData = {
       owner: this.item.isOwner,
       editable: this.isEditable,
@@ -41,7 +34,6 @@ export class swSagaItemSheet extends ItemSheet {
 
   /* -------------------------------------------- */
 
-  /** @override */
   activateListeners(html) {
     super.activateListeners(html);
 
