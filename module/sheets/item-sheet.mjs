@@ -25,7 +25,7 @@ export default class swSagaItemSheet extends ItemSheet {
       owner: this.item.isOwner,
       editable: this.isEditable,
       item: context.item,
-      data: context.item.data.data,
+      data: context.item.data,
       config: CONFIG.swSaga
     }
 

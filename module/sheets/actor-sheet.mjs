@@ -2,8 +2,8 @@ export default class swSagaActorSheet extends ActorSheet {
 
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      width: 975,
-      height: 400,
+      width: 700,
+      height: 900,
       classes: ["swsaga", "sheet", "actor"],
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
     });
@@ -19,17 +19,16 @@ export default class swSagaActorSheet extends ActorSheet {
 
   getData() {
     const context = super.getData();
-    console.log(context)
     let sheetData = {
       owner: this.actor.isOwner,
       editable: this.isEditable,
       actor: context.actor,
-      data: context.actor.data.data,
+      data: context.actor.data,
       weapons: context.items.filter(function(item){return item.type == 'weapon'}),
       config: CONFIG.swSaga
     }
     
-
+    console.log(sheetData)
     return sheetData;
   }
   /* -------------------------------------------- */

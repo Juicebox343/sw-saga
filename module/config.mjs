@@ -25,3 +25,13 @@ swSaga.abilities = {
   wis: "swSaga.abilities.wis",
   cha: "swSaga.abilities.cha"
 }
+
+swSaga.details = {
+  "name": "swSaga.details.name",
+  "bio": "swSaga.details.bio",
+  "age": "swSaga.details.age",
+  "gender": "swSaga.details.gender",
+  "height": "swSaga.details.height",
+  "weight": "swSaga.details.weight"
+}
+

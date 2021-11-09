@@ -8,6 +8,8 @@
         <input name="characterName" id="characterName" type="text" value="{{actor.name}}" placeholder="Name"/>
       </div>
 
+      {{log data}}
+
       <div class='label-container character-form small-flex'>
         <label for='characterName'>Level</label>
         <input name="characterName" id="characterName" type="text" value="{{data.characterLevel}}" placeholder="Level"/>
@@ -28,19 +30,19 @@
     <div class='second-row'>
       <div class='label-container player-form'>
         <label for='playerName'>Age</label>
-        <input type='text' id='playerName' name='playerName' value="{{data.age}}"/>
+        <input type='text' id='playerName' name='playerName' value="{{data.details.age}}"/>
       </div>   
       <div class='label-container player-form'>
         <label for='playerName'>Gender</label>
-        <input type='text' id='playerName' name='playerName' value="{{data.gender}}"/>
+        <input type='text' id='playerName' name='playerName' value="{{data.details.gender}}"/>
       </div>   
             <div class='label-container player-form'>
         <label for='playerName'>Height</label>
-        <input type='text' id='playerName' name='playerName' value="{{data.height}}"/>
+        <input type='text' id='playerName' name='playerName' value="{{data.details.height}}" data-dtype="Number"/>
       </div>     
       <div class='label-container player-form'>
         <label for='playerName'>Weight</label>
-        <input type='text' id='playerName' name='playerName' value="{{data.weight}}"/>
+        <input type='text' id='playerName' name='playerName' value="{{data.details.weight}}" data-dtype="Number"/>
       </div>      
     </div>
     </div>

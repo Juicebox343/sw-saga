@@ -9,6 +9,7 @@ async function preloadHandlebarsTemplates(){
   const templatePaths = [
     "systems/swSaga/templates/partials/character-details.hbs",
     "systems/swSaga/templates/partials/stat-block.hbs",
+    "systems/swSaga/templates/partials/condition-track.hbs",
   ];
   return loadTemplates(templatePaths);
 }
