@@ -61,7 +61,8 @@
             "max": 30
           },
           "characterLevel": 1,
-          "darksideScore" : 0
+          "darksideScore" : 0,
+          "condition": "Normal"
         },
         "classes": [],
         "feats": [],
@@ -295,6 +296,7 @@
         "destinyPoint": 1,
         "abilityIncrease": [[],[],[],[],[]],
         "addtlFeats": [],
+        "baseAttack": 1,
         "baseAttackProgression":{
           "jedi-soldier": false
         }

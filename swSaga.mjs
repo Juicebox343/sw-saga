@@ -10,6 +10,7 @@ async function preloadHandlebarsTemplates(){
     "systems/swSaga/templates/actor/partials/character-details.hbs",
     "systems/swSaga/templates/actor/partials/stat-block.hbs",
     "systems/swSaga/templates/actor/partials/condition-track.hbs",
+    "systems/swSaga/templates/actor/partials/character-page.hbs",
   ];
   return loadTemplates(templatePaths);
 }

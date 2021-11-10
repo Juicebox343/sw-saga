@@ -1,19 +1,21 @@
 <header class="sheet-header">
   <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="200" width="200"/>
+  
   <div class='sub-container'>
-    <div class='first-row row'>
 
-      <div class='label-container character-form row-item'>
+      <div class='label-container character-form character-name row-item'>
         <label for='characterName'>Character</label>
         <input name="name" id="characterName" type="text" value="{{actor.name}}" placeholder="Name"/>
       </div>
 
-      <div class='label-container character-form row-item level'>
+      <div class='label-container character-form character-level row-item level'>
         <label for='characterLevel'>Level</label>
         <input name="data.characterLevel" id="characterLevel" type="text" value="{{data.characterLevel}}" placeholder="Level"/>
       </div>
+   
 
-      <div class='label-container species-form row-item'>
+
+      <div class='label-container character-form species-select row-item'>
         <label for='speciesName'>Species</label>
         <select id='speciesName' name="data.species">
           {{#select data.species}}
@@ -22,29 +24,82 @@
           {{/each}}
           {{/select}}
         </select>
-      </div>      
-    </div>
+      </div>
+      <div class='class-select'>
+        {{!-- {{#each data.classes as |name type|}}
+          <span value="{{type}}">{{localize name}}ClassName</span>
+        {{/each}} --}}
+        <span>class 2 / class 3</span>
+      </div>
 
-    <div class='second-row row'>
-      <div class='label-container row-item player-form'>
-        <label for='characterAge'>Age</label>
-        <input type='text' id='characterAge' name='data.details.age' value="{{data.details.age}}"/>
-      </div>   
-      <div class='label-container row-item player-form'>
-        <label for='characterGender'>Gender</label>
-        <input type='text' id='characterGender' name='data.details.gender' value="{{data.details.gender}}"/>
-      </div>   
-            <div class='label-container row-item player-form'>
-        <label for='characterHeight'>Height</label>
-        <input type='text' id='characterHeight' name='data.details.height' value="{{data.details.height}}" data-dtype="Number"/>
-      </div>     
-      <div class='label-container row-item player-form'>
-        <label for='characterWeight'>Weight</label>
-        <input type='text' id='characterWeight' name='data.details.weight' value="{{data.details.weight}}" data-dtype="Number"/>
-      </div>      
-    </div>
-    </div>
-    
+
+
+      <div class='label-container character-form row-item level'>
+        <label for='characterPerc'>Perc</label>
+        <input name="data.skills.perception" id="topLevelPerception" type="text" value="{{data.skills.perception.value}}" placeholder="0"/>
+      </div>
+
+      <div class='label-container character-form row-item level'>
+        <label for='characterInit'>init</label>
+        <input name="data.skills.initiative" id="topLevelInit" type="text" value="{{data.skills.initiative.value}}" placeholder="0"/>
+      </div>
+
+      <div class='label-container character-form row-item level'>
+        <label for='characterBA'>BA</label>
+        <input name="data.attributes.baseAttack" id="topLevelBA" type="text" value="{{data.attributes.baseAttack}}" placeholder="0"/>
+      </div>
+
+      <div class='label-container character-form row-item level'>
+        <label for='characterSpeed'>Speed</label>
+        <input name="" id="topLevelSpeed" type="text" value="" placeholder="0"/>
+      </div>
+
   </div>
   
+  <div class='sub-container'>
+      <div class='label-container character-form row-item'>
+        <label for='fortDef'>Fort</label>
+        <input name="" id="fortDef" type="text" value="" placeholder="0"/>
+      </div>
+
+      <div class='label-container character-form row-item'>
+        <label for='refDef'>Ref</label>
+        <input name="" id="refDef" type="text" value="" placeholder="0"/>
+      </div>
+
+      <div class='label-container character-form row-item'>
+        <label for='willDef'>Will</label>
+        <input name="" id="willDef" type="text" value="" placeholder="0"/>
+      </div>
+  </div>
+
+  <div class='sub-container'>
+    <div class='label-container hitpoints row-item'>
+      <label for='hitpoints'>HP</label>
+      <input name="data.attributes.hp.value" id="hitpoints" type="text" value="{{data.attributes.hp.value}}" placeholder="{{data.attributes.hp.value}}"/>
+    </div>
+
+    <div class='label-container condition row-item'>
+      <input name="data.attributes.condition" id="condition" type="text" value="{{data.attributes.condition}}" placeholder="{{data.attributes.condition}}"/>
+      <label for='condition'>Cond</label>
+    </div>
+
+    <div class='label-container shieldReduction row-item'>
+      <label for='shieldReduction'>SR</label>
+      <input name="" id="shieldReduction" type="text" value="" placeholder=""/>
+    </div>
+
+    <div class='label-container damageReduction row-item'>
+      <label for='damageReduction'>DR</label>
+      <input name="" id="damageReduction" type="text" value="" placeholder=""/>
+    </div>
+
+    <div class='label-container threshold row-item'>
+      <label for='threshold'>DT</label>
+      <input name="n" id="threshold" type="text" value="" placeholder=""/>
+    </div>
+  </div>
+     
 </header>
+
+

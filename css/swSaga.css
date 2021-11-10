@@ -17,15 +17,14 @@
 .swsaga.sheet select,
 .swsaga.sheet textarea {
   background: none;
-  border: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  border: solid 2px black;
+  border: solid 1px black;
   width: 100%;
   line-height: 180%;
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding: 0.3rem 0.8rem;
-  height: 48px;
+  height: 36px;
   margin: 0;
 }
 
@@ -51,64 +50,134 @@
 }
 
 .swsaga.sheet .window-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  background: white;
+}
+
+.swsaga.sheet .window-content form.character {
+  display: grid;
+  grid-template-rows: 150px auto 300px;
+  grid-template-columns: 150px auto;
+  gap: 1rem;
   height: 100%;
   width: 100%;
   overflow: hidden;
   background: white;
 }
 
-.swsaga.sheet .window-content .sheet-header {
-  -webkit-box-flex: initial;
-  -ms-flex: initial;
-  flex: initial;
-}
-
-.swsaga.sheet .window-content .sheet-header img {
+.swsaga.sheet .window-content form.character .sheet-header {
+  grid-row: 1 / 2;
+  grid-column: 1 / 4;
+  display: grid;
+  gap: .5rem;
+  grid-template-rows: 150px auto;
+  grid-template-columns: 150px 3fr 1fr 150px;
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 125px;
-  flex: 0 0 125px;
-  height: 125px;
+  -ms-flex: none;
+  flex: none;
 }
 
-.swsaga.sheet .window-content .sheet-header .sub-container {
+.swsaga.sheet .window-content form.character .sheet-header img {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  width: 150px;
+  height: 150px;
+}
+
+.swsaga.sheet .window-content form.character .sheet-header .sub-container:first-of-type {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.swsaga.sheet .window-content form.character .sheet-header .sub-container:first-of-type .character-name {
+  grid-row: 1 / 2;
+  grid-column: 1 / 4;
+}
+
+.swsaga.sheet .window-content form.character .sheet-header .sub-container:first-of-type .character-level {
+  grid-row: 1 / 2;
+  grid-column: 4 / 5;
+}
+
+.swsaga.sheet .window-content form.character .sheet-header .sub-container:first-of-type .species-select {
+  grid-row: 2 / 3;
+  grid-column: 1 / 3;
+}
+
+.swsaga.sheet .window-content form.character .sheet-header .sub-container:first-of-type .class-select {
+  grid-row: 2 / 3;
+  grid-column: 3 / 5;
+}
+
+.swsaga.sheet .window-content form.character .sheet-header .sub-container {
+  display: grid;
+  gap: .5rem;
+  grid-row: 1 / 2;
+  grid-column: 3 / 4;
+}
+
+.swsaga.sheet .window-content form.character .sheet-header .sub-container:last-of-type {
+  grid-row: 1 / 2;
+  grid-column: 4 / 5;
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.swsaga.sheet .window-content form.character .sheet-header .sub-container:last-of-type .hitpoints {
+  grid-row: 1 / 3;
+  grid-column: 1 / 2;
+}
+
+.swsaga.sheet .window-content form.character .sheet-header .sub-container:last-of-type .hitpoints input {
+  height: 100%;
+  font-size: 2rem;
+}
+
+.swsaga.sheet .window-content form.character .sheet-header .sub-container:last-of-type .condition {
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+}
+
+.swsaga.sheet .window-content form.character .sheet-header .sub-container:last-of-type .shieldReduction {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+}
+
+.swsaga.sheet .window-content form.character .sheet-header .sub-container:last-of-type .damageReduction {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+}
+
+.swsaga.sheet .window-content form.character .sheet-header .sub-container:last-of-type .threshold {
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+}
+
+.swsaga.sheet .window-content form.character .sheet-header .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  height: 106.5%;
-}
-
-.swsaga.sheet .window-content .sheet-header div > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
-.swsaga.sheet .window-content .sheet-header div > div div {
+.swsaga.sheet .window-content form.character .sheet-header .row .row-item {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin: 0.25rem;
 }
 
-.swsaga.sheet .window-content .stat-block {
-  margin: 1rem 0 0 0;
+.swsaga.sheet .window-content form.character .stat-block {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  width: 125px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -121,9 +190,14 @@
   justify-content: flex-start;
 }
 
-.swsaga.sheet .window-content .stat-block div {
+.swsaga.sheet .window-content form.character .stat-block div {
   margin: 0.25rem 0;
   width: 125px;
+}
+
+.swsaga.sheet .window-content form.character .character-page {
+  grid-row: 2 / 3;
+  grid-column: 2 / 4;
 }
 
 .swsaga.sheet table {

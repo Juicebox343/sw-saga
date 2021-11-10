@@ -1,0 +1,43 @@
+<section class="character-page">
+
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item active" data-tab="skills">Skills</a>
+    <a class="item" data-tab="combat">Combat</a>
+    <a class="item" data-tab="force">Force Powers</a>
+    <a class="item" data-tab="bio">Character Bio</a>
+  </nav>
+
+  <section class='sheet-body'>
+    <section class="tab skills" data-group="primary" data-tab="skills">
+      <p>Skills</p>
+    </section>
+
+    <section class="tab combat" data-group="primary" data-tab="combat">
+      <p>Combat</p>
+    </section>
+
+    <section class="tab force" data-group="primary" data-tab="force">
+      <p>Force Powers</p>
+    </section>
+    <section class="tab bio" data-group="primary" data-tab="bio">
+      <div class='label-container row-item player-form'>
+        <label for='characterAge'>Age</label>
+        <input type='text' id='characterAge' name='data.details.age' value="{{data.details.age}}"/>
+      </div>   
+      <div class='label-container row-item player-form'>
+        <label for='characterGender'>Gender</label>
+        <input type='text' id='characterGender' name='data.details.gender' value="{{data.details.gender}}"/>
+      </div>   
+      <div class='label-container row-item player-form'>
+        <label for='characterHeight'>Height</label>
+        <input type='text' id='characterHeight' name='data.details.height' value="{{data.details.height}}" data-dtype="Number"/>
+      </div>     
+      <div class='label-container row-item player-form'>
+        <label for='characterWeight'>Weight</label>
+        <input type='text' id='characterWeight' name='data.details.weight' value="{{data.details.weight}}" data-dtype="Number"/>
+      </div>      
+    </section>
+  </section>
+
+  
+</section>
