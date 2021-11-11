@@ -3,9 +3,11 @@
     <label for='equippedWeapon'>Weapon</label>
     <div id='equippedWeapon'>
       {{#each weapons as |weapon id|}}
-        <div class='item-card'>
-          <p>{{name}}</p>
-          <p>{{data.damage}}</p>
+        <div class='item-card item' data-item-id="{{_id}}">
+          <a class='item-edit' title="{{localize "swsaga.sheet.editItem"}}">
+            <p>{{name}}</p>
+            <p>{{data.damage}}</p>
+          </a>
         </div>
       {{/each}}
     </div>
@@ -21,6 +23,6 @@
       {{/each}}
     </div>
   </div>
-</section>
+</section> 
 
 

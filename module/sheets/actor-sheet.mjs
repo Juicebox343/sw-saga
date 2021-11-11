@@ -2,8 +2,8 @@ export default class swSagaActorSheet extends ActorSheet {
 
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      width: 800,
-      height: 900,
+      width: 655,
+      height: 865,
       classes: ["swsaga", "sheet", "actor"],
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "skills" }]
     });
@@ -45,7 +45,32 @@ export default class swSagaActorSheet extends ActorSheet {
 
     // Everything below here is only needed if the sheet is editable
     if (!this.isEditable) return;
-
+    html.find(".item-create").click(this._onItemCreate.bind(this));
+    html.find(".item-edit").click(this._onItemEdit.bind(this));
     // Roll handlers, click handlers, etc. would go here.
   }
+
+  _onItemCreate(event){
+    event.preventDefault();
+    let element = event.currentTarget;
+
+    let itemData = {
+      name: game.i18n.localize("swSaga.sheet.newItem"),
+    }
+    return this.actor.createOwnedItem(itemData)
+  }
+
+  _onItemEdit(event){
+    event.preventDefault();
+    let element = event.currentTarget;
+    let itemId = element.closest(".item").dataset.itemId;
+    let item = this.actor.getOwnedItem(itemId);
+    console.log(itemId)
+    item.sheet.render(true);
+
+  }
+
+
+
+
 }
