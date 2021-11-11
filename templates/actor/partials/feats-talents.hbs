@@ -1,0 +1,21 @@
+<section class='feats-talents'>
+  <div class='label-container character-form'>
+    <label for='feats'>Feats</label>
+    <div id='feats'>
+      {{#each feats as |feat id|}}
+        <div class='item-card'>
+          <p>{{name}}</p>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+  <div class='label-container character-form'>
+    <label for='talents'>Talents</label>
+    <div id='talents'>
+      {{#each talents as |talent id|}}
+        <div class='item-card'>
+          <p>{{name}}</p>
+        </div>
+      {{/each}}</div>
+  </div>
+</section>

@@ -1,0 +1,51 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
+    </div>
+  </header>
+
+  <section>
+
+
+    <table>
+      <tr>
+        <th>{{localize "swSaga.armor.refBonus" }}</th>
+        <th>{{localize "swSaga.armor.fortDef" }}</th>
+        <th>{{localize "swSaga.armor.maxDex" }}</th>
+        <th>{{localize "swSaga.armor.cost" }}</th>
+        <th>{{localize "swSaga.armor.weight" }}</th>
+        <th>{{localize "swSaga.armor.speedReduction" }}</th>
+        <th>{{localize "swSaga.armor.availability" }}</th>
+        <th>{{localize "swSaga.armor.size" }}</th>
+      </tr>
+      <tr>
+        <td>
+          <input name="data.refBonus" type='text' value="{{data.refBonus}}"  />
+        </td>
+        <td>
+          <input name="data.fortDef" type='text' value="{{data.fortDef}}"  />
+        </td>
+        <td>
+          <input name="data.maxDex" type='text' value="{{data.maxDex}}"  />
+        </td>
+        <td><input name="data.cost" type='text' value="{{data.cost}}"  />
+        </td>
+        <td>
+          <input name="data.weight" type='text' value="{{data.weight}}"  />
+        </td>
+        <td>
+          <input name="data.speedReduction" type='text' value="{{data.speedReduction}}"  />
+        </td>
+        <td>
+          <input name="data.availability" type='text' value="{{data.availability}}"  />
+        </td>
+        <td>
+          <input name="data.size" type='text' value="{{data.size}}"  />
+        </td>
+      </tr>
+    </table>
+
+  </section>
+</form>

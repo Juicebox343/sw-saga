@@ -1,0 +1,61 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
+    </div>
+  </header>
+
+  <section>
+    <table>
+      <tr>
+        <th>{{localize "swSaga.class.name" }}</th>
+        <th>{{localize "swSaga.class.description" }}</th>
+        <th>{{localize "swSaga.class.startHP" }}</th>
+        <th>{{localize "swSaga.class.hitDice" }}</th>
+        <th>{{localize "swSaga.class.forcePoints" }}</th>
+        <th>{{localize "swSaga.class.defBonus" }}</th>
+        <th>{{localize "swSaga.class.startFeats" }}</th>
+        <th>{{localize "swSaga.class.bonusFeats" }}</th>
+        <th>{{localize "swSaga.class.talents" }}</th>
+        <th>{{localize "swSaga.class.trainedSkills" }}</th>
+        <th>{{localize "swSaga.class.startingCredits" }}</th>
+      </tr>
+      <tr>
+        <td>
+          <input name="data.name" type='text' value="{{data.name}}"  />
+        </td>
+        <td>
+          <input name="data.description" type='text' value="{{data.description}}"  />
+        </td>
+        <td>
+          <input name="data.startHP" type='text' value="{{data.startHP}}"  />
+        </td>
+        <td><input name="data.hitDice" type='text' value="{{data.hitDice}}"  />
+        </td>
+        <td>
+          <input name="data.forcePoints" type='text' value="{{data.forcePoints}}"  />
+        </td>
+        <td>
+          <input name="data.defBonus" type='text' value="{{data.defBonus}}"  />
+        </td>
+        <td>
+          <input name="data.startFeats" type='text' value="{{data.startFeats}}"  />
+        </td>
+        <td>
+          <input name="data.bonusFeats" type='text' value="{{data.bonusFeats}}"  />
+        </td>
+        <td>
+          <input name="data.bonusFeats" type='text' value="{{data.talents}}"  />
+        </td>
+        <td>
+          <input name="data.bonusFeats" type='text' value="{{data.trainedSkills}}"  />
+        </td>
+        <td>
+          <input name="data.bonusFeats" type='text' value="{{data.startingCredits}}"  />
+        </td>
+      </tr>
+    </table>
+
+  </section>
+</form>

@@ -1,5 +1,5 @@
 .swsaga.sheet {
-  overflow: hidden;
+  
   input[type="text"],
   input[type="number"],
   input[type="password"],
@@ -41,17 +41,18 @@
 
   .window-content{
     background: white;
+
   
     form.character{
       display: grid;
-      grid-template-rows: 150px auto 300px;
+      grid-template-rows: 150px 650px 75px 150px;
       grid-template-columns: 150px auto;
-      gap: 1rem;
+      gap: .5rem;
       height: 100%;
       width: 100%;
-      overflow: hidden;
       background: white;
-
+      overflow-y: auto;
+      overflow-x: hidden;
       .sheet-header {
         grid-row: 1 / 2;
         grid-column: 1 / 4;
@@ -66,6 +67,7 @@
           grid-column: 1 / 2;
           width: 150px;
           height: 150px;
+          border-radius: 3px;
         }
 
         .sub-container:first-of-type {
@@ -148,47 +150,142 @@
     .stat-block {
       grid-row: 2 / 3;
       grid-column: 1 / 2;
-      width: 125px;
+      width: 150px;
       display: flex;
       flex-direction: column;
+      gap: .5rem;
       justify-content: flex-start;
 
       div {
-        margin: 0.25rem 0;
-        width: 125px;
+        width: 150px;
+        gap: .5rem;
+      }
+      div:first-of-type {
+        display: flex;
       }
     }
 
     .character-page{
       grid-row: 2 / 3;
       grid-column: 2 / 4;
+      border: solid 1px #2f2f2f;
+      border-radius: 3px;
+      padding: 0 1rem;
+      
+      nav.sheet-tabs{
+        border-top: none;
+        border-bottom-color: #2f2f2f; 
+        margin-bottom: 1rem;
+        .item{
+          &.active {
+            text-shadow: 0 0 10px rgb(38, 148, 212);
+          } 
+          &:hover {
+            text-shadow: 0 0 10px rgb(38, 148, 212);
+          } 
+        }
+      }
+      .sheet-body{
+        height: calc(100% - 52px);
+      }
+      .skills{
+        height: 100%;
+        overflow-x: scroll;
+        font-size: .75rem;
+        table{
+          border: none;
+          th{
+            text-align: left;
+            width: 30px;
+            &:nth-of-type(2){
+              width: 125px;
+            }
+          }
+          tr:nth-child(even) {
+            background-color: #D6EEEE;
+          }
+          tr:nth-child(odd) {
+            background-color: #faffff;
+          }
+        }
+      }
+      .tab.active{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 100%;
+        p{
+          margin: 4px 0;
+        }
+      }
+    }
+
+    .current-equipment{
+      grid-row: 3 / 4;
+      grid-column: 1 / 4;
+      display: flex;
+      gap: .5rem;
+        & > div{
+          border: solid 1px #2f2f2f;
+          border-radius: 3px;
+          display: flex;
+          flex: 0 0 50%;
+          align-items: center;
+          & > div{
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+          }
+        }
+        
+        .item-card{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100px;
+          height: 50px;
+          border: 1px solid black;
+          border-radius: 3px;
+          font-size: .75rem;
+          p{
+            margin: 0;
+          }
+        }
+    }
+
+    .feats-talents{
+      grid-row: 4 / 5;
+      grid-column: 1 / 4;
+      display: flex;
+      gap: .5rem;
+        & > div{
+          border: solid 1px #2f2f2f;
+          border-radius: 3px;
+          flex: 1 1 50%;
+        }
     }
 
   }
 }
 
-  table {
-    background-color: none;
-    td {
-      margin: 0.25rem;
-    }
-  }
 
   form div.label-container {
     position: relative;
 
     label {
       position: absolute;
-      top: -7px;
-      left: 8px;
+      line-height: 100%;
+      top: -6px;
+      left: 4px;
       background: white;
       padding: 0 5px;
       font-size: 0.7rem;
     }
   }
 
-  .small-flex {
-    width: 30px;
+  .half-size {
+    width: 45%;
   }
 
   @keyframes artifact-animation {

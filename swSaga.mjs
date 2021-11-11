@@ -11,6 +11,8 @@ async function preloadHandlebarsTemplates(){
     "systems/swSaga/templates/actor/partials/stat-block.hbs",
     "systems/swSaga/templates/actor/partials/condition-track.hbs",
     "systems/swSaga/templates/actor/partials/character-page.hbs",
+    "systems/swSaga/templates/actor/partials/current-equipment.hbs",
+    "systems/swSaga/templates/actor/partials/feats-talents.hbs"
   ];
   return loadTemplates(templatePaths);
 }

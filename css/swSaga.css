@@ -5,10 +5,6 @@
   font-style: normal;
 }
 
-.swsaga.sheet {
-  overflow: hidden;
-}
-
 .swsaga.sheet input[type="text"],
 .swsaga.sheet input[type="number"],
 .swsaga.sheet input[type="password"],
@@ -55,13 +51,14 @@
 
 .swsaga.sheet .window-content form.character {
   display: grid;
-  grid-template-rows: 150px auto 300px;
+  grid-template-rows: 150px 650px 75px 150px;
   grid-template-columns: 150px auto;
-  gap: 1rem;
+  gap: .5rem;
   height: 100%;
   width: 100%;
-  overflow: hidden;
   background: white;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .swsaga.sheet .window-content form.character .sheet-header {
@@ -81,6 +78,7 @@
   grid-column: 1 / 2;
   width: 150px;
   height: 150px;
+  border-radius: 3px;
 }
 
 .swsaga.sheet .window-content form.character .sheet-header .sub-container:first-of-type {
@@ -177,7 +175,7 @@
 .swsaga.sheet .window-content form.character .stat-block {
   grid-row: 2 / 3;
   grid-column: 1 / 2;
-  width: 125px;
+  width: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -185,27 +183,166 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  gap: .5rem;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
 }
 
 .swsaga.sheet .window-content form.character .stat-block div {
-  margin: 0.25rem 0;
-  width: 125px;
+  width: 150px;
+  gap: .5rem;
+}
+
+.swsaga.sheet .window-content form.character .stat-block div:first-of-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .swsaga.sheet .window-content form.character .character-page {
   grid-row: 2 / 3;
   grid-column: 2 / 4;
+  border: solid 1px #2f2f2f;
+  border-radius: 3px;
+  padding: 0 1rem;
 }
 
-.swsaga.sheet table {
-  background-color: none;
+.swsaga.sheet .window-content form.character .character-page nav.sheet-tabs {
+  border-top: none;
+  border-bottom-color: #2f2f2f;
+  margin-bottom: 1rem;
 }
 
-.swsaga.sheet table td {
-  margin: 0.25rem;
+.swsaga.sheet .window-content form.character .character-page nav.sheet-tabs .item.active {
+  text-shadow: 0 0 10px #2694d4;
+}
+
+.swsaga.sheet .window-content form.character .character-page nav.sheet-tabs .item:hover {
+  text-shadow: 0 0 10px #2694d4;
+}
+
+.swsaga.sheet .window-content form.character .character-page .sheet-body {
+  height: calc(100% - 52px);
+}
+
+.swsaga.sheet .window-content form.character .character-page .skills {
+  height: 100%;
+  overflow-x: scroll;
+  font-size: .75rem;
+}
+
+.swsaga.sheet .window-content form.character .character-page .skills table {
+  border: none;
+}
+
+.swsaga.sheet .window-content form.character .character-page .skills table th {
+  text-align: left;
+  width: 30px;
+}
+
+.swsaga.sheet .window-content form.character .character-page .skills table th:nth-of-type(2) {
+  width: 125px;
+}
+
+.swsaga.sheet .window-content form.character .character-page .skills table tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+
+.swsaga.sheet .window-content form.character .character-page .skills table tr:nth-child(odd) {
+  background-color: #faffff;
+}
+
+.swsaga.sheet .window-content form.character .character-page .tab.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.swsaga.sheet .window-content form.character .character-page .tab.active p {
+  margin: 4px 0;
+}
+
+.swsaga.sheet .window-content form.character .current-equipment {
+  grid-row: 3 / 4;
+  grid-column: 1 / 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .5rem;
+}
+
+.swsaga.sheet .window-content form.character .current-equipment > div {
+  border: solid 1px #2f2f2f;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.swsaga.sheet .window-content form.character .current-equipment > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: .5rem;
+}
+
+.swsaga.sheet .window-content form.character .current-equipment .item-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 3px;
+  font-size: .75rem;
+}
+
+.swsaga.sheet .window-content form.character .current-equipment .item-card p {
+  margin: 0;
+}
+
+.swsaga.sheet .window-content form.character .feats-talents {
+  grid-row: 4 / 5;
+  grid-column: 1 / 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .5rem;
+}
+
+.swsaga.sheet .window-content form.character .feats-talents > div {
+  border: solid 1px #2f2f2f;
+  border-radius: 3px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 50%;
+  flex: 1 1 50%;
 }
 
 .swsaga.sheet form div.label-container {
@@ -214,15 +351,16 @@
 
 .swsaga.sheet form div.label-container label {
   position: absolute;
-  top: -7px;
-  left: 8px;
+  line-height: 100%;
+  top: -6px;
+  left: 4px;
   background: white;
   padding: 0 5px;
   font-size: 0.7rem;
 }
 
-.swsaga.sheet .small-flex {
-  width: 30px;
+.swsaga.sheet .half-size {
+  width: 45%;
 }
 
 @-webkit-keyframes artifact-animation {

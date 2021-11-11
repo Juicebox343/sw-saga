@@ -1,0 +1,26 @@
+<section class='current-equipment'>
+  <div class='label-container character-form'>
+    <label for='equippedWeapon'>Weapon</label>
+    <div id='equippedWeapon'>
+      {{#each weapons as |weapon id|}}
+        <div class='item-card'>
+          <p>{{name}}</p>
+          <p>{{data.damage}}</p>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+  <div class='label-container character-form'>
+    <label for='equippedClothing'>Clothing/Armor</label>
+    <div id='equippedClothing'>
+       {{#each armor as |armor id|}}
+        <div class='item-card'>
+          <p>{{name}}</p>
+          <p>{{data.damage}}</p>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
+
+

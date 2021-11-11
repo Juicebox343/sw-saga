@@ -24,6 +24,14 @@ export default class swSagaActorSheet extends ActorSheet {
       actor: context.actor,
       data: context.actor.data.data,
       weapons: context.items.filter(function(item){return item.type == 'weapon'}),
+      armor: context.items.filter(function(item){return item.type == 'armor'}),
+      class: context.items.filter(function(item){return item.type == 'class'}),
+      species: context.items.filter(function(item){return item.type == 'species'}),
+      feats: context.items.filter(function(item){return item.type == 'feat'}),
+      talents: context.items.filter(function(item){return item.type == 'talent'}),
+      force: context.items.filter(function(item){return item.type == 'forcePower'}),
+      equipment: context.items.filter(function(item){return item.type == 'equipment'}),
+      consumables: context.items.filter(function(item){return item.type == 'consumables'}),
       config: CONFIG.swSaga
     }
     

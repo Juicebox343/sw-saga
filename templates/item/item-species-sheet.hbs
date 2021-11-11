@@ -1,0 +1,49 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
+    </div>
+  </header>
+
+  <section>
+    <table>
+      <tr>
+        <th>{{localize "swSaga.species.name" }}</th>
+        <th>{{localize "swSaga.species.description" }}</th>
+        <th>{{localize "swSaga.species.homeworld" }}</th>
+        <th>{{localize "swSaga.species.languages" }}</th>
+        <th>{{localize "swSaga.species.modifiers" }}</th>
+        <th>{{localize "swSaga.species.size" }}</th>
+        <th>{{localize "swSaga.species.speed" }}</th>
+        <th>{{localize "swSaga.species.traits" }}</th>
+      </tr>
+      <tr>
+        <td>
+          <input name="data.name" type='text' value="{{data.name}}"  />
+        </td>
+        <td>
+          <input name="data.description" type='text' value="{{data.description}}"  />
+        </td>
+        <td>
+          <input name="data.homeworld" type='text' value="{{data.homeworld}}"  />
+        </td>
+        <td><input name="data.languages" type='text' value="{{data.languages}}"  />
+        </td>
+        <td>
+          <input name="data.modifiers" type='text' value="{{data.modifiers}}"  />
+        </td>
+        <td>
+          <input name="data.size" type='text' value="{{data.size}}"  />
+        </td>
+        <td>
+          <input name="data.speed" type='text' value="{{data.speed}}"  />
+        </td>
+        <td>
+          <input name="data.traits" type='text' value="{{data.traits}}"  />
+        </td>
+      </tr>
+    </table>
+
+  </section>
+</form>
