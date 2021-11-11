@@ -248,8 +248,17 @@
           border: 1px solid black;
           border-radius: 3px;
           font-size: .75rem;
-          p{
-            margin: 0;
+
+          .item-edit{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            p{
+              margin: 0;
+            }
           }
         }
     }

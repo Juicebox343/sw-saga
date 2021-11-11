@@ -3,8 +3,8 @@
     <label for='feats'>Feats</label>
     <div id='feats'>
       {{#each feats as |feat id|}}
-        <div class='item-card'>
-          <p>{{name}}</p>
+        <div class='item-card item' data-item-id="{{_id}}">
+          <p>{{name}}</p><a class='item-delete'><i class="fas fa-times"></i></a>
         </div>
       {{/each}}
     </div>
@@ -13,8 +13,9 @@
     <label for='talents'>Talents</label>
     <div id='talents'>
       {{#each talents as |talent id|}}
-        <div class='item-card'>
-          <p>{{name}}</p>
+      {{log id}}
+        <div class='item-card item' data-item-id="{{_id}}">
+          <p>{{name}}</p><a class='item-delete'><i class="fas fa-times"></i></a>
         </div>
       {{/each}}</div>
   </div>

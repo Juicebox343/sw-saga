@@ -47,6 +47,8 @@ export default class swSagaActorSheet extends ActorSheet {
     if (!this.isEditable) return;
     html.find(".item-create").click(this._onItemCreate.bind(this));
     html.find(".item-edit").click(this._onItemEdit.bind(this));
+    html.find("input[type='checkbox'").change(this._onSkillEdit.bind(this));
+    html.find(".item-delete").click(this._onItemDelete.bind(this));
     // Roll handlers, click handlers, etc. would go here.
   }
 
@@ -60,17 +62,27 @@ export default class swSagaActorSheet extends ActorSheet {
     return this.actor.createOwnedItem(itemData)
   }
 
+  _onSkillEdit(event){
+    event.preventDefault();
+    let skill = {};
+    let element = event.currentTarget;
+    let itemId = element.closest(".item").dataset.itemId;
+    skill["data.skills." + itemId + ".trained"] = element.checked;
+    return this.actor.update(skill)
+  }
+
   _onItemEdit(event){
     event.preventDefault();
     let element = event.currentTarget;
     let itemId = element.closest(".item").dataset.itemId;
-    let item = this.actor.getOwnedItem(itemId);
-    console.log(itemId)
+    let item = this.actor.items.get(itemId);
     item.sheet.render(true);
-
   }
 
-
-
-
+  _onItemDelete(event){
+    event.preventDefault();
+    let element = event.currentTarget;
+    let itemId = element.closest(".item").dataset.itemId;
+    return this.actor.deleteOwnedItem(itemId)
+  }
 }
