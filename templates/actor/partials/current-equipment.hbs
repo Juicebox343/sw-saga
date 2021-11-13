@@ -3,28 +3,16 @@
     <label for='equippedWeapon'>Weapon</label>
     <div id='equippedWeapon'>
       {{#each weapons as |weapon id|}}
-        <div class='item-card item draggable' data-item-id="{{_id}}">
-          <a class='item-edit' title="{{localize "swsaga.sheet.editItem"}}">
-            <p>{{name}}</p>
-            <p>{{data.damage}}</p>
-          </a>
-        </div>
+        {{> "systems/swSaga/templates/item/partials/components/item-card.hbs" weapon}}
       {{/each}}
     </div>
   </div>
   <div class='label-container character-form'>
     <label for='equippedClothing'>Clothing/Armor</label>
     <div id='equippedClothing'>
-       {{#each armor as |armor id|}}
-        <div class='item-card item draggable' data-item-id="{{_id}}">
-          <a class='item-edit' title="{{localize "swsaga.sheet.editItem"}}">
-            <p>{{name}}</p>
-            <p>{{data.damage}}</p>
-          </a>
-        </div>
+      {{#each armor as |armor id|}}
+        {{> "systems/swSaga/templates/item/partials/components/item-card.hbs" armor}}
       {{/each}}
     </div>
   </div>
 </section> 
-
-

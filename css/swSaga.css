@@ -51,7 +51,7 @@
 
 .swsaga.sheet .window-content form.character {
   display: grid;
-  grid-template-rows: 150px 388px 75px 150px;
+  grid-template-rows: 150px 388px 135px 150px;
   grid-template-columns: 150px auto;
   gap: .5rem;
   height: 100%;
@@ -291,6 +291,9 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .swsaga.sheet .window-content form.character .current-equipment > div > div {
@@ -317,11 +320,13 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 100px;
-  height: 50px;
-  border: 1px solid black;
+  width: 130px;
+  height: 87px;
   border-radius: 3px;
   font-size: .75rem;
+  background-image: url("../../swSaga/icons/item-card.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .swsaga.sheet .window-content form.character .current-equipment .item-card .item-edit {

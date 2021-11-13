@@ -12,7 +12,9 @@ async function preloadHandlebarsTemplates(){
     "systems/swSaga/templates/actor/partials/condition-track.hbs",
     "systems/swSaga/templates/actor/partials/character-page.hbs",
     "systems/swSaga/templates/actor/partials/current-equipment.hbs",
-    "systems/swSaga/templates/actor/partials/feats-talents.hbs"
+    "systems/swSaga/templates/actor/partials/feats-talents.hbs",
+    "systems/swSaga/templates/item/partials/components/item-card.hbs"
+
   ];
   return loadTemplates(templatePaths);
 }
