@@ -1,8 +1,7 @@
-<div class='item-card item draggable' data-item-id="{{_id}}" >
+<div class='item-card item draggable' style="background-image: url('systems/swSaga/icons/item-card-{{type}}.svg'); background-repeat: no-repeat;background-size: cover;" data-item-id={{_id}} >
   <a class='item-edit' title="{{localize "swsaga.sheet.editItem"}}">
-    {{log weapon}}
     <p>{{name}}</p>
-    <img src="{{image}}">
+    <img class={{type}} src="/systems/swSaga/icons/{{data.type}}.svg">
     <p>{{data.damage}}</p>
   </a>
 </div>

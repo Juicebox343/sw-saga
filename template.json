@@ -397,6 +397,7 @@
       "skillUsed": "",
       "availability": "",
       "range": [0, 0, 0, 0],
+      "type": "",
       "weaponWield": "ranged",
       "weaponGroup": "simple"
     },
@@ -409,7 +410,8 @@
       "speedReduction": "",
       "weight": "",
       "availability": "",
-      "size": "Light Armor"
+      "size": "Light Armor",
+      "type:": ""
     },
     "equipment": {
       "templates": ["itemDescription"],

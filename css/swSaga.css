@@ -36,6 +36,10 @@
   font-family: "Verdana";
 }
 
+.swsaga.sheet a:hover {
+  text-shadow: none;
+}
+
 .swsaga.sheet h1,
 .swsaga.sheet h2,
 .swsaga.sheet h3,
@@ -51,7 +55,7 @@
 
 .swsaga.sheet .window-content form.character {
   display: grid;
-  grid-template-rows: 150px 388px 135px 150px;
+  grid-template-rows: 150px 388px 115px 150px;
   grid-template-columns: 150px auto;
   gap: .5rem;
   height: 100%;
@@ -280,7 +284,6 @@
 }
 
 .swsaga.sheet .window-content form.character .current-equipment > div {
-  border: solid 1px #2f2f2f;
   border-radius: 3px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -324,9 +327,31 @@
   height: 87px;
   border-radius: 3px;
   font-size: .75rem;
-  background-image: url("../../swSaga/icons/item-card.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+  -webkit-box-shadow: 2px 2px 3px rgba(44, 44, 44, 0.144);
+  box-shadow: 2px 2px 3px rgba(44, 44, 44, 0.144);
+}
+
+.swsaga.sheet .window-content form.character .current-equipment .item-card:hover {
+  -webkit-box-shadow: 2px 2px 8px rgba(44, 44, 44, 0.336);
+  box-shadow: 2px 2px 8px rgba(44, 44, 44, 0.336);
+  -webkit-transform: scale(1.01) translateY(-3px);
+  -ms-transform: scale(1.01) translateY(-3px);
+  transform: scale(1.01) translateY(-3px);
+}
+
+.swsaga.sheet .window-content form.character .current-equipment .item-card img.weapon {
+  border: none;
+  width: 100%;
+}
+
+.swsaga.sheet .window-content form.character .current-equipment .item-card img.armor {
+  border: none;
+  width: 100%;
+  position: absolute;
+  top: 25px;
 }
 
 .swsaga.sheet .window-content form.character .current-equipment .item-card .item-edit {
@@ -345,10 +370,30 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  position: relative;
+}
+
+.swsaga.sheet .window-content form.character .current-equipment .item-card .item-edit a:hover {
+  text-shadow: none;
 }
 
 .swsaga.sheet .window-content form.character .current-equipment .item-card .item-edit p {
   margin: 0;
+  font-weight: bold;
+}
+
+.swsaga.sheet .window-content form.character .current-equipment .item-card .item-edit p:first-of-type {
+  text-transform: uppercase;
+  position: absolute;
+  top: 17px;
+}
+
+.swsaga.sheet .window-content form.character .current-equipment .item-card .item-edit p:last-of-type {
+  position: absolute;
+  bottom: 4px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.16rem;
 }
 
 .swsaga.sheet .window-content form.character .feats-talents {
