@@ -35,3 +35,26 @@ swSaga.details = {
   "weight": "swSaga.details.weight"
 }
 
+swSaga.armor = {
+  "cost": "swSaga.armor.cost",
+  "refBonus": "swSaga.armor.refBonus",
+  "fortDef": "swSaga.armor.fortDef",
+  "maxDex": "swSaga.armor.maxDex",
+  "speedReduction": "swSaga.armor.speedReduction",
+  "weight": "swSaga.armor.weight",
+  "availability": "swSaga.armor.availability",
+  "size": "swSaga.armor.size",
+  "type": "swSaga.armor.type"
+}
+
+swSaga.species = {
+  "name": "swSaga.species.name",
+  "homeworld": "swSaga.species.homeworld",
+  "languages": "swSaga.species.languages",
+  "modifiers": "swSaga.species.modifiers",
+  "size": "swSaga.species.size",
+  "speed": "swSaga.species.speed",
+  "traits": "swSaga.species.traits"
+}
+
+

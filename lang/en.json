@@ -7,7 +7,7 @@
       "cha": "Charisma"
     },
     "weapon":{
-      "cost": "Item Cost",
+      "cost": "Price",
       "damage": "Damage",
       "stunDamage": "Stun Damage",
       "weight": "Weight",
@@ -17,6 +17,17 @@
       "range": "Ranged Damage",
       "weaponWield": "Weapon Type",
       "weaponGroup": "Weapon Group"
+    },
+    "armor":{
+      "cost": "Price",
+      "refBonus": "Reflex Bonus",
+      "fortDef": "Fortitude Defense",
+      "maxDex": "Max Dexterity",
+      "speedReduction": "Speed Reduction",
+      "weight": "Weight",
+      "availability": "Availability",
+      "size": "Size",
+      "type:": "Type"
     },
     "class":{
       "jedi": "Jedi",
