@@ -1,5 +1,6 @@
 // Import sheet classes.
 import swSagaActorSheet from "./module/sheets/actor-sheet.mjs";
+import swSagaActor from "./module/documents/actor.mjs";
 import swSagaItemSheet from "./module/sheets/item-sheet.mjs";
 // Import helper/utility classes and constants.
 import { swSaga } from "./module/config.mjs";
@@ -28,7 +29,8 @@ Hooks.once('init', async function() {
   console.log('initializing Star Wars: Saga Edition System')
   
   CONFIG.swSaga = swSaga;
-
+  CONFIG.Actor.documentClass = swSagaActor;
+  
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
   Actors.registerSheet("swSaga", swSagaActorSheet, { makeDefault: true });
