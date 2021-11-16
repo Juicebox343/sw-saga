@@ -13,8 +13,12 @@
         <tr><th>Trained?</th><th>Skill</th><th>Bonus</th><th>Modifier</th></tr>
       {{#each data.skills as |skill id|}}
           <tr data-item-id="{{@key}}" class='item'>
+            {{log @key}}
             <td><input type='checkbox' {{#if trained}}checked{{/if}}></td>
-            <td>{{name}}</td><td>{{data.abilities.{{skill.mod}}.{{mod}}</td>
+            <td>{{name}}</td>
+            <td>
+              {{abilities.mod}}
+              </td>
             <td>{{attribute}}</td>
           </tr>
       {{/each}}
