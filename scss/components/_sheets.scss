@@ -14,7 +14,7 @@
     line-height: 180%;
     font-size: 1rem;
     padding: 0.3rem 0.8rem;
-    height: 36px;
+    height: 100%;
     margin: 0;
   }
 
@@ -49,7 +49,7 @@
   
     form.character{
       display: grid;
-      grid-template-rows: 150px 388px 115px 150px;
+      grid-template-rows: 150px 450px auto 150px;
       grid-template-columns: 150px auto;
       gap: .5rem;
       height: 100%;
@@ -157,16 +157,30 @@
       width: 150px;
       display: flex;
       flex-direction: column;
-      gap: .5rem;
-      justify-content: flex-start;
-
-      div {
-        width: 150px;
-        gap: .5rem;
-      }
+      justify-content: space-between;
       div:first-of-type {
         display: flex;
+        gap: 1rem;
       }
+      div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        gap: .5rem;
+        height: 45px;
+      }
+      span {
+        font-size: 1rem;
+        background-color:rgb(44, 44, 44);
+        border-radius: 3px;
+        color: white;
+        line-height: 160%;
+        height: 25px;
+        width: 35px;
+        z-index: 2;
+      }
+
     }
 
     .character-page{
@@ -194,7 +208,7 @@
       }
       .skills{
         height: 100%;
-        overflow-x: scroll;
+        overflow-y: scroll;
         font-size: .75rem;
         table{
           border: none;
@@ -230,15 +244,17 @@
       display: flex;
       gap: .5rem;
         & > div{
-
           border-radius: 3px;
           display: flex;
           flex: 0 0 50%;
           align-items: center;
           justify-content: center;
+          padding: 1rem;
           & > div{
             display: flex;
             align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
             gap: .5rem;
           }
         }
@@ -322,8 +338,9 @@
     &.abilities{
       display: flex;
       > *{
-        flex: 1 1 50%;
+        flex: 1 1 25%;
         width: initial;
+        text-align: center;
       }
     }
     label {
@@ -352,8 +369,6 @@
     }
   }
 }
-
-
 
 
 

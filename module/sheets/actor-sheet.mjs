@@ -2,8 +2,8 @@ export default class swSagaActorSheet extends ActorSheet {
 
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      width: 655,
-      height: 865,
+      width: 850,
+      height: 880,
       classes: ["swsaga", "sheet", "actor"],
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "skills" }]
     });

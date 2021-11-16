@@ -14,7 +14,7 @@
       {{#each data.skills as |skill id|}}
           <tr data-item-id="{{@key}}" class='item'>
             <td><input type='checkbox' {{#if trained}}checked{{/if}}></td>
-            <td>{{name}}</td><td>{{value}}</td>
+            <td>{{name}}</td><td>{{data.abilities.{{skill.mod}}.{{mod}}</td>
             <td>{{attribute}}</td>
           </tr>
       {{/each}}

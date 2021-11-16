@@ -76,7 +76,6 @@
         "skills": {
           "acrobatics": {
             "name": "Acrobatics",
-            "value": 0,
             "attribute": "dex",
             "trained": false,
             "useUnTrained": true,
@@ -85,7 +84,6 @@
           },
           "climb": {
             "name": "Climb",
-            "value": 0,
             "attribute": "str",
             "trained": false,
             "useUnTrained": true,
@@ -94,7 +92,6 @@
           },
           "deception": {
             "name": "Deception",
-            "value": 0,
             "attribute": "cha",
             "trained": false,
             "useUnTrained": true,
@@ -103,7 +100,6 @@
           },
           "endurance": {
             "name": "Endurance",
-            "value": 0,
             "attribute": "con",
             "trained": false,
             "useUnTrained": true,
@@ -112,7 +108,6 @@
           },
           "gatherInfo": {
             "name": "Gather Information",
-            "value": 0,
             "attribute": "cha",
             "trained": false,
             "useUnTrained": true,
@@ -121,7 +116,6 @@
           },
           "initiative": {
             "name": "Initiative",
-            "value": 0,
             "attribute": "dex",
             "trained": false,
             "useUnTrained": true,
@@ -130,7 +124,6 @@
           },
           "jump": {
             "name": "Jump",
-            "value": 0,
             "attribute": "str",
             "trained": false,
             "useUnTrained": true,
@@ -139,7 +132,6 @@
           },
           "knowledgeBur": {
             "name": "Knowledge (Bureaucracy)",
-            "value": 0,
             "attribute": "int",
             "trained": false,
             "useUnTrained": true,
@@ -148,7 +140,6 @@
           },
           "knowledgeLore": {
             "name": "Knowledge (Galactic Lore)",
-            "value": 0,
             "attribute": "int",
             "trained": false,
             "useUnTrained": true,
@@ -157,7 +148,6 @@
           },
           "knowledgeLife": {
             "name": "Knowledge (Life Sciences)",
-            "value": 0,
             "attribute": "int",
             "trained": false,
             "useUnTrained": true,
@@ -166,7 +156,6 @@
           },
           "knowledgePhys": {
             "name": "Knowledge (Physical Sciences)",
-            "value": 0,
             "attribute": "int",
             "trained": false,
             "useUnTrained": true,
@@ -175,7 +164,6 @@
           },
           "knowledgeSoc": {
             "name": "Knowledge (Social Sciences)",
-            "value": 0,
             "attribute": "int",
             "trained": false,
             "useUnTrained": true,
@@ -184,7 +172,6 @@
           },
           "knowledgeTac": {
             "name": "Knowledge (Tactics)",
-            "value": 0,
             "attribute": "int",
             "trained": false,
             "useUnTrained": true,
@@ -193,7 +180,6 @@
           },
           "knowledgeTec": {
             "name": "Knowledge (Technology)",
-            "value": 0,
             "attribute": "int",
             "trained": false,
             "useUnTrained": true,
@@ -202,7 +188,6 @@
           },
           "mechanics": {
             "name": "Mechanics",
-            "value": 0,
             "attribute": "int",
             "trained": false,
             "useUnTrained": false,
@@ -211,7 +196,6 @@
           },
           "perception": {
             "name": "Perception",
-            "value": 0,
             "attribute": "wis",
             "trained": false,
             "useUnTrained": true,
@@ -220,7 +204,6 @@
           },
           "persuasion": {
             "name": "Persuasion",
-            "value": 0,
             "attribute": "cha",
             "trained": false,
             "useUnTrained": true,
@@ -229,7 +212,6 @@
           },
           "pilot": {
             "name": "Pilot",
-            "value": 0,
             "attribute": "dex",
             "trained": false,
             "useUnTrained": true,
@@ -238,7 +220,6 @@
           },
           "ride": {
             "name": "Ride",
-            "value": 0,
             "attribute": "dex",
             "trained": false,
             "useUnTrained": true,
@@ -247,7 +228,6 @@
           },
           "stealth": {
             "name": "Stealth",
-            "value": 0,
             "attribute": "dex",
             "trained": false,
             "useUnTrained": true,
@@ -256,7 +236,6 @@
           },
           "survival": {
             "name": "Survival",
-            "value": 0,
             "attribute": "wis",
             "trained": false,
             "useUnTrained": true,
@@ -265,7 +244,6 @@
           },
           "swim": {
             "name": "Swim",
-            "value": 0,
             "attribute": "str",
             "trained": false,
             "useUnTrained": true,
@@ -274,7 +252,6 @@
           },
           "treatInjury": {
             "name": "Treat Injury",
-            "value": 0,
             "attribute": "wis",
             "trained": false,
             "useUnTrained": true,
@@ -283,7 +260,6 @@
           },
           "useComputer": {
             "name": "Use Computer",
-            "value": 0,
             "attribute": "int",
             "trained": false,
             "useUnTrained": true,
@@ -292,7 +268,6 @@
           },
           "useForce": {
             "name": "Use the Force",
-            "value": 0,
             "attribute": "cha",
             "trained": false,
             "useUnTrained": true,
