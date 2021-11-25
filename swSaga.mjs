@@ -38,5 +38,13 @@ Hooks.once('init', async function() {
   Items.registerSheet("swSaga", swSagaItemSheet, { makeDefault: true });
 
   preloadHandlebarsTemplates();
+
+  Handlebars.registerHelper('isValue', (object, x, y) =>{
+    if (x === y){
+      console.log(object)
+      return object.x.mod
+    }
+    return null;
+  })
   
 });

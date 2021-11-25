@@ -6,19 +6,15 @@
     <a class="item" data-tab="inventory">Inventory</a>
     <a class="item" data-tab="bio">Character Bio</a>
   </nav>
-
   <section class='sheet-body'>
     <section class="tab skills" data-group="primary" data-tab="skills">
       <table>
         <tr><th>Trained?</th><th>Skill</th><th>Bonus</th><th>Modifier</th></tr>
       {{#each data.skills as |skill id|}}
           <tr data-item-id="{{@key}}" class='item'>
-            {{log @id}}
             <td><input type='checkbox' {{#if trained}}checked{{/if}}></td>
             <td>{{name}}</td>
-            <td>
-     
-              </td>
+            <td>{{{isValue actorData attribute 'str'}}}</td>
             <td>{{attribute}}</td>
           </tr>
       {{/each}}
