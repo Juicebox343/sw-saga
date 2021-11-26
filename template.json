@@ -335,6 +335,7 @@
     "feat": {
       "templates": ["itemDescription"],
       "name": "",
+      "bonus": [],
       "prerequisite": {
         "required": false,
         "value": []
@@ -345,6 +346,7 @@
       "name": "",
       "class": "",
       "talentTree": "",
+      "bonus": [],
       "prerequisite": {
         "required": false,
         "value": []
@@ -390,6 +392,7 @@
     },
     "equipment": {
       "templates": ["itemDescription"],
+      "bonus": [],
       "cost": 0,
       "weight": 0
     }
