@@ -14,7 +14,14 @@
           <tr data-item-id="{{@key}}" class='item'>
             <td><input type='checkbox' {{#if trained}}checked{{/if}}></td>
             <td>{{name}}</td>
-            <td>{{{isValue actorData attribute 'str'}}}</td> //data isnt coming from main object?
+            <td>
+              {{setBonus ../data skill attribute 'str'}}
+              {{setBonus ../data skill attribute 'dex'}}
+              {{setBonus ../data skill attribute 'con'}}
+              {{setBonus ../data skill attribute 'int'}}
+              {{setBonus ../data skill attribute 'wis'}}
+              {{setBonus ../data skill attribute 'cha'}}
+              </td>
             <td>{{attribute}}</td>
           </tr>
       {{/each}}

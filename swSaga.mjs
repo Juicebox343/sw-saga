@@ -39,10 +39,13 @@ Hooks.once('init', async function() {
 
   preloadHandlebarsTemplates();
 
-  Handlebars.registerHelper('isValue', (object, x, y) =>{
+  Handlebars.registerHelper('setBonus', (actorObject, skillObject, x, y) =>{
+    let armor = 0;
+    let talent = 0;
+    let feat = 0;
+    let equipment = 0;
     if (x === y){
-      console.log(object)
-      return object.x.mod
+      return actorObject.abilities[x].mod + (skillObject.trained ? 5 : 0) + (Math.floor(actorObject.characterLevel / 2));
     }
     return null;
   })
