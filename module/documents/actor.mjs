@@ -23,6 +23,10 @@ prepareData() {
     for (let [key, ability] of Object.entries(data.abilities)){
         ability.mod = Math.floor((ability.value - 10) / 2)
     }
+
+   
+      data.refDef.value = Math.floor((ability.value - 10) / 2)
+  }
   }
 
   /**

@@ -35,7 +35,6 @@ export default class swSagaActorSheet extends ActorSheet {
       config: CONFIG.swSaga
     }
     
-    console.log(sheetData)
     return sheetData;
   }
   /* -------------------------------------------- */
