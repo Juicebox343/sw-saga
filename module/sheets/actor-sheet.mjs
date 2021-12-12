@@ -34,7 +34,7 @@ export default class swSagaActorSheet extends ActorSheet {
       consumables: context.items.filter(function(item){return item.type == 'consumables'}),
       config: CONFIG.swSaga
     }
-    
+    console.log(sheetData)
     return sheetData;
   }
   /* -------------------------------------------- */

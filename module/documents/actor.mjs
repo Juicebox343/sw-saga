@@ -23,10 +23,10 @@ prepareData() {
     for (let [key, ability] of Object.entries(data.abilities)){
         ability.mod = Math.floor((ability.value - 10) / 2)
     }
-
-   
-      data.refDef.value = Math.floor((ability.value - 10) / 2)
-  }
+    // 10 + Heroic Level or Armor Bonus + Dexterity Modifier + Class Bonus + Size Modifier
+    data.ref = Math.floor(10 + ((data.abilities.dex.value - 10) / 2))
+    data.fort = Math.floor(10 + ((data.abilities.con.value - 10) / 2))
+    data.will = Math.floor(10 + ((data.abilities.wis.value - 10) / 2))
   }
 
   /**

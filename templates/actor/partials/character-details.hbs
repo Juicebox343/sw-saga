@@ -13,24 +13,10 @@
         <input name="data.characterLevel" id="characterLevel" type="text" value="{{data.characterLevel}}" placeholder="Level"/>
       </div>
 
-      <div class='label-container character-form species-select row-item'>
+      <div class='label-container character-form item-card item row-item'>
         <label for='speciesName'>Species</label>
-        <select id='speciesName' name="data.species">
-          {{#select data.species}}
-          {{#each config.species as |name type|}}
-            <option value="{{type}}">{{localize name}}</option>
-          {{/each}}
-          {{/select}}
-        </select>
+        <a class='item-edit' title="{{localize "swsaga.sheet.species"}}">{{ species.[0].name }}</a>
       </div>
-      <div class='class-select'>
-        {{!-- {{#each data.classes as |name type|}}
-          <span value="{{type}}">{{localize name}}ClassName</span>
-        {{/each}} --}}
-        <span>class 2 / class 3</span>
-      </div>
-
-
 
       <div class='label-container character-form row-item level'>
         <label for='characterPerc'>Perc</label>
@@ -57,17 +43,17 @@
   <div class='sub-container'>
       <div class='label-container character-form row-item'>
         <label for='fortDef'>Fort</label>
-        <input name="{{data.attributes.baseAttack}}" id="fortDef" type="text" value="{{data.attributes.baseAttack}}" placeholder="0"/>
+        <p>{{ data.fort }}</p>
       </div>
 
       <div class='label-container character-form row-item'>
         <label for='refDef'>Ref</label>
-        <input name="" id="refDef" type="text" value="" placeholder="0"/>
+        <p>{{ data.ref }}</p>
       </div>
 
       <div class='label-container character-form row-item'>
         <label for='willDef'>Will</label>
-        <input name="" id="willDef" type="text" value="" placeholder="0"/>
+        <p>{{ data.will }}</p>
       </div>
   </div>
 
