@@ -2,7 +2,6 @@
   <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="200" width="200"/>
   
   <div class='sub-container'>
-
       <div class='label-container character-form character-name row-item'>
         <label for='characterName'>Character</label>
         <input name="name" id="characterName" type="text" value="{{actor.name}}" placeholder="Name"/>
@@ -13,9 +12,9 @@
         <input name="data.characterLevel" id="characterLevel" type="text" value="{{data.characterLevel}}" placeholder="Level"/>
       </div>
 
-      <div class='label-container character-form item-card item row-item'>
+      <div class='label-container character-form item-card item row-item' data-item-id={{species.[0]._id}}>
         <label for='speciesName'>Species</label>
-        <a class='item-edit' title="{{localize "swsaga.sheet.species"}}">{{ species.[0].name }}</a>
+        <a class='item-edit' title="{{localize "swsaga.sheet.editItem"}}">{{ species.[0].name }}</a>
       </div>
 
       <div class='label-container character-form row-item level'>
