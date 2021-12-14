@@ -34,7 +34,17 @@
       "noble": "Noble",
       "scoundrel": "Scoundrel",
       "scout": "Scout",
-      "soldier": "Soldier"
+      "soldier": "Soldier",
+      "description": "Description",
+      "startHP": "Starting HP",
+      "hitDice": "Hit Dice",
+      "forcePoints": "Force Points",
+      "defBonus": "Defense Bonus",
+      "startFeats": "Starting Feats",
+      "bonusFeats": "Bonus Feats",
+      "talents": "Talents",
+      "trainedSkills": "Trained Skills",
+      "startingCredits": "Starting Credits"
     },
     "species":{
       "bothan": "Bothan",

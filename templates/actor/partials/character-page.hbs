@@ -4,7 +4,7 @@
     <a class="item active" data-tab="skills">Skills</a>
     <a class="item" data-tab="force">Force Powers</a>
     <a class="item" data-tab="inventory">Inventory</a>
-    <a class="item" data-tab="bio">Character Bio</a>
+    <a class="item" data-tab="bio">Bio and Class</a>
   </nav>
   <section class='sheet-body'>
     <section class="tab skills" data-group="primary" data-tab="skills">
@@ -78,6 +78,15 @@
         <label for='characterWeight'>Weight</label>
         <input type='text' id='characterWeight' name='data.details.weight' value="{{data.details.weight}}" data-dtype="Number"/>
       </div>      
+
+      <div class='label-container row-item player-form'>
+        {{#each class as |class id|}}
+        <div class='item-card item' data-item-id="{{_id}}">
+          <p>{{name}} {{id}}</p><a class='item-delete'><i class="fas fa-times"></i></a>
+        </div>
+      {{/each}}
+      </div>      
+
     </section>
 
 

@@ -311,7 +311,6 @@
     },
     "species":{
       "templates": ["itemDescription"],
-      "name": "",
       "homeworld": "",
       "languages": [],
       "modifiers": [],
@@ -321,7 +320,6 @@
     },
     "class":{
       "templates": ["itemDescription"],
-      "name": "",
       "startHP": 18,
       "hitDice": 6,
       "forcePoints": 5,
@@ -334,7 +332,6 @@
     },
     "feat": {
       "templates": ["itemDescription"],
-      "name": "",
       "bonus": [],
       "prerequisite": {
         "required": false,
@@ -343,7 +340,6 @@
     },
     "talent":{
       "templates": ["itemDescription"],
-      "name": "",
       "class": "",
       "talentTree": "",
       "bonus": [],
@@ -354,15 +350,13 @@
     },
     "forcePower": {
       "templates": ["itemDescription"],
-      "name": "",
       "prerequisite": {
         "required": false,
         "value": []
       }
     },
     "consumables":{
-      "templates": ["itemDescription"],
-      "name":""
+      "templates": ["itemDescription"]
     },
     "weapon": {
       "templates": ["itemDescription"],
