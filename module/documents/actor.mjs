@@ -21,12 +21,18 @@ prepareData() {
     const data = actorData.data;
 
     for (let [key, ability] of Object.entries(data.abilities)){
-        ability.mod = Math.floor((ability.value - 10) / 2)
+      ability.mod = Math.floor((ability.value - 10) / 2)
+    }
+
+    for (let [key, skill] of Object.entries(data.skills)){
+      skill.mod = Math.floor(data.abilities[skill.attribute].mod + (skill.trained ? 5 : 0) + (Math.floor(data.characterLevel / 2))) || 0;
     }
     // 10 + Heroic Level or Armor Bonus + Dexterity Modifier + Class Bonus + Size Modifier
     data.ref = Math.floor(10 + ((data.abilities.dex.value - 10) / 2))
     data.fort = Math.floor(10 + ((data.abilities.con.value - 10) / 2))
     data.will = Math.floor(10 + ((data.abilities.wis.value - 10) / 2))
+
+    
   }
 
   /**
@@ -48,7 +54,7 @@ getRollData() {
 _getCharacterRollData(data) {
   if (this.data.type !== 'character') return;
 
-  // Copy the ability scores to the top level, so that rolls can use
+  // Copy the ability scores to the top level, so that rolls can ux
   // formulas like `@str.mod + 4`.
   if (data.abilities) {
     for (let [k, v] of Object.entries(data.abilities)) {
@@ -61,4 +67,11 @@ _getCharacterRollData(data) {
     data.lvl = data.attributes.level.value ?? 0;
   }
 }
+
+/**
+ * Prepare NPC roll data.
+ */
+ _getNpcRollData(data) {
+  if (this.data.type !== 'npc') return;
+ }
 }

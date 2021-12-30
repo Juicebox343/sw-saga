@@ -49,6 +49,7 @@ export default class swSagaActorSheet extends ActorSheet {
     html.find("input[type='checkbox'").change(this._onSkillEdit.bind(this));
     html.find(".item-delete").click(this._onItemDelete.bind(this));
     // Roll handlers, click handlers, etc. would go here.
+    html.find(".rollable").click(this._onRoll.bind(this));
   }
 
   _onItemCreate(event){
@@ -58,7 +59,7 @@ export default class swSagaActorSheet extends ActorSheet {
     let itemData = {
       name: game.i18n.localize("swSaga.sheet.newItem"),
     }
-    return this.actor.createOwnedItem(itemData)
+    return this.actor.items.new(itemData)
   }
 
   _onSkillEdit(event){
@@ -80,8 +81,23 @@ export default class swSagaActorSheet extends ActorSheet {
 
   _onItemDelete(event){
     event.preventDefault();
-    let element = event.currentTarget;
-    let itemId = element.closest(".item").dataset.itemId;
-    return this.actor.deleteOwnedItem(itemId)
+    const li = event.currentTarget.closest(".item");
+    const item = this.actor.items.get(li.dataset.itemId);
+    return item.delete();
   }
+
+  async _onRoll(event){
+    event.preventDefault();
+    const element = event.currentTarget;
+    const dataset = element.dataset;
+
+    if(dataset.roll){
+      let label = dataset.label ? `Rolling ${dataset.label}` : '';
+      let roll = await new Roll(dataset.roll, this.actor.data.data).roll({async: true}).toMessage({
+        speaker: ChatMessage.getSpeaker(),
+        flavor: label
+      });
+    }
+  }
+
 }
