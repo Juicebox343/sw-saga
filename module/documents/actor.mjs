@@ -1,4 +1,4 @@
-export default class BoilerplateActor extends Actor {
+export default class swSagaActor extends Actor {
 
 prepareData() {
     super.prepareData();

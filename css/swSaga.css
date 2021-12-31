@@ -359,6 +359,7 @@
   transition: all .2s;
   -webkit-box-shadow: 2px 2px 3px rgba(44, 44, 44, 0.144);
   box-shadow: 2px 2px 3px rgba(44, 44, 44, 0.144);
+  position: relative;
 }
 
 .swsaga.sheet .window-content form.character .current-equipment .item-card:hover {
@@ -371,51 +372,30 @@
 
 .swsaga.sheet .window-content form.character .current-equipment .item-card img.weapon {
   border: none;
-  width: 100%;
+  width: 130px;
+  height: auto;
 }
 
 .swsaga.sheet .window-content form.character .current-equipment .item-card img.armor {
   border: none;
-  width: 100%;
+  width: 130px;
+  height: auto;
   position: absolute;
   top: 25px;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .item-card .item-edit {
-  height: 100%;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.swsaga.sheet .window-content form.character .current-equipment .item-card .item-edit a:hover {
-  text-shadow: none;
-}
-
-.swsaga.sheet .window-content form.character .current-equipment .item-card .item-edit p {
+.swsaga.sheet .window-content form.character .current-equipment .item-card p {
   margin: 0;
   font-weight: bold;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .item-card .item-edit p:first-of-type {
+.swsaga.sheet .window-content form.character .current-equipment .item-card p:first-of-type {
   text-transform: uppercase;
   position: absolute;
   top: 17px;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .item-card .item-edit p:last-of-type {
+.swsaga.sheet .window-content form.character .current-equipment .item-card p:last-of-type {
   position: absolute;
   bottom: 4px;
   color: white;

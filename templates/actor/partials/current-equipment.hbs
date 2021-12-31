@@ -3,7 +3,7 @@
     <label for='equippedWeapon'>Weapon</label>
     <div id='equippedWeapon'>
       {{#each weapons as |weapon id|}}
-        {{> "systems/swSaga/templates/item/partials/components/item-card.hbs" weapon}}
+        {{> "systems/swSaga/templates/item/partials/components/weapon-card.hbs" weapon}}
       {{/each}}
     </div>
   </div>
@@ -11,7 +11,7 @@
     <label for='equippedClothing'>Clothing/Armor</label>
     <div id='equippedClothing'>
       {{#each armor as |armor id|}}
-        {{> "systems/swSaga/templates/item/partials/components/item-card.hbs" armor}}
+        {{> "systems/swSaga/templates/item/partials/components/armor-card.hbs" armor}}
       {{/each}}
     </div>
   </div>

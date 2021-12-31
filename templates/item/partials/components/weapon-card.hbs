@@ -1,0 +1,11 @@
+<div class='item-card weapon-card item item-roll' 
+      style="background-image: url('systems/swSaga/icons/item-card-weapon.svg'); background-repeat: no-repeat;background-size: cover;" 
+      data-item-id={{_id}}
+      data-roll="d20+@abilities.{{data.skillUsed}}.mod+{{actor.data.data.attributes.baseAttack}}" 
+      data-label={{name}}
+>
+{{log data}}
+    <p>{{name}}</p>
+    <img class={{type}} src="/systems/swSaga/icons/{{data.type}}.svg">
+    <p>{{data.damage}}</p>
+</div>

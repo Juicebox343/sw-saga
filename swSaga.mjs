@@ -1,6 +1,7 @@
 // Import sheet classes.
 import swSagaActorSheet from "./module/sheets/actor-sheet.mjs";
 import swSagaActor from "./module/documents/actor.mjs";
+import swSagaItem from "./module/documents/item.mjs";
 import swSagaItemSheet from "./module/sheets/item-sheet.mjs";
 // Import helper/utility classes and constants.
 import { swSaga } from "./module/config.mjs";
@@ -14,7 +15,8 @@ async function preloadHandlebarsTemplates(){
     "systems/swSaga/templates/actor/partials/character-page.hbs",
     "systems/swSaga/templates/actor/partials/current-equipment.hbs",
     "systems/swSaga/templates/actor/partials/feats-talents.hbs",
-    "systems/swSaga/templates/item/partials/components/item-card.hbs"
+    "systems/swSaga/templates/item/partials/components/armor-card.hbs",
+    "systems/swSaga/templates/item/partials/components/weapon-card.hbs"
 
   ];
   return loadTemplates(templatePaths);
@@ -30,6 +32,7 @@ Hooks.once('init', async function() {
   
   CONFIG.swSaga = swSaga;
   CONFIG.Actor.documentClass = swSagaActor;
+  CONFIG.Item.documentClass = swSagaItem;
   
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);

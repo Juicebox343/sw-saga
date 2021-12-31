@@ -16,6 +16,8 @@ export default class swSagaItemSheet extends ItemSheet {
     return `${path}/item-${this.item.data.type}-sheet.hbs`;
   }
 
+  
+
   /* -------------------------------------------- */
 
   getData() {
@@ -30,5 +32,14 @@ export default class swSagaItemSheet extends ItemSheet {
     console.log(sheetData)
     return sheetData;
   }
+
+  activateListeners(html) {
+    super.activateListeners(html);
+    // Everything below here is only needed if the sheet is editable
+
+  }
+
+  
+
 
 }
