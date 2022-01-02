@@ -1,3 +1,6 @@
+import * as Dice from "../dice.js";
+
+
 export default class swSagaActorSheet extends ActorSheet {
 
   static get defaultOptions() {
