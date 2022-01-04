@@ -54,7 +54,7 @@
       gap: .5rem;
       height: 100%;
       width: 100%;
-      background: white;
+      background: #368fe2;
       overflow-y: auto;
       overflow-x: hidden;
       .sheet-header {
@@ -172,7 +172,7 @@
       }
       span {
         font-size: 1rem;
-        background-color:rgb(44, 44, 44);
+        background-color:#2264a1;
         border-radius: 3px;
         color: white;
         line-height: 160%;
@@ -186,13 +186,13 @@
     .character-page{
       grid-row: 2 / 3;
       grid-column: 2 / 4;
-      border: solid 1px #2f2f2f;
+      border: solid 1px white;
       border-radius: 3px;
       padding: 0 1rem;
       
       nav.sheet-tabs{
         border-top: none;
-        border-bottom-color: #2f2f2f; 
+        border-bottom-color: white; 
         margin-bottom: 1rem;
         .item{
           &.active {
@@ -270,15 +270,29 @@
           font-size: .75rem;
           transition: all .2s;
           box-shadow: 2px 2px 3px rgba(44, 44, 44, 0.144);
+          margin: 0;
           position: relative;
+          overflow: hidden;
           &:hover{
             box-shadow: 2px 2px 8px rgba(44, 44, 44, 0.336);
             transform: scale(1.01) translateY(-3px);
+          }
+          &:hover div{
+            transform: translateX(0);
+          }
+          &:hover img{
+            transform: translateX(-200%);
+          }
+          img{
+            transform: translateX(0);
+            transition: transform .2s linear;
           }
           img.weapon{
             border: none;
             width: 130px;
             height: auto;
+            position: absolute;
+            top: 20px;
           }
           img.armor{
             border: none;
@@ -286,21 +300,45 @@
             height: auto;
             position: absolute;
             top: 25px;
-          }     
+          }    
           p{
             margin: 0;
             font-weight: bold;
-            &:first-of-type{
-              text-transform: uppercase;
-              position: absolute;
-              top: 17px;
-            }
-            &:last-of-type{
-              position: absolute;
-              bottom: 4px;
-              color: white;
+            text-transform: uppercase;
+          } 
+          .item-name{
+            position: absolute;
+            top: 17px;
+          }
+          .item-detail{
+            position: absolute;
+            bottom: 0;
+            opacity: 1;
+            transition: opacity .2s linear;
+          }
+          div{
+            height: 32px;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            transition: all .2s linear;
+            position: absolute;
+            top: 20px;
+            transform: translateX(200%);
+            button{
+              box-shadow:none;
+              border: white solid 1px;
+              margin: 5px;
+              height: 20px;
+              width: 40px;
+              margin: 0;
+              color: blue;
               font-weight: bold;
-              font-size: 1.16rem;
+              font-size: 0.75rem;
+              line-height: 0.75rem;
+              text-align: center;
+              background-color: transparent;
             }
           }
         }
@@ -324,7 +362,7 @@
 
   form div.label-container {
     position: relative;
-    border: solid 1px black;
+    border: solid 1px white;
     border-radius: 3px;
     &.abilities{
       display: flex;
@@ -339,7 +377,7 @@
       line-height: 100%;
       top: -6px;
       left: 4px;
-      background: white;
+      background: #368fe2;
       padding: 0 5px;
       font-size: 0.7rem;
     }

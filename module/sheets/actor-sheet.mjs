@@ -69,10 +69,11 @@ export default class swSagaActorSheet extends ActorSheet {
     html.find("input[type='checkbox'").change(this._onSkillEdit.bind(this));
 
     // Roll handlers, click handlers, etc. would go here.
-    html.find(".rollable").click(this._onActorRoll.bind(this));
+    html.find(".rollable").click(Dice.rollD20.bind(this));
     html.find(".item-create").click(this._onItemCreate.bind(this));
     // html.find(".item-edit").click(this._onItemEdit.bind(this));
-    html.find(".item-roll").click(this._onItemRoll.bind(this));
+    html.find(".item-roll").click(Dice.rollD20.bind(this));
+    html.find(".item-damage").click(Dice.rollDamage.bind(this));
     html.find(".item-delete").click(this._onItemDelete.bind(this));
 
     new ContextMenu(html, '.item-card', this.itemContextMenu);
@@ -111,41 +112,5 @@ export default class swSagaActorSheet extends ActorSheet {
     const li = event.currentTarget.closest(".item");
     const item = this.actor.items.get(li.dataset.itemId);
     return item.delete();
-  }
-
-
-  _onActorRoll(event) {
-    event.preventDefault();
-    const element = event.currentTarget;
-    const dataset = element.dataset;
-    if (dataset.roll) {
-      let label = dataset.label ? `Rolling ${dataset.label}` : '';
-      let roll = new Roll(dataset.roll, this.actor.getRollData());
-      roll.toMessage({
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        flavor: label,
-        rollMode: game.settings.get('core', 'rollMode'),
-      });
-      return roll;
-    }
-  }
-
-  
-  _onItemRoll(event) {
-    event.preventDefault();
-    const element = event.currentTarget;
-    const dataset = element.dataset;
-    console.log(dataset)
-    if (dataset.roll) {
-      let label = dataset.label ? `Attacking with ${dataset.label}` : '';
-      console.log(this.actor)
-      let roll = new Roll(dataset.roll, this.actor.getRollData());
-      roll.toMessage({
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        flavor: label,
-        rollMode: game.settings.get('core', 'rollMode'),
-      });
-      return roll;
-    }
   }
 }

@@ -1,11 +1,16 @@
-<div class='item-card weapon-card item item-roll' 
-      style="background-image: url('systems/swSaga/icons/item-card-weapon.svg'); background-repeat: no-repeat;background-size: cover;" 
-      data-item-id={{_id}}
-      data-roll="d20+@abilities.{{data.skillUsed}}.mod+{{actor.data.data.attributes.baseAttack}}" 
-      data-label={{name}}
->
+<div class='item-card weapon-card item' 
+      style="background-image: url('systems/swSaga/icons/item-card-weapon.svg'); background-repeat: no-repeat;background-size: cover;" >
 {{log data}}
-    <p>{{name}}</p>
+    <p class='item-name'>{{name}}</p>
     <img class={{type}} src="/systems/swSaga/icons/{{data.type}}.svg">
-    <p>{{data.damage}}</p>
+    <div>
+        <button class='item-roll'       
+            data-item-id={{_id}}
+            data-roll="d20+@abilities.{{data.skillUsed}}.mod+{{actor.data.data.attributes.baseAttack}}" 
+            data-label={{name}}
+            data-rollType='attack'>Atk</button>
+        <button>Dmg</button>
+    </div>
+    <p class='item-detail'>{{data.damage}}</p>
 </div>
+

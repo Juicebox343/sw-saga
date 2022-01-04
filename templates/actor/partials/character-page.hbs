@@ -13,7 +13,7 @@
       {{#each data.skills as |skill id|}}
           <tr data-item-id="{{@key}}" class='item'>
             <td><input type='checkbox' {{#if trained}}checked{{/if}}></td>
-            <td data-roll="d20+@skills.{{@key}}.mod" data-label="{{name}}" class='rollable'>{{name}}</td>
+            <td data-roll="d20+@skills.{{@key}}.mod" data-label="{{name}}" data-rollType='check' class='rollable'>{{name}}</td>
             <td>{{mod}}</td>
             <td>{{attribute}}</td>
           </tr>
