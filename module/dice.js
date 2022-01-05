@@ -2,7 +2,6 @@ export function rollD20(event){
     event.preventDefault();
     const element = event.currentTarget;
     const dataset = element.dataset;
-    console.log(element)
     if (dataset.roll) {
       let label = dataset.label ? `Rolling ${dataset.label}` : '';
       // let label = dataset.label ? `Attacking with ${dataset.label}` : '';
@@ -17,8 +16,10 @@ export function rollD20(event){
 }
 
 export function rollDamage(event){
+  event.preventDefault();
   const element = event.currentTarget;
   const dataset = element.dataset;
+  console.log(dataset)
   if (dataset.roll) {
     let label = dataset.label ? `What is this ${dataset.label}` : '';
     let roll = new Roll(dataset.roll, this.actor.getRollData());

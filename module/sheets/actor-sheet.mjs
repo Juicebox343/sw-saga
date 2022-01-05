@@ -32,7 +32,8 @@ export default class swSagaActorSheet extends ActorSheet {
       name: game.i18n.localize('swSaga.sheet.delete'),
       icon: '<i class="fas fa-trash"></i>',
       callback: element => {
-        this.actor.deleteOwnedItem(element.data('item-id'));
+        const item = this.actor.items.get(element.data('item-id'));
+        item.delete();
       }
     },
 
@@ -76,7 +77,7 @@ export default class swSagaActorSheet extends ActorSheet {
     html.find(".item-damage").click(Dice.rollDamage.bind(this));
     html.find(".item-delete").click(this._onItemDelete.bind(this));
 
-    new ContextMenu(html, '.item-card', this.itemContextMenu);
+    new ContextMenu(html, ".item-card", this.itemContextMenu);
   }
 
   _onSkillEdit(event){

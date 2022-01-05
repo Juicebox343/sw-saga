@@ -405,8 +405,6 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 130px;
-  height: 87px;
   border-radius: 3px;
   font-size: .75rem;
   -webkit-transition: all .2s;
@@ -417,14 +415,31 @@
   margin: 0;
   position: relative;
   overflow: hidden;
+  width: 160px;
+  height: 130px;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .item-card:hover {
-  -webkit-box-shadow: 2px 2px 8px rgba(44, 44, 44, 0.336);
-  box-shadow: 2px 2px 8px rgba(44, 44, 44, 0.336);
-  -webkit-transform: scale(1.01) translateY(-3px);
-  -ms-transform: scale(1.01) translateY(-3px);
-  transform: scale(1.01) translateY(-3px);
+.swsaga.sheet .window-content form.character .current-equipment .item-card:hover::after {
+  content: "";
+  -webkit-animation: shine 3s ease-in-out;
+  animation: shine 3s ease-in-out;
+  position: absolute;
+  top: -210%;
+  left: -210%;
+  width: 200%;
+  height: 200%;
+  opacity: 0;
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+  background: rgba(175, 218, 59, 0.13);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.13)), color-stop(77%, rgba(255, 255, 255, 0.13)), color-stop(92%, rgba(255, 255, 255, 0.774)), to(rgba(255, 255, 255, 0)));
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.13) 77%, rgba(255, 255, 255, 0.774) 92%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.13) 77%, rgba(255, 255, 255, 0.774) 92%, rgba(255, 255, 255, 0) 100%);
+}
+
+.swsaga.sheet .window-content form.character .current-equipment .item-card:active::after {
+  opacity: 0;
 }
 
 .swsaga.sheet .window-content form.character .current-equipment .item-card:hover div {
@@ -433,37 +448,32 @@
   transform: translateY(0);
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .item-card:hover img {
-  -webkit-transform: translateY(-200%);
-  -ms-transform: translateY(-200%);
-  transform: translateY(-200%);
+.swsaga.sheet .window-content form.character .current-equipment .item-card:hover .item-detail {
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .item-card img {
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-  -webkit-transition: -webkit-transform .2s linear;
-  transition: -webkit-transform .2s linear;
-  -o-transition: transform .2s linear;
-  transition: transform .2s linear;
-  transition: transform .2s linear, -webkit-transform .2s linear;
+.swsaga.sheet .window-content form.character .current-equipment .item-card:hover .item-name {
+  -webkit-transform: translateY(200%);
+  -ms-transform: translateY(200%);
+  transform: translateY(200%);
 }
 
 .swsaga.sheet .window-content form.character .current-equipment .item-card img.weapon {
   border: none;
-  width: 130px;
+  width: 100%;
   height: auto;
   position: absolute;
-  top: 20px;
+  top: 35px;
 }
 
 .swsaga.sheet .window-content form.character .current-equipment .item-card img.armor {
   border: none;
-  width: 130px;
+  width: 100%;
   height: auto;
   position: absolute;
-  top: 25px;
+  top: 20px;
 }
 
 .swsaga.sheet .window-content form.character .current-equipment .item-card p {
@@ -474,20 +484,36 @@
 
 .swsaga.sheet .window-content form.character .current-equipment .item-card .item-name {
   position: absolute;
-  top: 17px;
+  bottom: 6px;
+  color: white;
+  font-size: 1.1rem;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: -webkit-transform .2s linear;
+  transition: -webkit-transform .2s linear;
+  -o-transition: transform .2s linear;
+  transition: transform .2s linear;
+  transition: transform .2s linear, -webkit-transform .2s linear;
 }
 
 .swsaga.sheet .window-content form.character .current-equipment .item-card .item-detail {
   position: absolute;
-  bottom: 0;
-  opacity: 1;
-  -webkit-transition: opacity .2s linear;
-  -o-transition: opacity .2s linear;
-  transition: opacity .2s linear;
+  bottom: 2px;
+  font-size: 1.25rem;
+  -webkit-transition: -webkit-transform .2s linear;
+  transition: -webkit-transform .2s linear;
+  -o-transition: transform .2s linear;
+  transition: transform .2s linear;
+  transition: transform .2s linear, -webkit-transform .2s linear;
+  color: white;
+  -webkit-transform: translateY(200%);
+  -ms-transform: translateY(200%);
+  transform: translateY(200%);
 }
 
 .swsaga.sheet .window-content form.character .current-equipment .item-card div {
-  height: 32px;
+  height: 24px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -502,29 +528,89 @@
   -o-transition: all .2s linear;
   transition: all .2s linear;
   position: absolute;
-  top: 20px;
-  -webkit-transform: translateY(200%);
-  -ms-transform: translateY(200%);
-  transform: translateY(200%);
+  top: 10px;
+  z-index: 100;
+  padding: 2px;
 }
 
 .swsaga.sheet .window-content form.character .current-equipment .item-card div button {
   -webkit-box-shadow: none;
   box-shadow: none;
-  border: white solid 1px;
-  margin: 5px;
-  height: 20px;
-  width: 40px;
+  background-color: transparent;
+  height: 30px;
+  width: 50%;
   margin: 0;
-  color: white;
   font-weight: bold;
   font-size: 0.75rem;
   line-height: 0.75rem;
   text-align: center;
-  background-color: transparent;
+  border-radius: 0;
+  border-width: 6px;
+  border-top: none;
 }
 
-.swsaga.sheet .window-content form.character .feats-talents {
+.swsaga.sheet .window-content form.character .current-equipment .item-card div button:first-of-type {
+  border-right-width: 3px;
+}
+
+.swsaga.sheet .window-content form.character .current-equipment .item-card div button:last-of-type {
+  border-left-width: 3px;
+}
+
+.swsaga.sheet .window-content form.character .current-equipment .item-card #context-menu.expand-down {
+  top: 0;
+  -webkit-transform: translateX(12%);
+  -ms-transform: translateX(12%);
+  transform: translateX(12%);
+}
+
+.swsaga.sheet .window-content form.character .current-equipment .item-card #context-menu {
+  width: 80%;
+  min-width: initial;
+  background: var(--text-color);
+  border: none;
+}
+
+.swsaga.sheet .window-content form.character .current-equipment .item-card #context-menu li.context-item {
+  border: solid transparent 2px;
+}
+
+.swsaga.sheet .window-content form.character .current-equipment .item-card #context-menu li.context-item:hover {
+  text-shadow: 0 0 4px #2694d4;
+  border: solid white 2px;
+}
+
+.swsaga.sheet .window-content form.character .current-equipment .armor-card:hover {
+  -webkit-box-shadow: 0px 0px 7px #257A8C;
+  box-shadow: 0px 0px 7px #257A8C;
+}
+
+.swsaga.sheet .window-content form.character .current-equipment .armor-card button {
+  border: 2px solid #257A8C;
+  color: #257A8C;
+}
+
+.swsaga.sheet .window-content form.character .current-equipment .armor-card button:hover {
+  background: #257A8C;
+  color: white;
+}
+
+.swsaga.sheet .window-content form.character .current-equipment .weapon-card:hover {
+  -webkit-box-shadow: 0px 0px 7px #B44242;
+  box-shadow: 0px 0px 7px #B44242;
+}
+
+.swsaga.sheet .window-content form.character .current-equipment .weapon-card button {
+  border: 2px solid #B44242;
+  color: #B44242;
+}
+
+.swsaga.sheet .window-content form.character .current-equipment .weapon-card button:hover {
+  background: #B44242;
+  color: white;
+}
+
+.swsaga.sheet .window-content form.character .current-equipment .feats-talents {
   grid-row: 4 / 5;
   grid-column: 1 / 13;
   display: -webkit-box;
@@ -533,23 +619,23 @@
   gap: .5rem;
 }
 
-.swsaga.sheet .window-content form.character .feats-talents > div {
+.swsaga.sheet .window-content form.character .current-equipment .feats-talents > div {
   width: 50%;
 }
 
-.swsaga.sheet form div.label-container {
+.swsaga.sheet .window-content form div.label-container {
   position: relative;
   border: solid 1px var(--text-color);
   border-radius: 3px;
 }
 
-.swsaga.sheet form div.label-container.abilities {
+.swsaga.sheet .window-content form div.label-container.abilities {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.swsaga.sheet form div.label-container.abilities > * {
+.swsaga.sheet .window-content form div.label-container.abilities > * {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 25%;
   flex: 1 1 25%;
@@ -557,7 +643,7 @@
   text-align: center;
 }
 
-.swsaga.sheet form div.label-container label {
+.swsaga.sheet .window-content form div.label-container label {
   position: absolute;
   line-height: 100%;
   top: -6px;
@@ -567,7 +653,7 @@
   font-size: 0.7rem;
 }
 
-.swsaga.sheet .half-size {
+.swsaga.sheet .window-content .half-size {
   width: 45%;
 }
 
@@ -590,5 +676,57 @@
   to {
     bottom: 100%;
     opacity: 0.45;
+  }
+}
+
+@-webkit-keyframes shine {
+  10% {
+    opacity: 1;
+    top: -30%;
+    left: -30%;
+    -webkit-transition-property: left, top, opacity;
+    -o-transition-property: left, top, opacity;
+    transition-property: left, top, opacity;
+    -webkit-transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+  }
+  15% {
+    opacity: 0;
+  }
+  100% {
+    top: -30%;
+    left: -30%;
+    -webkit-transition-property: left, top, opacity;
+    -o-transition-property: left, top, opacity;
+    transition-property: left, top, opacity;
+  }
+}
+
+@keyframes shine {
+  10% {
+    opacity: 1;
+    top: -30%;
+    left: -30%;
+    -webkit-transition-property: left, top, opacity;
+    -o-transition-property: left, top, opacity;
+    transition-property: left, top, opacity;
+    -webkit-transition-duration: 0.7s, 0.7s, 0.15s;
+    -o-transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    -webkit-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    transition-timing-function: ease;
+  }
+  15% {
+    opacity: 0;
+  }
+  100% {
+    top: -30%;
+    left: -30%;
+    -webkit-transition-property: left, top, opacity;
+    -o-transition-property: left, top, opacity;
+    transition-property: left, top, opacity;
   }
 }

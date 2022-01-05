@@ -361,7 +361,7 @@
     "weapon": {
       "templates": ["itemDescription"],
       "cost": 0,
-      "damage": 0,
+      "damage": "",
       "stunDamage": 0,
       "weight": 0,
       "damageType": "",

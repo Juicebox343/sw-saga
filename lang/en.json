@@ -1,5 +1,9 @@
 { 
   "swSaga": {
+    "sheet":{
+      "edit" : "Edit",
+      "delete" : "Delete"
+    },
     "skillUsed":{
       "none" : "",
       "dex" : "Dexterity",

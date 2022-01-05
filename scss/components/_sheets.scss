@@ -2,6 +2,7 @@
   --text-color: #38578d;
   --background-color: #f1f1f1;
 }
+
 .swsaga.sheet {
   input[type="text"],
   input[type="number"],
@@ -218,10 +219,10 @@
         margin-bottom: 1rem;
         .item{
           &.active {
-            text-shadow: 0 0 10px rgb(38, 148, 212);
+            text-shadow: 0 0 10px #2694d4;
           } 
           &:hover {
-            text-shadow: 0 0 10px rgb(38, 148, 212);
+            text-shadow: 0 0 10px #2694d4;
           } 
         }
       }
@@ -281,48 +282,64 @@
             gap: .5rem;
           }
         }
-        
         .item-card{
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          width: 130px;
-          height: 87px;
           border-radius: 3px;
           font-size: .75rem;
           transition: all .2s;
           box-shadow: 2px 2px 3px rgba(44, 44, 44, 0.144);
           margin: 0;
           position: relative;
-          overflow: hidden;
-          &:hover{
-            box-shadow: 2px 2px 8px rgba(44, 44, 44, 0.336);
-            transform: scale(1.01) translateY(-3px);
+          overflow:hidden;
+          width: 160px;
+          height: 130px;
+          &:hover::after {
+            content: "";
+            animation: shine 3s ease-in-out;
+            position: absolute;
+            top: -210%;
+            left: -210%;
+            width: 200%;
+            height: 200%;
+            opacity: 0;
+            transform: rotate(30deg);
+            background: rgba(175, 218, 59, 0.13);
+            background: linear-gradient(
+              to right,
+              rgba(255, 255, 255, 0.13) 0%,
+              rgba(255, 255, 255, 0.13) 77%,
+              rgba(255, 255, 255, 0.774) 92%,
+              rgba(255, 255, 255, 0.0) 100%
+            );
           }
+          &:active::after {
+            opacity: 0;
+         }
           &:hover div{
-            transform: translateY(0);
+              transform: translateY(0);
+            }
+          &:hover .item-detail{
+            transform: translateY(0%);
           }
-          &:hover img{
-            transform: translateY(-200%);
-          }
-          img{
-            transform: translateY(0);
-            transition: transform .2s linear;
+          &:hover .item-name{
+            transform: translateY(200%);
           }
           img.weapon{
             border: none;
-            width: 130px;
+            width: 100%;
             height: auto;
             position: absolute;
-            top: 20px;
+            top: 35px;
           }
           img.armor{
             border: none;
-            width: 130px;
+            width: 100%;
             height: auto;
             position: absolute;
-            top: 25px;
+            top: 20px;
           }    
           p{
             margin: 0;
@@ -331,42 +348,97 @@
           } 
           .item-name{
             position: absolute;
-            top: 17px;
+            bottom: 6px;
+            color: white;
+            font-size: 1.1rem;
+            transform: translateY(0);
+            transition: transform .2s linear;
           }
           .item-detail{
             position: absolute;
-            bottom: 0;
-            opacity: 1;
-            transition: opacity .2s linear;
+            bottom: 2px;
+            font-size: 1.25rem;
+            transition: transform .2s linear;
+            color: white;
+            transform: translateY(200%);
           }
           div{
-            height: 32px;
+            height: 24px;
             width: 100%;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
             transition: all .2s linear;
             position: absolute;
-            top: 20px;
-            transform: translateY(200%);
+            top: 10px;
+            z-index: 100;
+            padding: 2px;
             button{
-              box-shadow:none;
-              border: white solid 1px;
-              margin: 5px;
-              height: 20px;
-              width: 40px;
+              box-shadow: none;
+              background-color: transparent;
+              height: 30px;
+              width: 50%;
               margin: 0;
-              color: rgb(255, 255, 255);
               font-weight: bold;
               font-size: 0.75rem;
               line-height: 0.75rem;
               text-align: center;
-              background-color: transparent;
+              border-radius: 0;
+              border-width: 6px;
+              border-top: none;
+              &:first-of-type{
+                border-right-width: 3px;
+              }
+              &:last-of-type{
+                border-left-width: 3px;
+              }
             }
+
+          }
+          #context-menu.expand-down{
+            top: 0;
+            transform: translateX(12%);
+          }
+          #context-menu{
+            width: 80%;
+            min-width: initial;
+            background: var(--text-color);
+            border: none;
+          }
+          #context-menu li.context-item{
+            border: solid transparent 2px;
+            &:hover {
+            text-shadow: 0 0 4px #2694d4;
+            border: solid white 2px;
           }
         }
     }
-
+    .armor-card{
+      &:hover{
+        box-shadow: 0px 0px 7px #257A8C;
+      }
+      button{
+        border: 2px solid #257A8C;
+        color: #257A8C;
+        &:hover{
+          background: #257A8C;
+          color: white;
+        }
+      }
+    }
+    .weapon-card{
+      &:hover{
+        box-shadow: 0px 0px 7px #B44242;
+      }
+      button{
+        border: 2px solid #B44242;
+        color: #B44242;
+        &:hover{
+          background: #B44242;
+          color: white;
+      }
+    }
+  }
     .feats-talents{
       grid-row: 4 / 5;
       grid-column: 1 / 13;
@@ -418,7 +490,29 @@
       opacity: 0.45;
     }
   }
+
+  @keyframes shine{
+    10% {
+      opacity: 1;
+      top: -30%;
+      left: -30%;
+      transition-property: left, top, opacity;
+      transition-duration: 0.7s, 0.7s, 0.15s;
+      transition-timing-function: ease;
+    }
+    15%{
+      opacity: 0;
+    }
+    100% {
+      top: -30%;
+      left: -30%;
+      transition-property: left, top, opacity;
+    }
 }
+}
+}
+
+
 
 
 
