@@ -28,7 +28,7 @@ async function preloadHandlebarsTemplates(){
 /* -------------------------------------------- */
 
 Hooks.once('init', async function() {
-  console.log('initializing Star Wars: Saga Edition System')
+  console.log('Loading swsaga system')
   
   CONFIG.swSaga = swSaga;
   CONFIG.Actor.documentClass = swSagaActor;

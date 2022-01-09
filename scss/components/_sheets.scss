@@ -62,22 +62,22 @@
     text-shadow: none;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  label {
-    font-family: "Star Jedi";
+  label, h4 {
+    font-family: var(--main-heading-font);
     letter-spacing: 1px;
-    color: var(--text-color);
   }
 
-
+  label{
+    color: var(--text-color);
+  }
 
   .window-content{
     background: var(--background-color);
     padding: 1rem;
-  
+    h4.window-title{
+      color: white;
+ 
+    }
     form.character{
       display: grid;
       grid-template-rows: 150px 500px auto 150px;
@@ -450,7 +450,48 @@
     }
 
   }
-}
+    }
+    form.weapon{
+      display: flex;
+      flex-direction: column;
+      
+      h5{
+        margin: 0 0 .25rem 0;
+        input{
+          font-size: 2rem;
+          font-family: var(--main-heading-font);
+          padding: 0;
+          border: none;
+        }
+      }
+      .item-container{
+        div{
+          display: flex;
+          flex-wrap: wrap;
+          div{
+            display: flex;
+            flex-wrap: wrap;
+            flex: auto;
+            div{
+              display: flex;
+              flex-direction: column;
+            }
+          }
+          .profile-img{
+            width: 255px;
+            height: 150px;
+            border: solid 2px var(--text-color);
+            object-fit: fill;
+          }
+        }
+        textarea{
+          font-size: .75rem;
+        }
+        .label-container{
+          margin: 0.5rem;
+        }
+      }
+    }
 
 
   form div.label-container {

@@ -1,65 +1,42 @@
-<form class="{{cssClass}}" autocomplete="off">
+<form class="{{item.type}}" autocomplete="off">
   <header class="sheet-header">
-    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
     <div class="header-fields">
-      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
-    </div>
+        <h5><input name="name" id="itemName" type="text" value="{{item.name}}" placeholder="Name"/></h5>
+        <div class='label-container'><label for='weaponType'>{{localize "swSaga.weapon.type" }}</label><input id='weaponType' name="data.type" type='text' value="{{data.type}}"/></div>
   </header>
-
   <section>
-
-
-    <table>
-      <tr>
-        <th>{{localize "swSaga.weapon.skillUsed" }}</th>
-        <th>{{localize "swSaga.weapon.damage" }}</th>
-        <th>{{localize "swSaga.weapon.stunDamage" }}</th>
-        <th>{{localize "swSaga.weapon.weight" }}</th>
-        <th>{{localize "swSaga.weapon.damageType" }}</th>
-        <th>{{localize "swSaga.weapon.availability" }}</th>
-        <th>{{localize "swSaga.weapon.weaponWield" }}</th>
-        <th>{{localize "swSaga.weapon.weaponGroup" }}</th>
-        <th>{{localize "swSaga.weapon.range" }}</th>
-        <th>{{localize "swSaga.weapon.type" }}</th>
-      </tr>
-      <tr>
-        <td>
-          <select name="data.skillUsed">
-            {{#select data.skillUsed}}
-            {{#each config.skillUsed as |name type|}}
-            <option value="{{type}}">{{localize name}}</option>
-            {{/each}}
-            {{/select}}
-          </select>
-        </td>
-        <td>
-          <input name="data.damage" type='text' value="{{data.damage}}"  />
-        </td>
-        <td>
-          <input name="data.stunDamage" type='text' value="{{data.stunDamage}}"  />
-        </td>
-        <td>
-          <input name="data.weight" type='text' value="{{data.weight}}"  />
-        </td>
-        <td><input name="data.damageType" type='text' value="{{data.damageType}}"  />
-        </td>
-        <td>
-          <input name="data.availability" type='text' value="{{data.availability}}"  />
-        </td>
-        <td>
-          <input name="data.weaponWield" type='text' value="{{data.weaponWield}}"  />
-        </td>
-        <td>
-          <input name="data.weaponGroup" type='text' value="{{data.weaponGroup}}"  />
-        </td>
-        <td>
-          <input name="data.range" type='text' value="{{data.range}}"  />
-        </td>
-        <td>
-          <input name="data.type" type='text' value="{{data.type}}"  />
-        </td>
-      </tr>
-    </table>
-
+    <div class='item-container'>
+      <div>
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+        <div>
+          <div>
+            <div class='label-container'><label for='weaponAvail'>{{localize "swSaga.weapon.availability" }}</label><input id='weaponAvail' name="data.availability" type='text' value="{{data.availability}}"/></div>
+            <div class='label-container'><label for='weaponWield'>{{localize "swSaga.weapon.weaponWield" }}</label><input id='weaponWield' name="data.weaponWield" type='text' value="{{data.weaponWield}}"/></div>
+            <div class='label-container'><label for='weaponGroup'>{{localize "swSaga.weapon.weaponGroup" }}</label><input id='weaponGroup' name="data.weaponGroup" type='text' value="{{data.weaponGroup}}"/></div>
+          </div>
+          <div>
+            <div class='label-container'><label for='weaponDescription'>{{localize "swSaga.weapon.description" }}</label><textarea id='weaponDescription' name="data.description">{{data.description}}</textarea></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class='label-container'>
+          <label for='skillUsed'>{{localize 'swSaga.weapon.skillUsed' }}</label>
+            <select id='skillUsed' name="data.skillUsed">
+              {{#select data.skillUsed}}
+              {{#each config.skillUsed as |name type|}}
+              <option value="{{type}}">{{localize name}}</option>
+              {{/each}}
+              {{/select}}
+            </select>
+        </div>
+        <div class='label-container'><label for='weaponDamage'>{{localize 'swSaga.weapon.damage' }}</label><input id='weaponDamage' name="data.damage" type='text' value="{{data.damage}}"/></div>
+        <div class='label-container'><label for='stunDamage'>{{localize "swSaga.weapon.stunDamage" }}</label><input id='stunDamage' name="data.stunDamage" type='text' value="{{data.stunDamage}}"/></div>
+        <div class='label-container'><label for='weaponWeight'>{{localize "swSaga.weapon.weight" }}</label><input id='weaponWeight' name="data.weight" type='text' value="{{data.weight}}"/></div>
+        <div class='label-container'><label for='weaponDamageType'>{{localize "swSaga.weapon.damageType" }}</label><input id='weaponDamageType' name="data.damageType" type='text' value="{{data.damageType}}"/></div>
+        <div class='label-container'><label for='weaponRange'>{{localize "swSaga.weapon.range" }}</label><input id='weaponRange' name="data.range" type='text' value="{{data.range}}"/></div>      
+      </div>
+     
+    </div>    
   </section>
 </form>

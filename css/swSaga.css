@@ -1,8 +1,27 @@
 @font-face {
-  font-family: 'Star Jedi';
-  src: url("../type/starjedi-webfont.woff2") format("woff2"), url("../type/starjedi-webfont.woff") format("woff");
+  font-family: 'SFDistant Galaxy';
+  src: url("../type/SFDistantGalaxy.woff2") format("woff2"), url("../type/SFDistantGalaxy-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFDistant Galaxy Alternate';
+  src: url("../type/SFDistantGalaxyAlternate-webfont.woff2") format("woff2"), url("../type/SFDistantGalaxyAlternate-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFDistant Galaxy Outline';
+  src: url("../type/SFDistantGalaxyOutline-webfont.woff2") format("woff2"), url("../type/SFDistantGalaxyOutline-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --main-heading-font: 'SFDistant Galaxy';
+  --alt-heading-font: 'SFDistant Galaxy Outline';
 }
 
 :root {
@@ -103,19 +122,22 @@
   text-shadow: none;
 }
 
-.swsaga.sheet h1,
-.swsaga.sheet h2,
-.swsaga.sheet h3,
-.swsaga.sheet h4,
-.swsaga.sheet label {
-  font-family: "Star Jedi";
+.swsaga.sheet label, .swsaga.sheet h4 {
+  font-family: var(--main-heading-font);
   letter-spacing: 1px;
+}
+
+.swsaga.sheet label {
   color: var(--text-color);
 }
 
 .swsaga.sheet .window-content {
   background: var(--background-color);
   padding: 1rem;
+}
+
+.swsaga.sheet .window-content h4.window-title {
+  color: white;
 }
 
 .swsaga.sheet .window-content form.character {
@@ -621,6 +643,72 @@
 
 .swsaga.sheet .window-content form.character .current-equipment .feats-talents > div {
   width: 50%;
+}
+
+.swsaga.sheet .window-content form.weapon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.swsaga.sheet .window-content form.weapon h5 {
+  margin: 0 0 .25rem 0;
+}
+
+.swsaga.sheet .window-content form.weapon h5 input {
+  font-size: 2rem;
+  font-family: var(--main-heading-font);
+  padding: 0;
+  border: none;
+}
+
+.swsaga.sheet .window-content form.weapon .item-container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.swsaga.sheet .window-content form.weapon .item-container div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-flex: 1;
+  -ms-flex: auto;
+  flex: auto;
+}
+
+.swsaga.sheet .window-content form.weapon .item-container div div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.swsaga.sheet .window-content form.weapon .item-container div .profile-img {
+  width: 255px;
+  height: 150px;
+  border: solid 2px var(--text-color);
+  -o-object-fit: fill;
+  object-fit: fill;
+}
+
+.swsaga.sheet .window-content form.weapon .item-container textarea {
+  font-size: .75rem;
+}
+
+.swsaga.sheet .window-content form.weapon .item-container .label-container {
+  margin: 0.5rem;
 }
 
 .swsaga.sheet .window-content form div.label-container {

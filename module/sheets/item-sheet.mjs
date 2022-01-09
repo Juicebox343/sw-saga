@@ -38,8 +38,4 @@ export default class swSagaItemSheet extends ItemSheet {
     // Everything below here is only needed if the sheet is editable
 
   }
-
-  
-
-
 }

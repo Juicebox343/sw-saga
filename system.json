@@ -9,78 +9,6 @@
   "esmodules": ["swSaga.mjs"],
   "styles": ["css/swSaga.css"],
   "scripts": [],
-  "packs": [
-    {
-      "name": "heroes",
-      "label": "Starter Heroes",
-      "system": "dnd5e",
-      "path": "./packs/heroes.db",
-      "entity": "Actor"
-    },
-    {
-      "name": "monsters",
-      "label": "Monsters (SRD)",
-      "system": "dnd5e",
-      "path": "./packs/monsters.db",
-      "entity": "Actor"
-    },
-    {
-      "name": "items",
-      "label": "Items (SRD)",
-      "system": "dnd5e",
-      "path": "./packs/items.db",
-      "entity": "Item"
-    },
-    {
-      "name": "tradegoods",
-      "label": "Trade Goods (SRD)",
-      "system": "dnd5e",
-      "path": "./packs/tradegoods.db",
-      "entity": "Item"
-    },
-    {
-      "name": "spells",
-      "label": "Spells (SRD)",
-      "system": "dnd5e",
-      "path": "./packs/spells.db",
-      "entity": "Item"
-    },
-    {
-      "name": "classes",
-      "label": "Classes (SRD)",
-      "system": "dnd5e",
-      "path": "./packs/classes.db",
-      "entity": "Item"
-    },
-    {
-      "name": "classfeatures",
-      "label": "Class Features (SRD)",
-      "system": "dnd5e",
-      "path": "./packs/classfeatures.db",
-      "entity": "Item"
-    },
-    {
-      "name": "races",
-      "label": "Racial Features (SRD)",
-      "system": "dnd5e",
-      "path": "./packs/races.db",
-      "entity": "Item"
-    },
-    {
-      "name": "monsterfeatures",
-      "label": "Monster Features (SRD)",
-      "system": "dnd5e",
-      "path": "./packs/monsterfeatures.db",
-      "entity": "Item"
-    },
-    {
-      "name": "rules",
-      "label": "Rules (SRD)",
-      "system": "dnd5e",
-      "path": "./packs/rules.db",
-      "entity": "JournalEntry"
-    }
-  ],
   "languages": [
     {
       "lang": "en",
@@ -91,7 +19,7 @@
   "gridDistance": 1.5,
   "gridUnits": "m",
   "primaryTokenAttribute": "health",
-  "secondaryTokenAttribute": "darkside",
+  "secondaryTokenAttribute": "condition",
   "url": "https://gitlab.com/Juicebox343/foundry-swSaga",
   "manifest": "https://gitlab.com/Juicebox343/foundry-swSaga/-/blob/5023866c5d8251ae12d88bd754a0986385d00ac5/system.json",
   "download": "https://gitlab.com/Juicebox343/foundry-swSaga/-/archive/main/foundry-swSaga-main.zip",

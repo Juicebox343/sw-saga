@@ -19,8 +19,9 @@
       "skillUsed": "Skill Used",
       "availability": "Availability",
       "range": "Ranged Damage",
-      "weaponWield": "Weapon Type",
-      "weaponGroup": "Weapon Group"
+      "weaponWield": "Wield",
+      "weaponGroup": "Weapon Group",
+      "type": "Type"
     },
     "armor":{
       "cost": "Price",

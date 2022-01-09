@@ -306,7 +306,8 @@
     "types": ["weapon", "armor", "equipment", "consumable", "class", "feat", "talent", "species", "forcePower"],
     "templates": {
       "itemDescription": {
-        "description": ""
+        "description": "",
+        "image_url": ""
       }
     },
     "species":{
