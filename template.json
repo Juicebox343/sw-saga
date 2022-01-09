@@ -368,7 +368,7 @@
       "damageType": "",
       "skillUsed": "",
       "availability": "",
-      "range": [0, 0, 0, 0],
+      "range": "",
       "type": "",
       "weaponWield": "ranged",
       "weaponGroup": "simple"

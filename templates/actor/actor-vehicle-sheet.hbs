@@ -1,0 +1,296 @@
+<form class="{{cssClass}} {{actor.type}}" autocomplete="off">
+
+  {{!-- Sheet Header --}}
+  <header class="sheet-header">
+    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="200" width="200" />
+
+    <div class='sub-container'>
+      <div class='label-container character-form character-name row-item'>
+        <label for='characterName'>Character</label>
+        <input name="name" id="characterName" type="text" value="{{actor.name}}" placeholder="Name" />
+      </div>
+
+      <div class='label-container character-form character-level row-item'>
+        <label for='characterLevel'>Level</label>
+        <input name="data.characterLevel" id="characterLevel" type="text" value="{{data.characterLevel}}"
+          placeholder="Level" />
+      </div>
+
+      <div class='label-container character-form item-card item row-item' data-item-id={{species.[0]._id}}>
+        <label for='speciesName'>Species</label>
+        <a class='item-edit' title="{{localize " swsaga.sheet.editItem"}}">{{ species.[0].name }}</a>
+      </div>
+
+      <div class='label-container character-form row-item'>
+        <label for='characterPerc'>Perc</label>
+        <input name="" id="topLevelPerception" type="text" value="" placeholder="0" />
+      </div>
+
+      <div class='label-container character-form row-item'>
+        <label for='characterInit'>init</label>
+        <input name="" id="topLevelInit" type="text" value="" placeholder="0" />
+      </div>
+
+      <div class='label-container character-form row-item '>
+        <label for='characterBA'>BA</label>
+        <input name="data.attributes.baseAttack" id="topLevelBA" type="text" value="{{data.attributes.baseAttack}}"
+          placeholder="0" />
+      </div>
+
+      <div class='label-container character-form row-item'>
+        <label for='characterSpeed'>Speed</label>
+        <input name="" id="topLevelSpeed" type="text" value="" placeholder="0" />
+      </div>
+    </div>
+
+    <div class='sub-container'>
+      <div class='label-container character-form row-item'>
+        <label for='fortDef'>Fort</label>
+        <p>{{ data.fort }}</p>
+      </div>
+
+      <div class='label-container character-form row-item'>
+        <label for='refDef'>Ref</label>
+        <p>{{ data.ref }}</p>
+      </div>
+
+      <div class='label-container character-form row-item'>
+        <label for='willDef'>Will</label>
+        <p>{{ data.will }}</p>
+      </div>
+    </div>
+
+    <div class='sub-container'>
+      <div class='label-container hitpoints row-item'>
+        <label for='hitpoints'>HP</label>
+        <input name="data.attributes.hp.value" id="hitpoints" type="text" value="{{data.attributes.hp.value}}"
+          placeholder="{{data.attributes.hp.value}}" />
+      </div>
+
+      <div class='label-container condition row-item'>
+        <input name="data.attributes.condition" id="condition" type="text" value="{{data.attributes.condition}}"
+          placeholder="{{data.attributes.condition}}" />
+        <label for='condition'>Cond</label>
+      </div>
+
+      <div class='label-container shieldReduction row-item'>
+        <label for='shieldReduction'>SR</label>
+        <input name="" id="shieldReduction" type="text" value="" placeholder="" />
+      </div>
+
+      <div class='label-container damageReduction row-item'>
+        <label for='damageReduction'>DR</label>
+        <input name="" id="damageReduction" type="text" value="" placeholder="" />
+      </div>
+
+      <div class='label-container threshold row-item'>
+        <label for='threshold'>DT</label>
+        <input name="n" id="threshold" type="text" value="" placeholder="" />
+      </div>
+    </div>
+
+  </header>
+
+
+
+
+  <section class='stat-block'>
+    <div>
+      <div class='label-container character-form'>
+        <label for='forcePoint'>Force</label>
+        <input name="" id="forcePoint" type="text" value="" placeholder="" />
+      </div>
+
+      <div class='label-container character-form '>
+        <label for='destPoint'>Dest.</label>
+        <input name="" id="destPoint" type="text" value="" placeholder="" />
+      </div>
+    </div>
+
+    <div class='label-container character-form abilities'>
+      <label for='strengthStat'>Strength</label>
+      <input name="data.abilities.str.value" id="strengthStat" type="text" value="{{data.abilities.str.value}}" />
+      <div><span>{{data.abilities.str.mod}}</span></div>
+    </div>
+
+    <div class='label-container character-form abilities'>
+      <label for='dexStat'>Dexterity</label>
+      <input name="data.abilities.dex.value" id="dexStat" type="text" value="{{data.abilities.dex.value}}" />
+      <div><span>{{data.abilities.dex.mod}}</span></div>
+    </div>
+
+    <div class='label-container character-form abilities'>
+      <label for='conStat'>Constitution</label>
+      <input name="data.abilities.con.value" id="conStat" type="text" value="{{data.abilities.con.value}}" />
+      <div><span>{{data.abilities.con.mod}}</span></div>
+    </div>
+
+
+    <div class='label-container character-form abilities'>
+      <label for='intStat'>Intelligence</label>
+      <input name="data.abilities.int.value" id="intStat" type="text" value="{{data.abilities.int.value}}" />
+      <div><span>{{data.abilities.int.mod}}</span></div>
+    </div>
+
+    <div class='label-container character-form abilities'>
+      <label for='wisStat'>Wisdom</label>
+      <input name="data.abilities.wis.value" id="wisStat" type="text" value="{{data.abilities.wis.value}}" />
+      <div><span>{{data.abilities.wis.mod}}</span></div>
+    </div>
+
+    <div class='label-container character-form abilities'>
+      <label for='chaStat'>Charisma</label>
+      <input name="data.abilities.cha.value" id="chaStat" type="text" value="{{data.abilities.cha.value}}" />
+      <div><span>{{data.abilities.cha.mod}}</span></div>
+    </div>
+
+    <div class='label-container character-form'>
+      <label for='characterLang'>Languages</label>
+      <input name="" id="characterLang" type="text" value="" placeholder="" />
+    </div>
+
+    <div class='label-container character-form'>
+      <label for='characterCredit'>Credits</label>
+      <input name="data.credits" id="characterCredit" type="text" value="{{data.credits}}"
+        placeholder="{{data.credits}}" />
+    </div>
+
+  </section>
+
+  <section class="character-page">
+    <nav class="sheet-tabs tabs" data-group="primary">
+      <a class="item active" data-tab="skills">Skills</a>
+      <a class="item" data-tab="force">Force Powers</a>
+      <a class="item" data-tab="inventory">Inventory</a>
+      <a class="item" data-tab="bio">Bio and Class</a>
+    </nav>
+    <section class='sheet-body'>
+      <section class="tab skills" data-group="primary" data-tab="skills">
+        <table>
+          <tr>
+            <th>Trained?</th>
+            <th>Skill</th>
+            <th>Bonus</th>
+            <th>Modifier</th>
+          </tr>
+          {{#each data.skills as |skill id|}}
+          <tr data-item-id="{{@key}}" class='item'>
+            <td><input type='checkbox' {{#if trained}}checked{{/if}}></td>
+            <td data-roll="d20+@skills.{{@key}}.mod" data-label="{{name}}" data-rollType='check' class='rollable'>
+              {{name}}</td>
+            <td>{{mod}}</td>
+            <td>{{attribute}}</td>
+          </tr>
+          {{/each}}
+        </table>
+      </section>
+
+      <section class="tab force" data-group="primary" data-tab="force">
+        {{#each force as |force id|}}
+        <div class='item-card item' data-item-id="{{_id}}">
+          <p>{{name}}</p><a class='item-delete'><i class="fas fa-times"></i></a>
+        </div>
+        {{/each}}
+      </section>
+
+      <section class="tab inventory" data-group="primary" data-tab="inventory">
+        <a class="item-create" data-type="skill" title="{{localize " swsaga.sheet.newItem"}}">
+          <i class="fas fa-plus"></i>Add Item</a>
+        {{#each weapons as |weapon id|}}
+        <div class='item-card item' data-item-id="{{_id}}">
+          <p>{{name}}</p><a class='item-delete'><i class="fas fa-times"></i></a>
+        </div>
+        {{/each}}
+        {{#each armor as |armor id|}}
+        <div class='item-card item' data-item-id="{{_id}}">
+          <p>{{name}}</p><a class='item-delete'><i class="fas fa-times"></i></a>
+        </div>
+        {{/each}}
+        {{#each consumables as |consumable id|}}
+        <div class='item-card item' data-item-id="{{_id}}">
+          <p>{{name}}</p><a class='item-delete'><i class="fas fa-times"></i></a>
+        </div>
+        {{/each}}
+        {{#each equipment as |equipment id|}}
+        <div class='item-card item' data-item-id="{{_id}}">
+          <p>{{name}}</p><a class='item-delete'><i class="fas fa-times"></i></a>
+        </div>
+        {{/each}}
+      </section>
+
+      <section class="tab bio" data-group="primary" data-tab="bio">
+        <div class='label-container row-item player-form'>
+          <label for='characterAge'>Age</label>
+          <input type='text' id='characterAge' name='data.details.age' value="{{data.details.age}}" />
+        </div>
+        <div class='label-container row-item player-form'>
+          <label for='characterGender'>Gender</label>
+          <input type='text' id='characterGender' name='data.details.gender' value="{{data.details.gender}}" />
+        </div>
+        <div class='label-container row-item player-form'>
+          <label for='characterHeight'>Height</label>
+          <input type='text' id='characterHeight' name='data.details.height' value="{{data.details.height}}"
+            data-dtype="Number" />
+        </div>
+        <div class='label-container row-item player-form'>
+          <label for='characterWeight'>Weight</label>
+          <input type='text' id='characterWeight' name='data.details.weight' value="{{data.details.weight}}"
+            data-dtype="Number" />
+        </div>
+
+        <div class='label-container row-item player-form'>
+          {{#each class as |class id|}}
+          <div class='item-card item' data-item-id="{{_id}}">
+            <p>{{name}} {{id}}</p><a class='item-delete'><i class="fas fa-times"></i></a>
+          </div>
+          {{/each}}
+        </div>
+
+      </section>
+    </section>
+  </section>
+
+  <section class='current-equipment'>
+    <div class='label-container character-form'>
+      <label for='equippedWeapon'>Weapon</label>
+      <div id='equippedWeapon'>
+        {{#each weapons as |weapon id|}}
+        {{> "systems/swSaga/templates/item/partials/components/weapon-card.hbs" weapon}}
+        {{/each}}
+      </div>
+    </div>
+    <div class='label-container character-form'>
+      <label for='equippedClothing'>Clothing/Armor</label>
+      <div id='equippedClothing'>
+        {{#each armor as |armor id|}}
+        {{> "systems/swSaga/templates/item/partials/components/armor-card.hbs" armor}}
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <section class='feats-talents'>
+    <div class='label-container character-form'>
+      <label for='feats'>Feats</label>
+      <div id='feats'>
+        {{#each feats as |feat id|}}
+        <div class='item-card item' data-item-id="{{_id}}">
+          <p>{{name}}</p><a class='item-delete'><i class="fas fa-times"></i></a>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+    <div class='label-container character-form'>
+      <label for='talents'>Talents</label>
+      <div id='talents'>
+        {{#each talents as |talent id|}}
+        {{log id}}
+        <div class='item-card item' data-item-id="{{_id}}">
+          <p>{{name}}</p><a class='item-delete'><i class="fas fa-times"></i></a>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+</form>

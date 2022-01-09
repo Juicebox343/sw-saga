@@ -1,52 +1,28 @@
-<form class="{{cssClass}}" autocomplete="off">
+<form class="{{item.type}}" autocomplete="off">
   <header class="sheet-header">
-    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
     <div class="header-fields">
-      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
-    </div>
+        <h5><input name="name" id="itemName" type="text" value="{{item.name}}" placeholder="Name"/></h5>
+        <div class='label-container'><label for='armorType'>{{localize "swSaga.armor.type" }}</label><input id='armorType' name="data.type" type='text' value="{{data.type}}"/></div>
   </header>
-
   <section>
-    <table>
-      <tr>
-        <th>{{localize "swSaga.armor.refBonus" }}</th>
-        <th>{{localize "swSaga.armor.fortDef" }}</th>
-        <th>{{localize "swSaga.armor.maxDex" }}</th>
-        <th>{{localize "swSaga.armor.cost" }}</th>
-        <th>{{localize "swSaga.armor.weight" }}</th>
-        <th>{{localize "swSaga.armor.speedReduction" }}</th>
-        <th>{{localize "swSaga.armor.availability" }}</th>
-        <th>{{localize "swSaga.armor.size" }}</th>
-        <th>{{localize "swSaga.armor.type" }}</th>
-      </tr>
-      <tr>
-        <td>
-          <input name="data.refBonus" type='text' value="{{data.refBonus}}"  />
-        </td>
-        <td>
-          <input name="data.fortDef" type='text' value="{{data.fortDef}}"  />
-        </td>
-        <td>
-          <input name="data.maxDex" type='text' value="{{data.maxDex}}"  />
-        </td>
-        <td><input name="data.cost" type='text' value="{{data.cost}}"  />
-        </td>
-        <td>
-          <input name="data.weight" type='text' value="{{data.weight}}"  />
-        </td>
-        <td>
-          <input name="data.speedReduction" type='text' value="{{data.speedReduction}}"  />
-        </td>
-        <td>
-          <input name="data.availability" type='text' value="{{data.availability}}"  />
-        </td>
-        <td>
-          <input name="data.size" type='text' value="{{data.size}}"  />
-        </td>
-        <td>
-          <input name="data.type" type='text' value="{{data.type}}"  />
-        </td>
-      </tr>
-    </table>
+    <div class='item-container'>
+      <div>
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+        <div>
+          <div>
+            <div class='label-container'><label for='armorAvail'>{{localize "swSaga.armor.availability" }}</label><input id='armorAvail' name="data.availability" type='text' value="{{data.availability}}"/></div>
+            <div class='label-container'><label for='armorSize'>{{localize "swSaga.armor.size" }}</label><input id='armorSize' name="data.armorSize" type='text' value="{{data.armorSize}}"/></div>
+            <div class='label-container'><label for='armorCost'>{{localize "swSaga.armor.cost" }}</label><input id='armorCost' name="data.armorCost" type='text' value="{{data.armorCost}}"/></div>
+          </div>
+          <div>
+            <div class='label-container'><label for='armorDescription'>{{localize "swSaga.item.description" }}</label><textarea id='armorDescription' name="data.description">{{data.description}}</textarea></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        
+      </div>
+     
+    </div>    
   </section>
 </form>

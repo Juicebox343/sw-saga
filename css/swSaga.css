@@ -645,7 +645,7 @@
   width: 50%;
 }
 
-.swsaga.sheet .window-content form.weapon {
+.swsaga.sheet .window-content form.weapon, .swsaga.sheet .window-content form.armor {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -655,18 +655,18 @@
   flex-direction: column;
 }
 
-.swsaga.sheet .window-content form.weapon h5 {
+.swsaga.sheet .window-content form.weapon h5, .swsaga.sheet .window-content form.armor h5 {
   margin: 0 0 .25rem 0;
 }
 
-.swsaga.sheet .window-content form.weapon h5 input {
+.swsaga.sheet .window-content form.weapon h5 input, .swsaga.sheet .window-content form.armor h5 input {
   font-size: 2rem;
   font-family: var(--main-heading-font);
   padding: 0;
   border: none;
 }
 
-.swsaga.sheet .window-content form.weapon .item-container div {
+.swsaga.sheet .window-content form.weapon .item-container div, .swsaga.sheet .window-content form.armor .item-container div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -674,7 +674,7 @@
   flex-wrap: wrap;
 }
 
-.swsaga.sheet .window-content form.weapon .item-container div div {
+.swsaga.sheet .window-content form.weapon .item-container div div, .swsaga.sheet .window-content form.armor .item-container div div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -685,7 +685,7 @@
   flex: auto;
 }
 
-.swsaga.sheet .window-content form.weapon .item-container div div div {
+.swsaga.sheet .window-content form.weapon .item-container div div div, .swsaga.sheet .window-content form.armor .item-container div div div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -695,7 +695,7 @@
   flex-direction: column;
 }
 
-.swsaga.sheet .window-content form.weapon .item-container div .profile-img {
+.swsaga.sheet .window-content form.weapon .item-container div .profile-img, .swsaga.sheet .window-content form.armor .item-container div .profile-img {
   width: 255px;
   height: 150px;
   border: solid 2px var(--text-color);
@@ -703,11 +703,11 @@
   object-fit: fill;
 }
 
-.swsaga.sheet .window-content form.weapon .item-container textarea {
+.swsaga.sheet .window-content form.weapon .item-container textarea, .swsaga.sheet .window-content form.armor .item-container textarea {
   font-size: .75rem;
 }
 
-.swsaga.sheet .window-content form.weapon .item-container .label-container {
+.swsaga.sheet .window-content form.weapon .item-container .label-container, .swsaga.sheet .window-content form.armor .item-container .label-container {
   margin: 0.5rem;
 }
 

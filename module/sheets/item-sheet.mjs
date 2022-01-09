@@ -13,7 +13,12 @@ export default class swSagaItemSheet extends ItemSheet {
 
   get template() {
     const path = "systems/swSaga/templates/item";
-    return `${path}/item-${this.item.data.type}-sheet.hbs`;
+    if(this.item.data.type === 'weapon' || this.item.data.type === 'armor' || this.item.data.type === 'equipment' || this.item.data.type === 'consumable'){
+      return `${path}/item-sheet.hbs`;
+    } else {
+      return `${path}/item-${this.item.data.type}-sheet.hbs`;
+    }
+
   }
 
   
