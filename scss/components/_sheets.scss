@@ -78,7 +78,9 @@
       color: white;
  
     }
-    form.character{
+  }
+}
+    .actor form.character{
       display: grid;
       grid-template-rows: 150px 500px auto 150px;
       grid-template-columns: repeat(12, 1fr);
@@ -451,7 +453,7 @@
 
   }
     }
-    form.weapon, form.armor{
+    .item form{
       display: flex;
       flex-direction: column;
       
@@ -465,24 +467,25 @@
         }
       }
       .item-container{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
         div{
           display: flex;
-          flex-wrap: wrap;
-          div{
-            display: flex;
-            flex-wrap: wrap;
-            flex: auto;
-            div{
-              display: flex;
-              flex-direction: column;
-            }
+          flex-direction: column;
+         &:first-of-type{
+          flex: 1;
+         }
+          &:last-of-type{
+          flex: 3;
           }
-          .profile-img{
-            width: 255px;
-            height: 150px;
-            border: solid 2px var(--text-color);
-            object-fit: fill;
-          }
+        }
+
+        .profile-img{
+          width: 255px;
+          height: 150px;
+          border: solid 2px var(--text-color);
+          object-fit: fill;
         }
         textarea{
           font-size: .75rem;
@@ -491,7 +494,6 @@
           margin: 0.5rem;
         }
       }
-    }
 
 
   form div.label-container {
@@ -550,10 +552,8 @@
       transition-property: left, top, opacity;
     }
 }
-}
-}
 
-
+    }
 
 
 

@@ -140,7 +140,7 @@
   color: white;
 }
 
-.swsaga.sheet .window-content form.character {
+.actor form.character {
   display: grid;
   grid-template-rows: 150px 500px auto 150px;
   grid-template-columns: repeat(12, 1fr);
@@ -149,7 +149,7 @@
   width: 100%;
 }
 
-.swsaga.sheet .window-content form.character .sheet-header {
+.actor form.character .sheet-header {
   grid-row: 1 / 2;
   grid-column: 1 / 13;
   display: grid;
@@ -158,7 +158,7 @@
   grid-template-columns: 150px 3fr 1fr 150px;
 }
 
-.swsaga.sheet .window-content form.character .sheet-header img {
+.actor form.character .sheet-header img {
   grid-row: 1 / 2;
   grid-column: 1 / 2;
   width: 150px;
@@ -166,7 +166,7 @@
   border-radius: 3px;
 }
 
-.swsaga.sheet .window-content form.character .sheet-header .sub-container:first-of-type {
+.actor form.character .sheet-header .sub-container:first-of-type {
   grid-row: 1 / 2;
   grid-column: 2 / 3;
   display: grid;
@@ -175,27 +175,27 @@
   grid-template-rows: repeat(3, 1fr);
 }
 
-.swsaga.sheet .window-content form.character .sheet-header .sub-container:first-of-type .character-name {
+.actor form.character .sheet-header .sub-container:first-of-type .character-name {
   grid-row: 1 / 2;
   grid-column: 1 / 4;
 }
 
-.swsaga.sheet .window-content form.character .sheet-header .sub-container:first-of-type .character-level {
+.actor form.character .sheet-header .sub-container:first-of-type .character-level {
   grid-row: 1 / 2;
   grid-column: 4 / 5;
 }
 
-.swsaga.sheet .window-content form.character .sheet-header .sub-container:first-of-type .species-select {
+.actor form.character .sheet-header .sub-container:first-of-type .species-select {
   grid-row: 2 / 3;
   grid-column: 1 / 3;
 }
 
-.swsaga.sheet .window-content form.character .sheet-header .sub-container:first-of-type .class-select {
+.actor form.character .sheet-header .sub-container:first-of-type .class-select {
   grid-row: 2 / 3;
   grid-column: 3 / 5;
 }
 
-.swsaga.sheet .window-content form.character .sheet-header .sub-container {
+.actor form.character .sheet-header .sub-container {
   display: grid;
   gap: .5rem;
   grid-row: 1 / 2;
@@ -203,7 +203,7 @@
   height: 100%;
 }
 
-.swsaga.sheet .window-content form.character .sheet-header .sub-container:last-of-type {
+.actor form.character .sheet-header .sub-container:last-of-type {
   grid-row: 1 / 2;
   grid-column: 4 / 5;
   display: grid;
@@ -212,37 +212,37 @@
   grid-template-rows: 1fr;
 }
 
-.swsaga.sheet .window-content form.character .sheet-header .sub-container:last-of-type .hitpoints {
+.actor form.character .sheet-header .sub-container:last-of-type .hitpoints {
   grid-row: 1 / 3;
   grid-column: 1 / 2;
 }
 
-.swsaga.sheet .window-content form.character .sheet-header .sub-container:last-of-type .hitpoints input {
+.actor form.character .sheet-header .sub-container:last-of-type .hitpoints input {
   height: 100%;
   font-size: 2rem;
 }
 
-.swsaga.sheet .window-content form.character .sheet-header .sub-container:last-of-type .condition {
+.actor form.character .sheet-header .sub-container:last-of-type .condition {
   grid-row: 3 / 4;
   grid-column: 1 / 2;
 }
 
-.swsaga.sheet .window-content form.character .sheet-header .sub-container:last-of-type .shieldReduction {
+.actor form.character .sheet-header .sub-container:last-of-type .shieldReduction {
   grid-row: 1 / 2;
   grid-column: 2 / 3;
 }
 
-.swsaga.sheet .window-content form.character .sheet-header .sub-container:last-of-type .damageReduction {
+.actor form.character .sheet-header .sub-container:last-of-type .damageReduction {
   grid-row: 2 / 3;
   grid-column: 2 / 3;
 }
 
-.swsaga.sheet .window-content form.character .sheet-header .sub-container:last-of-type .threshold {
+.actor form.character .sheet-header .sub-container:last-of-type .threshold {
   grid-row: 3 / 4;
   grid-column: 2 / 3;
 }
 
-.swsaga.sheet .window-content form.character .sheet-header .row {
+.actor form.character .sheet-header .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -251,14 +251,14 @@
   justify-content: space-between;
 }
 
-.swsaga.sheet .window-content form.character .sheet-header .row .row-item {
+.actor form.character .sheet-header .row .row-item {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin: 0.25rem;
 }
 
-.swsaga.sheet .window-content form.character .stat-block {
+.actor form.character .stat-block {
   grid-row: 2 / 3;
   grid-column: 1 / 3;
   display: -webkit-box;
@@ -273,14 +273,14 @@
   justify-content: space-between;
 }
 
-.swsaga.sheet .window-content form.character .stat-block div:first-of-type {
+.actor form.character .stat-block div:first-of-type {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 1rem;
 }
 
-.swsaga.sheet .window-content form.character .stat-block div {
+.actor form.character .stat-block div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -294,7 +294,7 @@
   height: 45px;
 }
 
-.swsaga.sheet .window-content form.character .stat-block span {
+.actor form.character .stat-block span {
   font-size: 1rem;
   background-color: var(--background-color);
   border-radius: 3px;
@@ -304,7 +304,7 @@
   z-index: 2;
 }
 
-.swsaga.sheet .window-content form.character .character-page {
+.actor form.character .character-page {
   grid-row: 2 / 3;
   grid-column: 3 / 13;
   border: solid 1px var(--text-color);
@@ -312,52 +312,52 @@
   padding: 0 1rem;
 }
 
-.swsaga.sheet .window-content form.character .character-page nav.sheet-tabs {
+.actor form.character .character-page nav.sheet-tabs {
   border-top: none;
   border-bottom-color: var(--text-color);
   margin-bottom: 1rem;
 }
 
-.swsaga.sheet .window-content form.character .character-page nav.sheet-tabs .item.active {
+.actor form.character .character-page nav.sheet-tabs .item.active {
   text-shadow: 0 0 10px #2694d4;
 }
 
-.swsaga.sheet .window-content form.character .character-page nav.sheet-tabs .item:hover {
+.actor form.character .character-page nav.sheet-tabs .item:hover {
   text-shadow: 0 0 10px #2694d4;
 }
 
-.swsaga.sheet .window-content form.character .character-page .sheet-body {
+.actor form.character .character-page .sheet-body {
   height: calc(100% - 52px);
 }
 
-.swsaga.sheet .window-content form.character .character-page .skills {
+.actor form.character .character-page .skills {
   height: 100%;
   overflow-y: scroll;
   font-size: .75rem;
 }
 
-.swsaga.sheet .window-content form.character .character-page .skills table {
+.actor form.character .character-page .skills table {
   border: none;
 }
 
-.swsaga.sheet .window-content form.character .character-page .skills table th {
+.actor form.character .character-page .skills table th {
   text-align: left;
   width: 30px;
 }
 
-.swsaga.sheet .window-content form.character .character-page .skills table th:nth-of-type(2) {
+.actor form.character .character-page .skills table th:nth-of-type(2) {
   width: 125px;
 }
 
-.swsaga.sheet .window-content form.character .character-page .skills table tr:nth-child(even) {
+.actor form.character .character-page .skills table tr:nth-child(even) {
   border: 1px solid var(--background-color);
 }
 
-.swsaga.sheet .window-content form.character .character-page .skills table tr:nth-child(odd) {
+.actor form.character .character-page .skills table tr:nth-child(odd) {
   border: 1px solid var(--background-color);
 }
 
-.swsaga.sheet .window-content form.character .character-page .tab.active {
+.actor form.character .character-page .tab.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -370,11 +370,11 @@
   height: 100%;
 }
 
-.swsaga.sheet .window-content form.character .character-page .tab.active p {
+.actor form.character .character-page .tab.active p {
   margin: 4px 0;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment {
+.actor form.character .current-equipment {
   grid-row: 3 / 4;
   grid-column: 1 / 13;
   display: -webkit-box;
@@ -383,7 +383,7 @@
   gap: .5rem;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment > div {
+.actor form.character .current-equipment > div {
   border-radius: 3px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -398,7 +398,7 @@
   padding: 1rem;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment > div > div {
+.actor form.character .current-equipment > div > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -413,7 +413,7 @@
   gap: .5rem;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .item-card {
+.actor form.character .current-equipment .item-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -441,7 +441,7 @@
   height: 130px;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .item-card:hover::after {
+.actor form.character .current-equipment .item-card:hover::after {
   content: "";
   -webkit-animation: shine 3s ease-in-out;
   animation: shine 3s ease-in-out;
@@ -460,29 +460,29 @@
   background: linear-gradient(to right, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.13) 77%, rgba(255, 255, 255, 0.774) 92%, rgba(255, 255, 255, 0) 100%);
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .item-card:active::after {
+.actor form.character .current-equipment .item-card:active::after {
   opacity: 0;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .item-card:hover div {
+.actor form.character .current-equipment .item-card:hover div {
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .item-card:hover .item-detail {
+.actor form.character .current-equipment .item-card:hover .item-detail {
   -webkit-transform: translateY(0%);
   -ms-transform: translateY(0%);
   transform: translateY(0%);
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .item-card:hover .item-name {
+.actor form.character .current-equipment .item-card:hover .item-name {
   -webkit-transform: translateY(200%);
   -ms-transform: translateY(200%);
   transform: translateY(200%);
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .item-card img.weapon {
+.actor form.character .current-equipment .item-card img.weapon {
   border: none;
   width: 100%;
   height: auto;
@@ -490,7 +490,7 @@
   top: 35px;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .item-card img.armor {
+.actor form.character .current-equipment .item-card img.armor {
   border: none;
   width: 100%;
   height: auto;
@@ -498,13 +498,13 @@
   top: 20px;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .item-card p {
+.actor form.character .current-equipment .item-card p {
   margin: 0;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .item-card .item-name {
+.actor form.character .current-equipment .item-card .item-name {
   position: absolute;
   bottom: 6px;
   color: white;
@@ -519,7 +519,7 @@
   transition: transform .2s linear, -webkit-transform .2s linear;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .item-card .item-detail {
+.actor form.character .current-equipment .item-card .item-detail {
   position: absolute;
   bottom: 2px;
   font-size: 1.25rem;
@@ -534,7 +534,7 @@
   transform: translateY(200%);
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .item-card div {
+.actor form.character .current-equipment .item-card div {
   height: 24px;
   width: 100%;
   display: -webkit-box;
@@ -555,7 +555,7 @@
   padding: 2px;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .item-card div button {
+.actor form.character .current-equipment .item-card div button {
   -webkit-box-shadow: none;
   box-shadow: none;
   background-color: transparent;
@@ -571,68 +571,68 @@
   border-top: none;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .item-card div button:first-of-type {
+.actor form.character .current-equipment .item-card div button:first-of-type {
   border-right-width: 3px;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .item-card div button:last-of-type {
+.actor form.character .current-equipment .item-card div button:last-of-type {
   border-left-width: 3px;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .item-card #context-menu.expand-down {
+.actor form.character .current-equipment .item-card #context-menu.expand-down {
   top: 0;
   -webkit-transform: translateX(12%);
   -ms-transform: translateX(12%);
   transform: translateX(12%);
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .item-card #context-menu {
+.actor form.character .current-equipment .item-card #context-menu {
   width: 80%;
   min-width: initial;
   background: var(--text-color);
   border: none;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .item-card #context-menu li.context-item {
+.actor form.character .current-equipment .item-card #context-menu li.context-item {
   border: solid transparent 2px;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .item-card #context-menu li.context-item:hover {
+.actor form.character .current-equipment .item-card #context-menu li.context-item:hover {
   text-shadow: 0 0 4px #2694d4;
   border: solid white 2px;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .armor-card:hover {
+.actor form.character .current-equipment .armor-card:hover {
   -webkit-box-shadow: 0px 0px 7px #257A8C;
   box-shadow: 0px 0px 7px #257A8C;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .armor-card button {
+.actor form.character .current-equipment .armor-card button {
   border: 2px solid #257A8C;
   color: #257A8C;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .armor-card button:hover {
+.actor form.character .current-equipment .armor-card button:hover {
   background: #257A8C;
   color: white;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .weapon-card:hover {
+.actor form.character .current-equipment .weapon-card:hover {
   -webkit-box-shadow: 0px 0px 7px #B44242;
   box-shadow: 0px 0px 7px #B44242;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .weapon-card button {
+.actor form.character .current-equipment .weapon-card button {
   border: 2px solid #B44242;
   color: #B44242;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .weapon-card button:hover {
+.actor form.character .current-equipment .weapon-card button:hover {
   background: #B44242;
   color: white;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .feats-talents {
+.actor form.character .current-equipment .feats-talents {
   grid-row: 4 / 5;
   grid-column: 1 / 13;
   display: -webkit-box;
@@ -641,11 +641,11 @@
   gap: .5rem;
 }
 
-.swsaga.sheet .window-content form.character .current-equipment .feats-talents > div {
+.actor form.character .current-equipment .feats-talents > div {
   width: 50%;
 }
 
-.swsaga.sheet .window-content form.weapon, .swsaga.sheet .window-content form.armor {
+.item form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -655,37 +655,27 @@
   flex-direction: column;
 }
 
-.swsaga.sheet .window-content form.weapon h5, .swsaga.sheet .window-content form.armor h5 {
+.item form h5 {
   margin: 0 0 .25rem 0;
 }
 
-.swsaga.sheet .window-content form.weapon h5 input, .swsaga.sheet .window-content form.armor h5 input {
+.item form h5 input {
   font-size: 2rem;
   font-family: var(--main-heading-font);
   padding: 0;
   border: none;
 }
 
-.swsaga.sheet .window-content form.weapon .item-container div, .swsaga.sheet .window-content form.armor .item-container div {
+.item form .item-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
 }
 
-.swsaga.sheet .window-content form.weapon .item-container div div, .swsaga.sheet .window-content form.armor .item-container div div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-flex: 1;
-  -ms-flex: auto;
-  flex: auto;
-}
-
-.swsaga.sheet .window-content form.weapon .item-container div div div, .swsaga.sheet .window-content form.armor .item-container div div div {
+.item form .item-container div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -695,7 +685,19 @@
   flex-direction: column;
 }
 
-.swsaga.sheet .window-content form.weapon .item-container div .profile-img, .swsaga.sheet .window-content form.armor .item-container div .profile-img {
+.item form .item-container div:first-of-type {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.item form .item-container div:last-of-type {
+  -webkit-box-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+}
+
+.item form .item-container .profile-img {
   width: 255px;
   height: 150px;
   border: solid 2px var(--text-color);
@@ -703,27 +705,27 @@
   object-fit: fill;
 }
 
-.swsaga.sheet .window-content form.weapon .item-container textarea, .swsaga.sheet .window-content form.armor .item-container textarea {
+.item form .item-container textarea {
   font-size: .75rem;
 }
 
-.swsaga.sheet .window-content form.weapon .item-container .label-container, .swsaga.sheet .window-content form.armor .item-container .label-container {
+.item form .item-container .label-container {
   margin: 0.5rem;
 }
 
-.swsaga.sheet .window-content form div.label-container {
+.item form form div.label-container {
   position: relative;
   border: solid 1px var(--text-color);
   border-radius: 3px;
 }
 
-.swsaga.sheet .window-content form div.label-container.abilities {
+.item form form div.label-container.abilities {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.swsaga.sheet .window-content form div.label-container.abilities > * {
+.item form form div.label-container.abilities > * {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 25%;
   flex: 1 1 25%;
@@ -731,7 +733,7 @@
   text-align: center;
 }
 
-.swsaga.sheet .window-content form div.label-container label {
+.item form form div.label-container label {
   position: absolute;
   line-height: 100%;
   top: -6px;
@@ -741,7 +743,7 @@
   font-size: 0.7rem;
 }
 
-.swsaga.sheet .window-content .half-size {
+.item form .half-size {
   width: 45%;
 }
 
