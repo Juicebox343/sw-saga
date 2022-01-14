@@ -38,10 +38,18 @@
           </div>   
           {{!-- flex 2 --}}
           <div class='description-fields'>
-            <div class='label-container'><label for='weaponDescription'>{{localize "swSaga.item.description" }}</label><textarea id='weaponDescription' name="data.description">{{data.description}}</textarea></div>
-            <div class='label-container'><label for='itemAvailability'>{{localize "swSaga.item.availability" }}</label><input id='itemAvailability' name="data.availability" type='text' value="{{data.availability}}"/></div>
-            <div class='label-container'><label for='weaponGroup'>{{localize "swSaga.item.weaponGroup" }}</label><input id='weaponGroup' name="data.weaponGroup" type='text' value="{{data.weaponGroup}}"/></div>
-     
+            <div class='label-container'>
+              <label for='weaponDescription'>{{localize "swSaga.item.description" }}</label>
+              <textarea id='weaponDescription' name="data.description">{{data.description}}</textarea>
+              </div>
+            <div class='label-container'>
+              <label for='itemAvailability'>{{localize "swSaga.item.availability" }}</label>
+              <input id='itemAvailability' name="data.availability" type='text' value="{{data.availability}}"/>
+              </div>
+            <div class='label-container'>
+              <label for='weaponGroup'>{{localize "swSaga.item.weaponGroup" }}</label>
+              <input id='weaponGroup' name="data.weaponGroup" type='text' value="{{data.weaponGroup}}"/>
+              </div>
             <div class='label-container'>
               <label for='weaponWeight'>{{localize "swSaga.item.weight" }}</label>
               <input id='weaponWeight' name="data.weight" type='text' value="{{data.weight}}"/>

@@ -1,34 +1,5 @@
-@font-face {
-  font-family: 'SFDistant Galaxy';
-  src: url('../type/SFDistantGalaxy.woff2') format('woff2'),
-       url('../type/SFDistantGalaxy-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'SFDistant Galaxy Alternate';
-  src: url('../type/SFDistantGalaxyAlternate-webfont.woff2') format('woff2'),
-       url('../type/SFDistantGalaxyAlternate-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'SFDistant Galaxy Outline';
-  src: url('../type/SFDistantGalaxyOutline-webfont.woff2') format('woff2'),
-       url('../type/SFDistantGalaxyOutline-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-:root{
-  --main-heading-font: 'SFDistant Galaxy';
-  --alt-heading-font: 'SFDistant Galaxy Outline';
-}
-
-  @import 'components/sheets';
-  @import 'general/typography';
-
-  @import 'panels/main'
+@import 'general/typography';
+@import 'general/animations';
+@import 'components/sheets';
+@import 'panels/main'
 
