@@ -307,7 +307,8 @@
     "templates": {
       "itemDescription": {
         "description": "",
-        "image_url": ""
+        "image_url": "",
+        "use_details": ""
       }
     },
     "species":{
@@ -363,13 +364,13 @@
       "templates": ["itemDescription"],
       "cost": 0,
       "damage": "",
-      "stunDamage": 0,
+      "stunSetting": "false",
       "weight": 0,
       "damageType": "",
       "skillUsed": "",
       "availability": "",
       "range": "",
-      "type": "",
+      "variety": "",
       "weaponWield": "ranged",
       "weaponGroup": "simple"
     },
@@ -383,7 +384,7 @@
       "weight": "",
       "availability": "",
       "size": "Light Armor",
-      "type:": ""
+      "variety:": ""
     },
     "equipment": {
       "templates": ["itemDescription"],

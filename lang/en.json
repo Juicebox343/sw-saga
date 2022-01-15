@@ -11,31 +11,28 @@
       "cha": "Charisma"
     },
     "item":{
-      "description": "Description"
+      "description": "Description",
+      "variety": "Type",
+      "availability": "Availability",
+      "cost": "Price",
+      "weight": "Weight",
+      "size": "Size",
+      "use_details": "Details"
     },
     "weapon":{
-      "cost": "Price",
       "damage": "Damage",
-      "stunDamage": "Stun Damage",
-      "weight": "Weight",
+      "hasStun": "Weapon Mode",
       "damageType": "Damage Type",
       "skillUsed": "Skill Used",
-      "availability": "Availability",
       "range": "Ranged Damage",
       "weaponWield": "Wield",
-      "weaponGroup": "Weapon Group",
-      "type": "Type"
+      "weaponGroup": "Weapon Group"
     },
     "armor":{
-      "cost": "Price",
       "refBonus": "Reflex Bonus",
-      "fortDef": "Fortitude Defense",
-      "maxDex": "Max Dexterity",
-      "speedReduction": "Speed Reduction",
-      "weight": "Weight",
-      "availability": "Availability",
-      "size": "Size",
-      "type:": "Type"
+      "fortDef": "Fort Def",
+      "maxDex": "Max Dex",
+      "speedReduction": "Speed Reduc."
     },
     "class":{
       "jedi": "Jedi",

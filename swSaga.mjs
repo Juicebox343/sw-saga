@@ -46,5 +46,12 @@ Hooks.once('init', async function() {
     }
     return null;
   })
+
+  Handlebars.registerHelper('conditional', (firstItem, secondItem) =>{
+    if (firstItem === secondItem){
+      return true;
+    }
+    return false;
+  })
   
 });

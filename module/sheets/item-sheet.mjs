@@ -34,7 +34,6 @@ export default class swSagaItemSheet extends ItemSheet {
       data: context.item.data.data,
       config: CONFIG.swSaga
     }
-    console.log(sheetData)
     return sheetData;
   }
 

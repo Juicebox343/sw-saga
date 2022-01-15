@@ -110,9 +110,48 @@
     color: white;
   }
 
-// Actor Sheet
+  header a{
+    color: white;
+  }
 
-  form.character {
+  form.weapon .item-container .label-container {
+    margin: 0.5rem;
+  }
+
+  .label-container {
+    position: relative;
+    border: solid 1px var(--text-color);
+    border-radius: 3px;
+  }
+
+  .label-container.abilities {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .label-container.abilities > * {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 25%;
+    flex: 1 1 25%;
+    width: initial;
+    text-align: center;
+  }
+
+  .label-container label {
+    position: absolute;
+    line-height: 100%;
+    top: -6px;
+    left: 4px;
+    background: var(--background-color);
+    padding: 0 5px;
+    font-size: 0.7rem;
+  }
+}
+  
+.actor.swsaga.sheet{
+// Actor Sheet
+  form {
     display: grid;
     grid-template-rows: 150px 500px auto 150px;
     grid-template-columns: repeat(12, 1fr);
@@ -385,226 +424,7 @@
     gap: .5rem;
   }
 
-  form.character .current-equipment .item-card {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    border-radius: 3px;
-    font-size: .75rem;
-    -webkit-transition: all .2s;
-    -o-transition: all .2s;
-    transition: all .2s;
-    -webkit-box-shadow: 2px 2px 3px rgba(44, 44, 44, 0.144);
-    box-shadow: 2px 2px 3px rgba(44, 44, 44, 0.144);
-    margin: 0;
-    position: relative;
-    overflow: hidden;
-    width: 160px;
-    height: 130px;
-  }
-
-  form.character .current-equipment .item-card:hover::after {
-    content: "";
-    -webkit-animation: shine 3s ease-in-out;
-    animation: shine 3s ease-in-out;
-    position: absolute;
-    top: -210%;
-    left: -210%;
-    width: 200%;
-    height: 200%;
-    opacity: 0;
-    -webkit-transform: rotate(30deg);
-    -ms-transform: rotate(30deg);
-    transform: rotate(30deg);
-    background: rgba(175, 218, 59, 0.13);
-    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.13)), color-stop(77%, rgba(255, 255, 255, 0.13)), color-stop(92%, rgba(255, 255, 255, 0.774)), to(rgba(255, 255, 255, 0)));
-    background: -o-linear-gradient(left, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.13) 77%, rgba(255, 255, 255, 0.774) 92%, rgba(255, 255, 255, 0) 100%);
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.13) 77%, rgba(255, 255, 255, 0.774) 92%, rgba(255, 255, 255, 0) 100%);
-  }
-
-  form.character .current-equipment .item-card:active::after {
-    opacity: 0;
-  }
-
-  form.character .current-equipment .item-card:hover div {
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  form.character .current-equipment .item-card:hover .item-detail {
-    -webkit-transform: translateY(0%);
-    -ms-transform: translateY(0%);
-    transform: translateY(0%);
-  }
-
-  form.character .current-equipment .item-card:hover .item-name {
-    -webkit-transform: translateY(200%);
-    -ms-transform: translateY(200%);
-    transform: translateY(200%);
-  }
-
-  form.character .current-equipment .item-card img.weapon {
-    border: none;
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 35px;
-  }
-
-  form.character .current-equipment .item-card img.armor {
-    border: none;
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 20px;
-  }
-
-  form.character .current-equipment .item-card p {
-    margin: 0;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-
-  form.character .current-equipment .item-card .item-name {
-    position: absolute;
-    bottom: 6px;
-    color: white;
-    font-size: 1.1rem;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-    -webkit-transition: -webkit-transform .2s linear;
-    transition: -webkit-transform .2s linear;
-    -o-transition: transform .2s linear;
-    transition: transform .2s linear;
-    transition: transform .2s linear, -webkit-transform .2s linear;
-  }
-
-  form.character .current-equipment .item-card .item-detail {
-    position: absolute;
-    bottom: 2px;
-    font-size: 1.25rem;
-    -webkit-transition: -webkit-transform .2s linear;
-    transition: -webkit-transform .2s linear;
-    -o-transition: transform .2s linear;
-    transition: transform .2s linear;
-    transition: transform .2s linear, -webkit-transform .2s linear;
-    color: white;
-    -webkit-transform: translateY(200%);
-    -ms-transform: translateY(200%);
-    transform: translateY(200%);
-  }
-
-  form.character .current-equipment .item-card div {
-    height: 24px;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
-    justify-content: space-evenly;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-transition: all .2s linear;
-    -o-transition: all .2s linear;
-    transition: all .2s linear;
-    position: absolute;
-    top: 10px;
-    z-index: 100;
-    padding: 2px;
-  }
-
-  form.character .current-equipment .item-card div button {
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    background-color: transparent;
-    height: 30px;
-    width: 50%;
-    margin: 0;
-    font-weight: bold;
-    font-size: 0.75rem;
-    line-height: 0.75rem;
-    text-align: center;
-    border-radius: 0;
-    border-width: 6px;
-    border-top: none;
-  }
-
-  form.character .current-equipment .item-card div button:first-of-type {
-    border-right-width: 3px;
-  }
-
-  form.character .current-equipment .item-card div button:last-of-type {
-    border-left-width: 3px;
-  }
-
-  form.character .current-equipment .item-card #context-menu.expand-down {
-    top: 0;
-    -webkit-transform: translateX(12%);
-    -ms-transform: translateX(12%);
-    transform: translateX(12%);
-  }
-
-  form.character .current-equipment .item-card #context-menu {
-    width: 80%;
-    min-width: initial;
-    background: var(--text-color);
-    border: none;
-  }
-
-  form.character .current-equipment .item-card #context-menu li.context-item {
-    border: solid transparent 2px;
-  }
-
-  form.character .current-equipment .item-card #context-menu li.context-item:hover {
-    text-shadow: 0 0 4px #2694d4;
-    border: solid white 2px;
-  }
-
-  form.character .current-equipment .armor-card:hover {
-    -webkit-box-shadow: 0px 0px 7px #257A8C;
-    box-shadow: 0px 0px 7px #257A8C;
-  }
-
-  form.character .current-equipment .armor-card button {
-    border: 2px solid #257A8C;
-    color: #257A8C;
-  }
-
-  form.character .current-equipment .armor-card button:hover {
-    background: #257A8C;
-    color: white;
-  }
-
-  form.character .current-equipment .weapon-card:hover {
-    -webkit-box-shadow: 0px 0px 7px #B44242;
-    box-shadow: 0px 0px 7px #B44242;
-  }
-
-  form.character .current-equipment .weapon-card button {
-    border: 2px solid #B44242;
-    color: #B44242;
-  }
-
-  form.character .current-equipment .weapon-card button:hover {
-    background: #B44242;
-    color: white;
-  }
-
-  form.character .current-equipment .feats-talents {
+  .feats-talents {
     grid-row: 4 / 5;
     grid-column: 1 / 13;
     display: -webkit-box;
@@ -613,107 +433,95 @@
     gap: .5rem;
   }
 
-  form.character .current-equipment .feats-talents > div {
+  .feats-talents > div {
     width: 50%;
   }
+}
 
-  form.weapon {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
+  // ITEMS
+  .item.swsaga.sheet{
 
-  form.weapon h5 {
-    margin: 0 0 .25rem 0;
-  }
+    h5{
+      margin: 0;
 
-  form.weapon h5 input {
-    font-size: 2rem;
-    font-family: var(--main-heading-font);
-    padding: 0;
-    border: none;
-  }
+      input{
+      font-size: 2.5rem;
+      font-family: var(--main-heading-font);
+      padding-left: 0;
+      }
+    }
 
-  form.weapon .item-container div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
+    form{
+      display: grid;
+      grid-template-columns: 255px 75px auto;
+      grid-template-rows: auto 135px 135px;
+      gap: 1rem;
+    }
 
-  form.weapon .item-container div div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-flex: 1;
-    -ms-flex: auto;
-    flex: auto;
-  }
+    .window-content header{
+      grid-column: 1 / 4;
+      grid-row: 1 / 2;
+      display: flex;
 
-  form.weapon .item-container div div div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
+    }
 
-  form.weapon .item-container div .profile-img {
-    width: 255px;
-    height: 150px;
-    border: solid 2px var(--text-color);
-    -o-object-fit: fill;
-    object-fit: fill;
-  }
+    .window-content header .header-fields{
+      flex-direction: column;
+      align-items: flex-start;
+    }
 
-  form.weapon .item-container textarea {
-    font-size: .75rem;
-  }
+    .window-content header .header-fields > div{
+      display: flex;
+      gap: .25rem;
+      width: 150px;
+    }
 
-  form.weapon .item-container .label-container {
-    margin: 0.5rem;
-  }
+    .window-content header .header-fields > div input{
+      width: 150px;
+    }
 
-  form div.label-container {
-    position: relative;
-    border: solid 1px var(--text-color);
-    border-radius: 3px;
-  }
+    .image-container{
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      overflow: hidden;
+    }
 
-  form div.label-container.abilities {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
+    .at-a-glance{
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      div{
+        display: flex;
+        gap: .25rem;
+      }
+    }
 
-  form div.label-container.abilities > * {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 25%;
-    flex: 1 1 25%;
-    width: initial;
-    text-align: center;
-  }
+    .description-fields{
+      grid-column: 2 / 4;
+      grid-row: 2 / 3;
+      display: flex;
+      gap: 1rem;
+      justify-content: space-evenly;
+    }
 
-  form div.label-container label {
-    position: absolute;
-    line-height: 100%;
-    top: -6px;
-    left: 4px;
-    background: var(--background-color);
-    padding: 0 5px;
-    font-size: 0.7rem;
-  }
+    .description-fields .description-details{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: .25rem;
+    }
 
-  .half-size {
-    width: 45%;
-  }
+    .description-fields .description-field{
+      display: flex;
+      flex: 2;
+    }
+
+    .usability-details{
+      grid-column: 2 / 4;
+      grid-row: 3 / 4;
+    }
+
+
 } 

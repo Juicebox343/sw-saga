@@ -1,0 +1,226 @@
+.item-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 3px;
+    font-size: .75rem;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    -webkit-box-shadow: 2px 2px 3px rgba(44, 44, 44, 0.144);
+    box-shadow: 2px 2px 3px rgba(44, 44, 44, 0.144);
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    width: 160px;
+    height: 130px;
+  }
+
+    .item-card:hover::after {
+    content: "";
+    -webkit-animation: shine 3s ease-in-out;
+    animation: shine 3s ease-in-out;
+    position: absolute;
+    top: -210%;
+    left: -210%;
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+    -webkit-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    transform: rotate(30deg);
+    background: rgba(175, 218, 59, 0.13);
+    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.13)), color-stop(77%, rgba(255, 255, 255, 0.13)), color-stop(92%, rgba(255, 255, 255, 0.774)), to(rgba(255, 255, 255, 0)));
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.13) 77%, rgba(255, 255, 255, 0.774) 92%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.13) 77%, rgba(255, 255, 255, 0.774) 92%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  .item-card:active::after {
+    opacity: 0;
+  }
+
+  .item-card:hover div {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  .item-card:hover .item-detail {
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+
+  .item-card:hover .item-name {
+    -webkit-transform: translateY(200%);
+    -ms-transform: translateY(200%);
+    transform: translateY(200%);
+  }
+
+  .item-card img.weapon {
+    border: none;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 35px;
+  }
+
+  .item-card img.armor {
+    border: none;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 20px;
+  }
+
+  .item-card p {
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .item-card p.item-name{
+    color: white;
+  }
+
+  .item-card .item-name {
+    position: absolute;
+    bottom: 6px;
+    color: white;
+    font-size: 1.1rem;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: -webkit-transform .2s linear;
+    transition: -webkit-transform .2s linear;
+    -o-transition: transform .2s linear;
+    transition: transform .2s linear;
+    transition: transform .2s linear, -webkit-transform .2s linear;
+  }
+
+  .item-card p.item-detail{
+    color: white;
+  }
+
+  .item-card .item-detail {
+    position: absolute;
+    bottom: 2px;
+    font-size: 1.25rem;
+    -webkit-transition: -webkit-transform .2s linear;
+    transition: -webkit-transform .2s linear;
+    -o-transition: transform .2s linear;
+    transition: transform .2s linear;
+    transition: transform .2s linear, -webkit-transform .2s linear;
+    color: white;
+    -webkit-transform: translateY(200%);
+    -ms-transform: translateY(200%);
+    transform: translateY(200%);
+  }
+
+  .item-card div {
+    height: 24px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+    position: absolute;
+    top: 10px;
+    z-index: 100;
+    padding: 2px;
+  }
+
+  .item-card div button {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: transparent;
+    height: 30px;
+    width: 50%;
+    margin: 0;
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+    text-align: center;
+    border-radius: 0;
+    border-width: 6px;
+    border-top: none;
+  }
+
+  .item-card div button:first-of-type {
+    border-right-width: 3px;
+  }
+
+  .item-card div button:last-of-type {
+    border-left-width: 3px;
+  }
+
+  .item-card #context-menu.expand-down {
+    top: 0;
+    -webkit-transform: translateX(12%);
+    -ms-transform: translateX(12%);
+    transform: translateX(12%);
+  }
+
+  .item-card #context-menu {
+    width: 80%;
+    min-width: initial;
+    background: var(--text-color);
+    border: none;
+  }
+
+  .item-card #context-menu li.context-item {
+    border: solid transparent 2px;
+  }
+
+  .item-card #context-menu li.context-item:hover {
+    text-shadow: 0 0 4px #2694d4;
+    border: solid white 2px;
+  }
+
+  .armor-card:hover {
+    -webkit-box-shadow: 0px 0px 7px #257A8C;
+    box-shadow: 0px 0px 7px #257A8C;
+  }
+
+  .armor-card button {
+    border: 2px solid #257A8C;
+    color: #257A8C;
+  }
+
+  .armor-card button:hover {
+    background: #257A8C;
+    color: white;
+  }
+
+  .weapon-card:hover {
+    -webkit-box-shadow: 0px 0px 7px #B44242;
+    box-shadow: 0px 0px 7px #B44242;
+  }
+
+  .weapon-card button {
+    border: 2px solid #B44242;
+    color: #B44242;
+  }
+
+  .weapon-card button:hover {
+    background: #B44242;
+    color: white;
+  }

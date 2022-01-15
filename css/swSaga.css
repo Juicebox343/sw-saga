@@ -213,7 +213,45 @@
   color: white;
 }
 
-.swsaga.sheet form.character {
+.swsaga.sheet header a {
+  color: white;
+}
+
+.swsaga.sheet form.weapon .item-container .label-container {
+  margin: 0.5rem;
+}
+
+.swsaga.sheet .label-container {
+  position: relative;
+  border: solid 1px var(--text-color);
+  border-radius: 3px;
+}
+
+.swsaga.sheet .label-container.abilities {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.swsaga.sheet .label-container.abilities > * {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 25%;
+  flex: 1 1 25%;
+  width: initial;
+  text-align: center;
+}
+
+.swsaga.sheet .label-container label {
+  position: absolute;
+  line-height: 100%;
+  top: -6px;
+  left: 4px;
+  background: var(--background-color);
+  padding: 0 5px;
+  font-size: 0.7rem;
+}
+
+.actor.swsaga.sheet form {
   display: grid;
   grid-template-rows: 150px 500px auto 150px;
   grid-template-columns: repeat(12, 1fr);
@@ -222,7 +260,7 @@
   width: 100%;
 }
 
-.swsaga.sheet form.character .sheet-header {
+.actor.swsaga.sheet form.character .sheet-header {
   grid-row: 1 / 2;
   grid-column: 1 / 13;
   display: grid;
@@ -231,7 +269,7 @@
   grid-template-columns: 150px 3fr 1fr 150px;
 }
 
-.swsaga.sheet form.character .sheet-header img {
+.actor.swsaga.sheet form.character .sheet-header img {
   grid-row: 1 / 2;
   grid-column: 1 / 2;
   width: 150px;
@@ -239,7 +277,7 @@
   border-radius: 3px;
 }
 
-.swsaga.sheet form.character .sheet-header .sub-container:first-of-type {
+.actor.swsaga.sheet form.character .sheet-header .sub-container:first-of-type {
   grid-row: 1 / 2;
   grid-column: 2 / 3;
   display: grid;
@@ -248,27 +286,27 @@
   grid-template-rows: repeat(3, 1fr);
 }
 
-.swsaga.sheet form.character .sheet-header .sub-container:first-of-type .character-name {
+.actor.swsaga.sheet form.character .sheet-header .sub-container:first-of-type .character-name {
   grid-row: 1 / 2;
   grid-column: 1 / 4;
 }
 
-.swsaga.sheet form.character .sheet-header .sub-container:first-of-type .character-level {
+.actor.swsaga.sheet form.character .sheet-header .sub-container:first-of-type .character-level {
   grid-row: 1 / 2;
   grid-column: 4 / 5;
 }
 
-.swsaga.sheet form.character .sheet-header .sub-container:first-of-type .species-select {
+.actor.swsaga.sheet form.character .sheet-header .sub-container:first-of-type .species-select {
   grid-row: 2 / 3;
   grid-column: 1 / 3;
 }
 
-.swsaga.sheet form.character .sheet-header .sub-container:first-of-type .class-select {
+.actor.swsaga.sheet form.character .sheet-header .sub-container:first-of-type .class-select {
   grid-row: 2 / 3;
   grid-column: 3 / 5;
 }
 
-.swsaga.sheet form.character .sheet-header .sub-container {
+.actor.swsaga.sheet form.character .sheet-header .sub-container {
   display: grid;
   gap: .5rem;
   grid-row: 1 / 2;
@@ -276,7 +314,7 @@
   height: 100%;
 }
 
-.swsaga.sheet form.character .sheet-header .sub-container:last-of-type {
+.actor.swsaga.sheet form.character .sheet-header .sub-container:last-of-type {
   grid-row: 1 / 2;
   grid-column: 4 / 5;
   display: grid;
@@ -285,37 +323,37 @@
   grid-template-rows: 1fr;
 }
 
-.swsaga.sheet form.character .sheet-header .sub-container:last-of-type .hitpoints {
+.actor.swsaga.sheet form.character .sheet-header .sub-container:last-of-type .hitpoints {
   grid-row: 1 / 3;
   grid-column: 1 / 2;
 }
 
-.swsaga.sheet form.character .sheet-header .sub-container:last-of-type .hitpoints input {
+.actor.swsaga.sheet form.character .sheet-header .sub-container:last-of-type .hitpoints input {
   height: 100%;
   font-size: 2rem;
 }
 
-.swsaga.sheet form.character .sheet-header .sub-container:last-of-type .condition {
+.actor.swsaga.sheet form.character .sheet-header .sub-container:last-of-type .condition {
   grid-row: 3 / 4;
   grid-column: 1 / 2;
 }
 
-.swsaga.sheet form.character .sheet-header .sub-container:last-of-type .shieldReduction {
+.actor.swsaga.sheet form.character .sheet-header .sub-container:last-of-type .shieldReduction {
   grid-row: 1 / 2;
   grid-column: 2 / 3;
 }
 
-.swsaga.sheet form.character .sheet-header .sub-container:last-of-type .damageReduction {
+.actor.swsaga.sheet form.character .sheet-header .sub-container:last-of-type .damageReduction {
   grid-row: 2 / 3;
   grid-column: 2 / 3;
 }
 
-.swsaga.sheet form.character .sheet-header .sub-container:last-of-type .threshold {
+.actor.swsaga.sheet form.character .sheet-header .sub-container:last-of-type .threshold {
   grid-row: 3 / 4;
   grid-column: 2 / 3;
 }
 
-.swsaga.sheet form.character .sheet-header .row {
+.actor.swsaga.sheet form.character .sheet-header .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -324,14 +362,14 @@
   justify-content: space-between;
 }
 
-.swsaga.sheet form.character .sheet-header .row .row-item {
+.actor.swsaga.sheet form.character .sheet-header .row .row-item {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin: 0.25rem;
 }
 
-.swsaga.sheet form.character .stat-block {
+.actor.swsaga.sheet form.character .stat-block {
   grid-row: 2 / 3;
   grid-column: 1 / 3;
   display: -webkit-box;
@@ -346,14 +384,14 @@
   justify-content: space-between;
 }
 
-.swsaga.sheet form.character .stat-block div:first-of-type {
+.actor.swsaga.sheet form.character .stat-block div:first-of-type {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 1rem;
 }
 
-.swsaga.sheet form.character .stat-block div {
+.actor.swsaga.sheet form.character .stat-block div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -367,7 +405,7 @@
   height: 45px;
 }
 
-.swsaga.sheet form.character .stat-block span {
+.actor.swsaga.sheet form.character .stat-block span {
   font-size: 1rem;
   background-color: var(--background-color);
   border-radius: 3px;
@@ -377,7 +415,7 @@
   z-index: 2;
 }
 
-.swsaga.sheet form.character .character-page {
+.actor.swsaga.sheet form.character .character-page {
   grid-row: 2 / 3;
   grid-column: 3 / 13;
   border: solid 1px var(--text-color);
@@ -385,52 +423,52 @@
   padding: 0 1rem;
 }
 
-.swsaga.sheet form.character .character-page nav.sheet-tabs {
+.actor.swsaga.sheet form.character .character-page nav.sheet-tabs {
   border-top: none;
   border-bottom-color: var(--text-color);
   margin-bottom: 1rem;
 }
 
-.swsaga.sheet form.character .character-page nav.sheet-tabs .item.active {
+.actor.swsaga.sheet form.character .character-page nav.sheet-tabs .item.active {
   text-shadow: 0 0 10px #2694d4;
 }
 
-.swsaga.sheet form.character .character-page nav.sheet-tabs .item:hover {
+.actor.swsaga.sheet form.character .character-page nav.sheet-tabs .item:hover {
   text-shadow: 0 0 10px #2694d4;
 }
 
-.swsaga.sheet form.character .character-page .sheet-body {
+.actor.swsaga.sheet form.character .character-page .sheet-body {
   height: calc(100% - 52px);
 }
 
-.swsaga.sheet form.character .character-page .skills {
+.actor.swsaga.sheet form.character .character-page .skills {
   height: 100%;
   overflow-y: scroll;
   font-size: .75rem;
 }
 
-.swsaga.sheet form.character .character-page .skills table {
+.actor.swsaga.sheet form.character .character-page .skills table {
   border: none;
 }
 
-.swsaga.sheet form.character .character-page .skills table th {
+.actor.swsaga.sheet form.character .character-page .skills table th {
   text-align: left;
   width: 30px;
 }
 
-.swsaga.sheet form.character .character-page .skills table th:nth-of-type(2) {
+.actor.swsaga.sheet form.character .character-page .skills table th:nth-of-type(2) {
   width: 125px;
 }
 
-.swsaga.sheet form.character .character-page .skills table tr:nth-child(even) {
+.actor.swsaga.sheet form.character .character-page .skills table tr:nth-child(even) {
   border: 1px solid var(--background-color);
 }
 
-.swsaga.sheet form.character .character-page .skills table tr:nth-child(odd) {
+.actor.swsaga.sheet form.character .character-page .skills table tr:nth-child(odd) {
   border: 1px solid var(--background-color);
 }
 
-.swsaga.sheet form.character .character-page .tab.active {
+.actor.swsaga.sheet form.character .character-page .tab.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -443,11 +481,11 @@
   height: 100%;
 }
 
-.swsaga.sheet form.character .character-page .tab.active p {
+.actor.swsaga.sheet form.character .character-page .tab.active p {
   margin: 4px 0;
 }
 
-.swsaga.sheet form.character .current-equipment {
+.actor.swsaga.sheet form.character .current-equipment {
   grid-row: 3 / 4;
   grid-column: 1 / 13;
   display: -webkit-box;
@@ -456,7 +494,7 @@
   gap: .5rem;
 }
 
-.swsaga.sheet form.character .current-equipment > div {
+.actor.swsaga.sheet form.character .current-equipment > div {
   border-radius: 3px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -471,7 +509,7 @@
   padding: 1rem;
 }
 
-.swsaga.sheet form.character .current-equipment > div > div {
+.actor.swsaga.sheet form.character .current-equipment > div > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -486,7 +524,133 @@
   gap: .5rem;
 }
 
-.swsaga.sheet form.character .current-equipment .item-card {
+.actor.swsaga.sheet .feats-talents {
+  grid-row: 4 / 5;
+  grid-column: 1 / 13;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .5rem;
+}
+
+.actor.swsaga.sheet .feats-talents > div {
+  width: 50%;
+}
+
+.item.swsaga.sheet h5 {
+  margin: 0;
+}
+
+.item.swsaga.sheet h5 input {
+  font-size: 2.5rem;
+  font-family: var(--main-heading-font);
+  padding-left: 0;
+}
+
+.item.swsaga.sheet form {
+  display: grid;
+  grid-template-columns: 255px 75px auto;
+  grid-template-rows: auto 135px 135px;
+  gap: 1rem;
+}
+
+.item.swsaga.sheet .window-content header {
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.item.swsaga.sheet .window-content header .header-fields {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.item.swsaga.sheet .window-content header .header-fields > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .25rem;
+  width: 150px;
+}
+
+.item.swsaga.sheet .window-content header .header-fields > div input {
+  width: 150px;
+}
+
+.item.swsaga.sheet .image-container {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  overflow: hidden;
+}
+
+.item.swsaga.sheet .at-a-glance {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.item.swsaga.sheet .at-a-glance div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .25rem;
+}
+
+.item.swsaga.sheet .description-fields {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+
+.item.swsaga.sheet .description-fields .description-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: .25rem;
+}
+
+.item.swsaga.sheet .description-fields .description-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+.item.swsaga.sheet .usability-details {
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
+}
+
+.item-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -514,7 +678,7 @@
   height: 130px;
 }
 
-.swsaga.sheet form.character .current-equipment .item-card:hover::after {
+.item-card:hover::after {
   content: "";
   -webkit-animation: shine 3s ease-in-out;
   animation: shine 3s ease-in-out;
@@ -533,29 +697,29 @@
   background: linear-gradient(to right, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.13) 77%, rgba(255, 255, 255, 0.774) 92%, rgba(255, 255, 255, 0) 100%);
 }
 
-.swsaga.sheet form.character .current-equipment .item-card:active::after {
+.item-card:active::after {
   opacity: 0;
 }
 
-.swsaga.sheet form.character .current-equipment .item-card:hover div {
+.item-card:hover div {
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
 }
 
-.swsaga.sheet form.character .current-equipment .item-card:hover .item-detail {
+.item-card:hover .item-detail {
   -webkit-transform: translateY(0%);
   -ms-transform: translateY(0%);
   transform: translateY(0%);
 }
 
-.swsaga.sheet form.character .current-equipment .item-card:hover .item-name {
+.item-card:hover .item-name {
   -webkit-transform: translateY(200%);
   -ms-transform: translateY(200%);
   transform: translateY(200%);
 }
 
-.swsaga.sheet form.character .current-equipment .item-card img.weapon {
+.item-card img.weapon {
   border: none;
   width: 100%;
   height: auto;
@@ -563,7 +727,7 @@
   top: 35px;
 }
 
-.swsaga.sheet form.character .current-equipment .item-card img.armor {
+.item-card img.armor {
   border: none;
   width: 100%;
   height: auto;
@@ -571,13 +735,17 @@
   top: 20px;
 }
 
-.swsaga.sheet form.character .current-equipment .item-card p {
+.item-card p {
   margin: 0;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.swsaga.sheet form.character .current-equipment .item-card .item-name {
+.item-card p.item-name {
+  color: white;
+}
+
+.item-card .item-name {
   position: absolute;
   bottom: 6px;
   color: white;
@@ -592,7 +760,11 @@
   transition: transform .2s linear, -webkit-transform .2s linear;
 }
 
-.swsaga.sheet form.character .current-equipment .item-card .item-detail {
+.item-card p.item-detail {
+  color: white;
+}
+
+.item-card .item-detail {
   position: absolute;
   bottom: 2px;
   font-size: 1.25rem;
@@ -607,7 +779,7 @@
   transform: translateY(200%);
 }
 
-.swsaga.sheet form.character .current-equipment .item-card div {
+.item-card div {
   height: 24px;
   width: 100%;
   display: -webkit-box;
@@ -628,7 +800,7 @@
   padding: 2px;
 }
 
-.swsaga.sheet form.character .current-equipment .item-card div button {
+.item-card div button {
   -webkit-box-shadow: none;
   box-shadow: none;
   background-color: transparent;
@@ -644,176 +816,63 @@
   border-top: none;
 }
 
-.swsaga.sheet form.character .current-equipment .item-card div button:first-of-type {
+.item-card div button:first-of-type {
   border-right-width: 3px;
 }
 
-.swsaga.sheet form.character .current-equipment .item-card div button:last-of-type {
+.item-card div button:last-of-type {
   border-left-width: 3px;
 }
 
-.swsaga.sheet form.character .current-equipment .item-card #context-menu.expand-down {
+.item-card #context-menu.expand-down {
   top: 0;
   -webkit-transform: translateX(12%);
   -ms-transform: translateX(12%);
   transform: translateX(12%);
 }
 
-.swsaga.sheet form.character .current-equipment .item-card #context-menu {
+.item-card #context-menu {
   width: 80%;
   min-width: initial;
   background: var(--text-color);
   border: none;
 }
 
-.swsaga.sheet form.character .current-equipment .item-card #context-menu li.context-item {
+.item-card #context-menu li.context-item {
   border: solid transparent 2px;
 }
 
-.swsaga.sheet form.character .current-equipment .item-card #context-menu li.context-item:hover {
+.item-card #context-menu li.context-item:hover {
   text-shadow: 0 0 4px #2694d4;
   border: solid white 2px;
 }
 
-.swsaga.sheet form.character .current-equipment .armor-card:hover {
+.armor-card:hover {
   -webkit-box-shadow: 0px 0px 7px #257A8C;
   box-shadow: 0px 0px 7px #257A8C;
 }
 
-.swsaga.sheet form.character .current-equipment .armor-card button {
+.armor-card button {
   border: 2px solid #257A8C;
   color: #257A8C;
 }
 
-.swsaga.sheet form.character .current-equipment .armor-card button:hover {
+.armor-card button:hover {
   background: #257A8C;
   color: white;
 }
 
-.swsaga.sheet form.character .current-equipment .weapon-card:hover {
+.weapon-card:hover {
   -webkit-box-shadow: 0px 0px 7px #B44242;
   box-shadow: 0px 0px 7px #B44242;
 }
 
-.swsaga.sheet form.character .current-equipment .weapon-card button {
+.weapon-card button {
   border: 2px solid #B44242;
   color: #B44242;
 }
 
-.swsaga.sheet form.character .current-equipment .weapon-card button:hover {
+.weapon-card button:hover {
   background: #B44242;
   color: white;
-}
-
-.swsaga.sheet form.character .current-equipment .feats-talents {
-  grid-row: 4 / 5;
-  grid-column: 1 / 13;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: .5rem;
-}
-
-.swsaga.sheet form.character .current-equipment .feats-talents > div {
-  width: 50%;
-}
-
-.swsaga.sheet form.weapon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.swsaga.sheet form.weapon h5 {
-  margin: 0 0 .25rem 0;
-}
-
-.swsaga.sheet form.weapon h5 input {
-  font-size: 2rem;
-  font-family: var(--main-heading-font);
-  padding: 0;
-  border: none;
-}
-
-.swsaga.sheet form.weapon .item-container div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.swsaga.sheet form.weapon .item-container div div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-flex: 1;
-  -ms-flex: auto;
-  flex: auto;
-}
-
-.swsaga.sheet form.weapon .item-container div div div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.swsaga.sheet form.weapon .item-container div .profile-img {
-  width: 255px;
-  height: 150px;
-  border: solid 2px var(--text-color);
-  -o-object-fit: fill;
-  object-fit: fill;
-}
-
-.swsaga.sheet form.weapon .item-container textarea {
-  font-size: .75rem;
-}
-
-.swsaga.sheet form.weapon .item-container .label-container {
-  margin: 0.5rem;
-}
-
-.swsaga.sheet form div.label-container {
-  position: relative;
-  border: solid 1px var(--text-color);
-  border-radius: 3px;
-}
-
-.swsaga.sheet form div.label-container.abilities {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.swsaga.sheet form div.label-container.abilities > * {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 25%;
-  flex: 1 1 25%;
-  width: initial;
-  text-align: center;
-}
-
-.swsaga.sheet form div.label-container label {
-  position: absolute;
-  line-height: 100%;
-  top: -6px;
-  left: 4px;
-  background: var(--background-color);
-  padding: 0 5px;
-  font-size: 0.7rem;
-}
-
-.swsaga.sheet .half-size {
-  width: 45%;
 }
