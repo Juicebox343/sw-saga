@@ -9,21 +9,21 @@
 
 @font-face {
   font-family: 'SFDistant Galaxy';
-  src: url("../type/SFDistantGalaxy.woff2") format("woff2"), url("../type/SFDistantGalaxy-webfont.woff") format("woff");
+  src: url("../type/SFDistantGalaxy.woff2") format("woff2"), url("../type/SFDistantGalaxy.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'SFDistant Galaxy Alternate';
-  src: url("../type/SFDistantGalaxyAlternate-webfont.woff2") format("woff2"), url("../type/SFDistantGalaxyAlternate-webfont.woff") format("woff");
+  src: url("../type/SFDistantGalaxyAlternate.woff2") format("woff2"), url("../type/SFDistantGalaxyAlternate.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'SFDistant Galaxy Outline';
-  src: url("../type/SFDistantGalaxyOutline-webfont.woff2") format("woff2"), url("../type/SFDistantGalaxyOutline-webfont.woff") format("woff");
+  src: url("../type/SFDistantGalaxyOutline.woff2") format("woff2"), url("../type/SFDistantGalaxyOutline.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -537,20 +537,10 @@
   width: 50%;
 }
 
-.item.swsaga.sheet h5 {
-  margin: 0;
-}
-
-.item.swsaga.sheet h5 input {
-  font-size: 2.5rem;
-  font-family: var(--main-heading-font);
-  padding-left: 0;
-}
-
 .item.swsaga.sheet form {
   display: grid;
   grid-template-columns: 255px 75px auto;
-  grid-template-rows: auto 135px 135px;
+  grid-template-rows: 75px 135px 135px;
   gap: 1rem;
 }
 
@@ -562,26 +552,59 @@
   display: flex;
 }
 
+.item.swsaga.sheet .to-hit, .item.swsaga.sheet .weapon-damage {
+  font-family: var(--main-heading-font);
+  font-size: 1.25rem;
+}
+
+.item.swsaga.sheet .to-hit span, .item.swsaga.sheet .weapon-damage span {
+  font-family: var(--main-font);
+  font-size: 1.25rem;
+}
+
 .item.swsaga.sheet .window-content header .header-fields {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.item.swsaga.sheet .window-content header .header-fields h5 {
+  margin: 0;
+}
+
+.item.swsaga.sheet .window-content header .header-fields h5 input {
+  font-size: 2.5rem;
+  font-family: var(--main-heading-font);
+  padding-left: 0;
 }
 
 .item.swsaga.sheet .window-content header .header-fields > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: .25rem;
-  width: 150px;
+  width: initial;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
-.item.swsaga.sheet .window-content header .header-fields > div input {
-  width: 150px;
+.item.swsaga.sheet .window-content header .header-fields > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .25rem;
+}
+
+.item.swsaga.sheet .attack-damage {
+  text-align: right;
 }
 
 .item.swsaga.sheet .image-container {
@@ -650,7 +673,7 @@
   grid-row: 3 / 4;
 }
 
-.item-card {
+.current-equipment .item-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -678,7 +701,7 @@
   height: 130px;
 }
 
-.item-card:hover::after {
+.current-equipment .item-card:hover::after {
   content: "";
   -webkit-animation: shine 3s ease-in-out;
   animation: shine 3s ease-in-out;
@@ -697,29 +720,29 @@
   background: linear-gradient(to right, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.13) 77%, rgba(255, 255, 255, 0.774) 92%, rgba(255, 255, 255, 0) 100%);
 }
 
-.item-card:active::after {
+.current-equipment .item-card:active::after {
   opacity: 0;
 }
 
-.item-card:hover div {
+.current-equipment .item-card:hover div {
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
 }
 
-.item-card:hover .item-detail {
+.current-equipment .item-card:hover .item-detail {
   -webkit-transform: translateY(0%);
   -ms-transform: translateY(0%);
   transform: translateY(0%);
 }
 
-.item-card:hover .item-name {
+.current-equipment .item-card:hover .item-name {
   -webkit-transform: translateY(200%);
   -ms-transform: translateY(200%);
   transform: translateY(200%);
 }
 
-.item-card img.weapon {
+.current-equipment .item-card img.weapon {
   border: none;
   width: 100%;
   height: auto;
@@ -727,7 +750,7 @@
   top: 35px;
 }
 
-.item-card img.armor {
+.current-equipment .item-card img.armor {
   border: none;
   width: 100%;
   height: auto;
@@ -735,17 +758,17 @@
   top: 20px;
 }
 
-.item-card p {
+.current-equipment .item-card p {
   margin: 0;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.item-card p.item-name {
+.current-equipment .item-card p.item-name {
   color: white;
 }
 
-.item-card .item-name {
+.current-equipment .item-card .item-name {
   position: absolute;
   bottom: 6px;
   color: white;
@@ -760,11 +783,11 @@
   transition: transform .2s linear, -webkit-transform .2s linear;
 }
 
-.item-card p.item-detail {
+.current-equipment .item-card p.item-detail {
   color: white;
 }
 
-.item-card .item-detail {
+.current-equipment .item-card .item-detail {
   position: absolute;
   bottom: 2px;
   font-size: 1.25rem;
@@ -779,7 +802,7 @@
   transform: translateY(200%);
 }
 
-.item-card div {
+.current-equipment .item-card div {
   height: 24px;
   width: 100%;
   display: -webkit-box;
@@ -800,7 +823,7 @@
   padding: 2px;
 }
 
-.item-card div button {
+.current-equipment .item-card div button {
   -webkit-box-shadow: none;
   box-shadow: none;
   background-color: transparent;
@@ -816,33 +839,33 @@
   border-top: none;
 }
 
-.item-card div button:first-of-type {
+.current-equipment .item-card div button:first-of-type {
   border-right-width: 3px;
 }
 
-.item-card div button:last-of-type {
+.current-equipment .item-card div button:last-of-type {
   border-left-width: 3px;
 }
 
-.item-card #context-menu.expand-down {
+.current-equipment .item-card #context-menu.expand-down {
   top: 0;
   -webkit-transform: translateX(12%);
   -ms-transform: translateX(12%);
   transform: translateX(12%);
 }
 
-.item-card #context-menu {
+.current-equipment .item-card #context-menu {
   width: 80%;
   min-width: initial;
   background: var(--text-color);
   border: none;
 }
 
-.item-card #context-menu li.context-item {
+.current-equipment .item-card #context-menu li.context-item {
   border: solid transparent 2px;
 }
 
-.item-card #context-menu li.context-item:hover {
+.current-equipment .item-card #context-menu li.context-item:hover {
   text-shadow: 0 0 4px #2694d4;
   border: solid white 2px;
 }

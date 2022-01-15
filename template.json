@@ -351,11 +351,14 @@
       }
     },
     "forcePower": {
-      "templates": ["itemDescription"],
       "prerequisite": {
         "required": false,
         "value": []
-      }
+      },
+      "time": "",
+      "target": "",
+      "special": "",
+      "effects": []
     },
     "consumables":{
       "templates": ["itemDescription"]

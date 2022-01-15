@@ -8,18 +8,24 @@
   
   <header class="sheet-header">
     <div class="header-fields">
-      <h5><input name="name" id="itemName" type="text" value="{{item.name}}" placeholder="Name"/></h5>
       <div>
-        <div class='label-container'>
-          <label for='weaponType'>{{localize "swSaga.item.variety" }}</label>
-          <input id='weaponType' name="data.variety" type='text' value="{{data.variety}}"/>
+        <h5><input name="name" id="itemName" type="text" value="{{item.name}}" placeholder="Name"/></h5>
+        <div>
+          <div class='label-container'>
+            <label for='weaponType'>{{localize "swSaga.item.variety" }}</label>
+            <input id='weaponType' name="data.variety" type='text' value="{{data.variety}}"/>
+          </div>
+          {{#if data.stunSetting}}
+          <div class='label-container'>
+            <label for='stunSetting'>{{localize "swSaga.weapon.hasStun" }}</label>
+            <input id='stunSetting' name="data.stunSetting" type='text' value="{{data.stunSetting}}"/>
+          </div>
+          {{/if}}
         </div>
-        {{#if data.stunSetting}}
-        <div class='label-container'>
-          <label for='stunSetting'>{{localize "swSaga.weapon.hasStun" }}</label>
-          <input id='stunSetting' name="data.stunSetting" type='text' value="{{data.stunSetting}}"/>
-        </div>
-        {{/if}}
+      </div>
+      <div class='attack-damage'>
+        <span class='to-hit'>To Hit <span>'{derived}'</span></span>
+        <span class='weapon-damage'>Damage <span>{{data.damage}} + '{derived}'</span></span>
       </div>
     </div>
         
