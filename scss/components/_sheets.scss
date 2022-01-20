@@ -478,6 +478,9 @@
         padding-left: 0;
         }
       }
+      .label-container{
+        max-width: 150px;
+      }
     }
 
     .window-content header .header-fields > div{
@@ -493,8 +496,13 @@
       gap: .25rem;
     }
 
+    .window-content header .header-fields > div:first-of-type{
+      flex: 2;
+    }
+
     .attack-damage{
       text-align: right;
+      flex: 1;
     }
 
     .image-container{

@@ -92,11 +92,14 @@
 
     <header class="sheet-header">
       <div class="header-fields">
-        <h5><input name="name" id="itemName" type="text" value="{{item.name}}" placeholder="Name"/></h5>
-        <div class='label-container'>
-          <label for='armorType'>{{localize "swSaga.item.variety" }}</label>
-          <input id='armorType' name="data.variety" type='text' value="{{data.variety}}"/>
+        <div>
+          <h5><input name="name" id="itemName" type="text" value="{{item.name}}" placeholder="Name"/></h5>
+          <div class='label-container'>
+            <label for='armorType'>{{localize "swSaga.item.variety" }}</label>
+            <input id='armorType' name="data.variety" type='text' value="{{data.variety}}"/>
+          </div>
         </div>
+        
     </header>
 
       <div class="image-container">

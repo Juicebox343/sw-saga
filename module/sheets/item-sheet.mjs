@@ -4,7 +4,7 @@ export default class swSagaItemSheet extends ItemSheet {
     return mergeObject(super.defaultOptions, {
       width: 975,
       height: 380,
-      resizable: false,
+      resizable: true,
       classes: ["swsaga", "sheet", "item"],
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
     });

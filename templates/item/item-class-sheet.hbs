@@ -1,60 +1,73 @@
-<form class="{{cssClass}}" autocomplete="off">
+<form class="{{item.type}}" autocomplete="off">
+  
   <header class="sheet-header">
-    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
     <div class="header-fields">
-      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
+      <div>
+        <h5><input name="name" id="itemName" type="text" value="{{item.name}}" placeholder="Name"/></h5>
+      </div>
     </div>
   </header>
 
-  <section>
+  <div class="image-container">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+  </div>
+
+  <div class='description-fields'>
+    <div class='description-details'>
+      <div>
+        <div class='label-container'>
+          <label for='hitDice'>{{localize 'swSaga.class.hitDice' }}</label>
+          <input id='hitDice' name="data.hitDice" type='text' value="{{data.hitDice}}"/>
+        </div>
+        <div class='label-container'>
+          <label for='startHP'>{{localize 'swSaga.class.startHP' }}</label>
+          <input id='startHP' name="data.startHP" type='text' value="{{data.startHP}}"/>
+        </div>
+      </div>
+      <div>
+        <div class='label-container'>
+          <label for='defBonus'>{{localize 'swSaga.class.defBonus' }}</label>
+          <input id='defBonus' name="data.defBonus" type='text' value="{{data.defBonus}}"/>
+        </div>
+      </div>
+      <div>
+        <div class='label-container'>
+          <label for='forcePoints'>{{localize 'swSaga.class.forcePoints' }}</label>
+          <input id='forcePoints' name="data.forcePoints" type='text' value="{{data.forcePoints}}"/>
+        </div>
+        <div class='label-container'>
+          <label for='startingCredits'>{{localize "swSaga.class.startingCredits" }}</label>
+          <input id='startingCredits' name="data.startingCredits" type='text' value="{{data.startingCredits}}"/>
+        </div>
+      </div>
+      <div class='label-container description-field'>
+        <label for='itemDescription'>{{localize "swSaga.item.description" }}</label>
+        <textarea id='itemDescription' name=""></textarea>
+      </div>
+    </div> 
+  </div>
+
+  <div class='label-container progression'>
+    <label for='progression'>{{localize 'swSaga.class.progression' }}</label>
     <table>
       <tr>
-        <th>{{localize "swSaga.class.description" }}</th>
-        <th>{{localize "swSaga.class.startHP" }}</th>
-        <th>{{localize "swSaga.class.hitDice" }}</th>
-        <th>{{localize "swSaga.class.forcePoints" }}</th>
-        <th>{{localize "swSaga.class.defBonus" }}</th>
-        <th>{{localize "swSaga.class.startFeats" }}</th>
-        <th>{{localize "swSaga.class.bonusFeats" }}</th>
-        <th>{{localize "swSaga.class.talents" }}</th>
-        <th>{{localize "swSaga.class.trainedSkills" }}</th>
-        <th>{{localize "swSaga.class.startingCredits" }}</th>
-      </tr>
-      <tr>
-        <td>
-          <input name="data.name" type='text' value="{{data.name}}"  />
-        </td>
-        <td>
-          <input name="data.description" type='text' value="{{data.description}}"  />
-        </td>
-        <td>
-          <input name="data.startHP" type='text' value="{{data.startHP}}"  />
-        </td>
-        <td><input name="data.hitDice" type='text' value="{{data.hitDice}}"  />
-        </td>
-        <td>
-          <input name="data.forcePoints" type='text' value="{{data.forcePoints}}"  />
-        </td>
-        <td>
-          <input name="data.defBonus" type='text' value="{{data.defBonus}}"  />
-        </td>
-        <td>
-          <input name="data.startFeats" type='text' value="{{data.startFeats}}"  />
-        </td>
-        <td>
-          <input name="data.bonusFeats" type='text' value="{{data.bonusFeats}}"  />
-        </td>
-        <td>
-          <input name="data.bonusFeats" type='text' value="{{data.talents}}"  />
-        </td>
-        <td>
-          <input name="data.bonusFeats" type='text' value="{{data.trainedSkills}}"  />
-        </td>
-        <td>
-          <input name="data.bonusFeats" type='text' value="{{data.startingCredits}}"  />
-        </td>
+        <th>Class Level</th>
+        <th>Base Attack Bonus</th>
+        <th>Class Features</th>
       </tr>
     </table>
+  </div>
+  <div class='label-container trained-skills'>
+    <label for='trainedSkills'>{{localize 'swSaga.class.trainedSkills' }}</label>
+    <input id='trainedSkills' name="data.trainedSkills" type='text' value="{{data.trainedSkills}}"/>
+  </div>
+  <div class='label-container starting-feats'>
+    <label for='startFeats'>{{localize 'swSaga.class.startFeats' }}</label>
+    <input id='startFeats' name="data.startFeats" type='text' value="{{data.startFeats}}"/>
+  </div>
+  <div class='label-container starting-talents'>
+    <label for='talentTrees'>{{localize "swSaga.class.talentTrees" }}</label>
+    <input id='talentTrees' name="data.talentTrees" type='text' value="{{data.talentTrees}}"/>
+  </div>
 
-  </section>
 </form>

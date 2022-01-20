@@ -581,6 +581,10 @@
   padding-left: 0;
 }
 
+.item.swsaga.sheet .window-content header .header-fields .label-container {
+  max-width: 150px;
+}
+
 .item.swsaga.sheet .window-content header .header-fields > div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -603,8 +607,17 @@
   gap: .25rem;
 }
 
+.item.swsaga.sheet .window-content header .header-fields > div:first-of-type {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
 .item.swsaga.sheet .attack-damage {
   text-align: right;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .item.swsaga.sheet .image-container {
