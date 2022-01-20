@@ -266,7 +266,7 @@
   display: grid;
   gap: .5rem;
   grid-template-rows: 150px auto;
-  grid-template-columns: 150px 3fr 1fr 150px;
+  grid-template-columns: 150px auto 50px 200px;
 }
 
 .actor.swsaga.sheet form.character .sheet-header img {
