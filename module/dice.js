@@ -3,6 +3,9 @@ export function rollD20(event){
     const element = event.currentTarget;
     const dataset = element.dataset;
     if (dataset.roll) {
+      if(dataset.label === 'Lightsaber'){
+        console.log(event)
+      }
       let label = dataset.label ? `Rolling ${dataset.label}` : '';
       // let label = dataset.label ? `Attacking with ${dataset.label}` : '';
       let roll = new Roll(dataset.roll, this.actor.getRollData());

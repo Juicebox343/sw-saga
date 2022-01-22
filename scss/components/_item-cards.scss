@@ -48,11 +48,11 @@
     opacity: 0;
   }
 
-  .current-equipment .item-card div {
+  .current-equipment .item-card .buttons {
     opacity: 0;
   }
 
-  .current-equipment .item-card:hover div {
+  .current-equipment .item-card:hover .buttons {
     opacity: 1;
   }
 
@@ -103,9 +103,10 @@
 
   .current-equipment .item-card .item-name {
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     height: 30px;
     width: 125px;
+    line-height: 30px;
     color: white;
     display: inline-block;
     text-align: center;
@@ -138,7 +139,7 @@
     transform: translateY(200%);
   }
 
-  .current-equipment .item-card div {
+  .current-equipment .item-card .buttons {
     height: 24px;
     width: 100%;
     display: -webkit-box;
@@ -159,7 +160,7 @@
     padding: 2px;
   }
 
-  .current-equipment .item-card div button {
+  .current-equipment .item-card .buttons button {
     -webkit-box-shadow: none;
     box-shadow: none;
     background-color: white;
@@ -236,4 +237,21 @@
     background: #ffffff;
     box-shadow: 0 0 2px #ec7777;
     color: white;
+  }
+
+  .item-card .hover-info{
+    transform: translate(0, -150px);
+    width: 200px;
+    height: 150px;
+    display: none;
+    opacity: 0;
+    z-index: 200;
+    background-color: green;
+  }
+
+  .current-equipment .item-card:hover .hover-info{
+    animation-name: fadeMeIn;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
   }

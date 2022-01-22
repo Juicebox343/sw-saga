@@ -1,10 +1,10 @@
 <div class='item-card weapon-card item'
         data-item-id={{_id}} 
         style="background-image: url('systems/swSaga/icons/item-card-weapon.svg'); background-repeat: no-repeat;background-size: cover;" >
-    <p class='item-name'>{{name}}</p>
+    <p class='item-name'>{{data.variety}}</p>
     
     <img class={{type}} src="/systems/swSaga/icons/{{data.variety}}.svg">
-    <div>
+    <div class='buttons'>
         <button class='item-roll'       
             data-item-id={{_id}}
             data-roll="d20+@abilities.{{data.skillUsed}}.mod+{{actor.data.data.attributes.baseAttack}}" 
@@ -19,5 +19,9 @@
         </button>
     </div>
     <p class='item-detail'>{{data.damage}}</p>
+
+    <div class='hover-info'>
+        <span>{{name}}</span>
+    </div>
 </div>
 

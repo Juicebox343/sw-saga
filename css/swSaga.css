@@ -102,6 +102,34 @@
   }
 }
 
+@-webkit-keyframes fadeMeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  10% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeMeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  10% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .swsaga.sheet input[type="text"],
 .swsaga.sheet input[type="number"],
 .swsaga.sheet input[type="password"],
@@ -326,11 +354,12 @@
 .actor.swsaga.sheet form.character .sheet-header .sub-container:last-of-type .hitpoints {
   grid-row: 1 / 3;
   grid-column: 1 / 2;
+  text-align: center;
 }
 
 .actor.swsaga.sheet form.character .sheet-header .sub-container:last-of-type .hitpoints input {
   height: 100%;
-  font-size: 2rem;
+  font-size: 3.25rem;
 }
 
 .actor.swsaga.sheet form.character .sheet-header .sub-container:last-of-type .condition {
@@ -736,11 +765,11 @@
   opacity: 0;
 }
 
-.current-equipment .item-card div {
+.current-equipment .item-card .buttons {
   opacity: 0;
 }
 
-.current-equipment .item-card:hover div {
+.current-equipment .item-card:hover .buttons {
   opacity: 1;
 }
 
@@ -793,9 +822,10 @@
 
 .current-equipment .item-card .item-name {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   height: 30px;
   width: 125px;
+  line-height: 30px;
   color: white;
   display: inline-block;
   text-align: center;
@@ -828,7 +858,7 @@
   transform: translateY(200%);
 }
 
-.current-equipment .item-card div {
+.current-equipment .item-card .buttons {
   height: 24px;
   width: 100%;
   display: -webkit-box;
@@ -849,7 +879,7 @@
   padding: 2px;
 }
 
-.current-equipment .item-card div button {
+.current-equipment .item-card .buttons button {
   -webkit-box-shadow: none;
   box-shadow: none;
   background-color: white;
@@ -925,4 +955,27 @@
   -webkit-box-shadow: 0 0 2px #ec7777;
   box-shadow: 0 0 2px #ec7777;
   color: white;
+}
+
+.item-card .hover-info {
+  -webkit-transform: translate(0, -150px);
+  -ms-transform: translate(0, -150px);
+  transform: translate(0, -150px);
+  width: 200px;
+  height: 150px;
+  display: none;
+  opacity: 0;
+  z-index: 200;
+  background-color: green;
+}
+
+.current-equipment .item-card:hover .hover-info {
+  -webkit-animation-name: fadeMeIn;
+  animation-name: fadeMeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }

@@ -27,3 +27,17 @@
       transition-property: left, top, opacity;
     }
 }
+
+@keyframes fadeMeIn{
+  0%{
+    display: none;
+    opacity: 0;
+  }
+  10% {
+    display: block;
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
