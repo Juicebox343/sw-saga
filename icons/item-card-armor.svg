@@ -1,11 +1,12 @@
-<svg width="80" height="65" viewBox="0 0 80 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_920_124)">
-<rect x="2" y="2" width="76" height="58" fill="white" stroke="#257A8C" stroke-width="4"/>
-<path class='bottom-bar' d="M80 67L80 49.9655L67.3016 49.9655L65.3968 48L16 48L14.5 49.9655L-2.56382e-07 49.9655L-2.47836e-06 67L80 67Z" fill="#257A8C"/>
+<svg width="80" height="53" viewBox="0 0 80 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_986_76)">
+<path d="M0 5.5C0 3.84315 1.34315 2.5 3 2.5H77C78.6569 2.5 80 3.84315 80 5.5V35.5C80 37.1569 78.6569 38.5 77 38.5H3C1.34315 38.5 0 37.1569 0 35.5V5.5Z" fill="white"/>
+<path d="M40.6349 8.5L24.7619 8.5L14.6032 8.5L12.6984 7L-1.68602e-07 7L-6.18204e-07 3.00001C-8.04435e-07 1.34315 1.34315 5.34831e-06 3 5.23565e-06L80 0L80 7L57.1429 7L55.873 5.49999L45.7143 5.49999L40.6349 8.5Z" fill="#257A8C"/>
+<path d="M39.3651 32.5L55.2381 32.5L65.3968 32.5L67.3016 34L80 34L80 50C80 51.6569 78.6569 53 77 53L-7.82641e-07 53L-1.9566e-07 34L22.8571 34L24.127 35.5L34.2857 35.5L39.3651 32.5Z" fill="#257A8C"/>
 </g>
 <defs>
-<clipPath id="clip0_920_124">
-<rect width="80" height="65" fill="white"/>
+<clipPath id="clip0_986_76">
+<rect width="80" height="53" fill="white"/>
 </clipPath>
 </defs>
 </svg>

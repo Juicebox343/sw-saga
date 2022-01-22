@@ -8,7 +8,7 @@
   "author": "Joe Heiser",
   "esmodules": ["swSaga.mjs"],
   "styles": ["css/swSaga.css"],
-  "scripts": [],
+  "scripts": ["module/helpers/textFit.js","module/helpers/scripts.js"],
   "languages": [
     {
       "lang": "en",

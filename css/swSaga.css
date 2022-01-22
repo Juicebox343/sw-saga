@@ -701,7 +701,6 @@
   -ms-flex-pack: center;
   justify-content: center;
   border-radius: 3px;
-  font-size: .75rem;
   -webkit-transition: all .2s;
   -o-transition: all .2s;
   transition: all .2s;
@@ -710,8 +709,8 @@
   margin: 0;
   position: relative;
   overflow: hidden;
-  width: 160px;
-  height: 130px;
+  width: 125px;
+  height: 100px;
 }
 
 .current-equipment .item-card:hover::after {
@@ -737,10 +736,12 @@
   opacity: 0;
 }
 
+.current-equipment .item-card div {
+  opacity: 0;
+}
+
 .current-equipment .item-card:hover div {
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
+  opacity: 1;
 }
 
 .current-equipment .item-card:hover .item-detail {
@@ -756,11 +757,20 @@
 }
 
 .current-equipment .item-card img.weapon {
+  -webkit-transition: opacity .2s linear;
+  -o-transition: opacity .2s linear;
+  transition: opacity .2s linear;
+}
+
+.current-equipment .item-card img.weapon {
   border: none;
-  width: 100%;
-  height: auto;
+  width: 80%;
+  max-width: initial;
+  max-height: 35px;
   position: absolute;
-  top: 35px;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin-bottom: 10px;
 }
 
 .current-equipment .item-card img.armor {
@@ -768,7 +778,11 @@
   width: 100%;
   height: auto;
   position: absolute;
-  top: 20px;
+  top: 15px;
+}
+
+.current-equipment .item-card:hover img.weapon {
+  opacity: 0;
 }
 
 .current-equipment .item-card p {
@@ -777,15 +791,14 @@
   text-transform: uppercase;
 }
 
-.current-equipment .item-card p.item-name {
-  color: white;
-}
-
 .current-equipment .item-card .item-name {
   position: absolute;
-  bottom: 6px;
+  bottom: 0px;
+  height: 30px;
+  width: 125px;
   color: white;
-  font-size: 1.1rem;
+  display: inline-block;
+  text-align: center;
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
@@ -831,7 +844,7 @@
   -o-transition: all .2s linear;
   transition: all .2s linear;
   position: absolute;
-  top: 10px;
+  top: 30px;
   z-index: 100;
   padding: 2px;
 }
@@ -839,25 +852,18 @@
 .current-equipment .item-card div button {
   -webkit-box-shadow: none;
   box-shadow: none;
-  background-color: transparent;
+  background-color: white;
   height: 30px;
-  width: 50%;
+  width: 40%;
   margin: 0;
   font-weight: bold;
   font-size: 0.75rem;
   line-height: 0.75rem;
   text-align: center;
-  border-radius: 0;
-  border-width: 6px;
-  border-top: none;
-}
-
-.current-equipment .item-card div button:first-of-type {
-  border-right-width: 3px;
-}
-
-.current-equipment .item-card div button:last-of-type {
-  border-left-width: 3px;
+  border: 2px solid #B44242;
+  color: #B44242;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .current-equipment .item-card #context-menu.expand-down {
@@ -872,6 +878,7 @@
   min-width: initial;
   background: var(--text-color);
   border: none;
+  z-index: 100;
 }
 
 .current-equipment .item-card #context-menu li.context-item {
@@ -883,32 +890,39 @@
   border: solid white 2px;
 }
 
-.armor-card:hover {
+.current-equipment .item-card.armor-card:hover {
   -webkit-box-shadow: 0px 0px 7px #257A8C;
   box-shadow: 0px 0px 7px #257A8C;
 }
 
-.armor-card button {
+.current-equipment .item-card.armor-card button {
   border: 2px solid #257A8C;
   color: #257A8C;
 }
 
-.armor-card button:hover {
+.current-equipment .item-card.armor-card button:hover {
   background: #257A8C;
   color: white;
 }
 
-.weapon-card:hover {
-  -webkit-box-shadow: 0px 0px 7px #B44242;
-  box-shadow: 0px 0px 7px #B44242;
-}
-
-.weapon-card button {
+.current-equipment .item-card.weapon-card button {
   border: 2px solid #B44242;
   color: #B44242;
 }
 
-.weapon-card button:hover {
+.current-equipment .item-card.weapon-card button:hover {
   background: #B44242;
+  -webkit-box-shadow: 0 0 2px #ec7777;
+  box-shadow: 0 0 2px #ec7777;
+  color: white;
+  -webkit-transition: all .25s;
+  -o-transition: all .25s;
+  transition: all .25s;
+}
+
+.current-equipment .item-card.weapon-card button:active {
+  background: #ffffff;
+  -webkit-box-shadow: 0 0 2px #ec7777;
+  box-shadow: 0 0 2px #ec7777;
   color: white;
 }
