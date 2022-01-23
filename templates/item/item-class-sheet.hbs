@@ -12,25 +12,21 @@
     <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
   </div>
 
-  <div class='description-fields'>
-    <div class='description-details'>
-      <div>
         <div class='label-container'>
           <label for='hitDice'>{{localize 'swSaga.class.hitDice' }}</label>
           <input id='hitDice' name="data.hitDice" type='text' value="{{data.hitDice}}"/>
         </div>
+
         <div class='label-container'>
           <label for='startHP'>{{localize 'swSaga.class.startHP' }}</label>
           <input id='startHP' name="data.startHP" type='text' value="{{data.startHP}}"/>
         </div>
-      </div>
-      <div>
+
         <div class='label-container'>
           <label for='defBonus'>{{localize 'swSaga.class.defBonus' }}</label>
           <input id='defBonus' name="data.defBonus" type='text' value="{{data.defBonus}}"/>
         </div>
-      </div>
-      <div>
+
         <div class='label-container'>
           <label for='forcePoints'>{{localize 'swSaga.class.forcePoints' }}</label>
           <input id='forcePoints' name="data.forcePoints" type='text' value="{{data.forcePoints}}"/>
@@ -39,13 +35,12 @@
           <label for='startingCredits'>{{localize "swSaga.class.startingCredits" }}</label>
           <input id='startingCredits' name="data.startingCredits" type='text' value="{{data.startingCredits}}"/>
         </div>
-      </div>
+      
       <div class='label-container description-field'>
-        <label for='itemDescription'>{{localize "swSaga.item.description" }}</label>
-        <textarea id='itemDescription' name=""></textarea>
+        <label for='classDescription'>{{localize "swSaga.item.description" }}</label>
+        <textarea id='classDescription' name=""></textarea>
       </div>
-    </div> 
-  </div>
+
 
   <div class='label-container progression'>
     <label for='progression'>{{localize 'swSaga.class.progression' }}</label>
@@ -55,12 +50,21 @@
         <th>Base Attack Bonus</th>
         <th>Class Features</th>
       </tr>
+      {{#each data.skills as |skill id|}}
+        <tr data-item-id="{{@key}}" class='item'>
+          <td>1</td>
+          <td>+1</td>
+          <td>Defense Bonus, Lightsaber, Starting Feats, Talent</td>
+        </tr>
+      {{/each}}
     </table>
   </div>
+
   <div class='label-container trained-skills'>
     <label for='trainedSkills'>{{localize 'swSaga.class.trainedSkills' }}</label>
     <input id='trainedSkills' name="data.trainedSkills" type='text' value="{{data.trainedSkills}}"/>
   </div>
+  
   <div class='label-container starting-feats'>
     <label for='startFeats'>{{localize 'swSaga.class.startFeats' }}</label>
     <input id='startFeats' name="data.startFeats" type='text' value="{{data.startFeats}}"/>
