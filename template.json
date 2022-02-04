@@ -303,7 +303,7 @@
 
 },
   "Item": {
-    "types": ["weapon", "armor", "equipment", "consumable", "class", "feat", "talent", "species", "forcePower"],
+    "types": ["weapon", "armor", "equipment", "consumable", "class", "feat", "talent", "species", "forcePower", "language"],
     "templates": {
       "itemDescription": {
         "description": "",
@@ -313,23 +313,29 @@
     },
     "species":{
       "templates": ["itemDescription"],
+      "personality": "",
+      "adventurers": "",
+      "physical_desc": "",
+      "average_weight_height": "",
+      "ageGroup": "",
       "homeworld": "",
       "languages": [],
       "modifiers": [],
       "size": "medium",
       "speed": 6,
-      "traits": []
+      "traits": [],
+      "species_feats": ""
     },
     "class":{
       "templates": ["itemDescription"],
-      "startHP": 18,
-      "hitDice": 6,
-      "forcePoints": 5,
+      "startHP": "",
+      "hitDice": "",
+      "forcePoints": "",
       "defBonus": [],
       "startFeats": [],
       "bonusFeats": [],
       "talentTrees": [],
-      "trainedSkills": 6,
+      "trainedSkills": "",
       "startingCredits": ""
     },
     "feat": {
@@ -394,6 +400,9 @@
       "bonus": [],
       "cost": 0,
       "weight": 0
+    },
+    "language": {
+      "templates": ["itemDescription"]
     }
   }
 }

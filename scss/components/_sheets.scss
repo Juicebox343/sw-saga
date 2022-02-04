@@ -554,14 +554,92 @@
 
 .item.swsaga.sheet form.class{
   display: grid;
-  grid-template-columns: repeat(12, 45px);
-  grid-template-rows: 45px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(16, 30px);
   header{
     grid-row: 1 / 2;
     grid-column: 1 / 13;
   }
   .image-container{
     grid-row: 2 / 5;
-    grid-column: 2 / 5;
+    grid-column: 1 / 4;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .hitDice{
+    grid-row: 2 / 3;
+    grid-column: 4 / 6;
+  }
+  .startHP{
+    grid-row: 2 / 3;
+    grid-column: 6 / 8;
+  }
+  .defBonus{
+    grid-row: 3 / 4;
+    grid-column: 4 / 6;
+  }
+  .forcePoints{
+    grid-row: 3 / 4;
+    grid-column: 6 / 8;
+  }
+  .startingCredits{
+    grid-row: 4 / 5;
+    grid-column: 4 / 8;
+  }
+  .description-field{
+    grid-row: 2 / 5;
+    grid-column: 8 / 13; 
+  }
+  .progression{
+    grid-row: 5 / 13;
+    grid-column: 1 / 8;
+  }
+  .trained-skills{
+    grid-row: 5 / 9;
+    grid-column: 8 / 13;
+  }
+  .starting-feats{
+    grid-row: 9 / 13;
+    grid-column: 8 / 13;
+  }
+  .talent-trees{
+    grid-row: 13 / 17;
+    grid-column: 1 / 13;
+  }
+}
+
+.item.swsaga.sheet form.species{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(16, 30px);
+  header{
+    grid-row: 1 / 2;
+    grid-column: 1 / 13;
+  }
+  .image-container{
+    grid-row: 2 / 5;
+    grid-column: 1 / 4;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .homeworld{
+    grid-row: 2 / 3;
+    grid-column: 5 / 7;
+  }
+  .speed{
+    grid-row: 2 / 3;
+    grid-column: 7 / 9;
+  }
+  .languages{
+    grid-row: 2 / 3;
+    grid-column: 4 / 6;
+  }
+  .adventurers{
+    grid-row: 2 / 5;
+    grid-column: 9 / 17;
   }
 }

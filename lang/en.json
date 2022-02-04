@@ -19,6 +19,23 @@
       "size": "Size",
       "use_details": "Details"
     },
+    "species":{
+      "size" : "Size",
+      "homeworld": "Homeworld",
+      "adventurers": "Adventurers",
+      "average_weight_height": "Average Weight",
+      "ageGroup": "Age Groups",
+      "languages": "Languages",
+      "modifiers": "Modifiers",
+      "speed": "Speed",
+      "traits": "Traits",
+      "species_feats": "Species Feats",
+      "personality": "Personality",
+      "physical_desc": "Physical Description"
+
+
+
+    },
     "weapon":{
       "damage": "Damage",
       "hasStun": "Weapon Mode",
@@ -50,13 +67,6 @@
       "talents": "Talents",
       "trainedSkills": "Trained Skills",
       "startingCredits": "Starting Credits"
-    },
-    "species":{
-      "bothan": "Bothan",
-      "droid": "Droid",
-      "mira": "Miraluka",
-      "trandoshan": "Trandoshan",
-      "twilek": "Twi'Lek"
     }
   }
 
