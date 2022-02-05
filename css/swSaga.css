@@ -809,22 +809,62 @@
 
 .item.swsaga.sheet form.species .homeworld {
   grid-row: 2 / 3;
-  grid-column: 5 / 7;
+  grid-column: 4 / 8;
 }
 
 .item.swsaga.sheet form.species .speed {
-  grid-row: 2 / 3;
-  grid-column: 7 / 9;
-}
-
-.item.swsaga.sheet form.species .languages {
-  grid-row: 2 / 3;
+  grid-row: 3 / 4;
   grid-column: 4 / 6;
 }
 
+.item.swsaga.sheet form.species .size {
+  grid-row: 3 / 4;
+  grid-column: 6 / 8;
+}
+
+.item.swsaga.sheet form.species .ex_names {
+  grid-row: 4 / 6;
+  grid-column: 4 / 6;
+}
+
+.item.swsaga.sheet form.species .languages {
+  grid-row: 4 / 6;
+  grid-column: 6 / 8;
+}
+
+.item.swsaga.sheet form.species .modifiers {
+  grid-row: 5 / 6;
+  grid-column: 1 / 4;
+}
+
+.item.swsaga.sheet form.species .ageGroup {
+  grid-row: 6 / 7;
+  grid-column: 1 / 8;
+}
+
+.item.swsaga.sheet form.species .personality {
+  grid-row: 2 / 6;
+  grid-column: 8 / 13;
+}
+
+.item.swsaga.sheet form.species .traits {
+  grid-row: 6 / 11;
+  grid-column: 8 / 13;
+}
+
+.item.swsaga.sheet form.species .species_feats {
+  grid-row: 11 / 14;
+  grid-column: 8 / 13;
+}
+
+.item.swsaga.sheet form.species .description {
+  grid-row: 7 / 14;
+  grid-column: 1 / 8;
+}
+
 .item.swsaga.sheet form.species .adventurers {
-  grid-row: 2 / 5;
-  grid-column: 9 / 17;
+  grid-row: 14 / 17;
+  grid-column: 1 / 13;
 }
 
 .current-equipment .item-card {

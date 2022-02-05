@@ -12,14 +12,9 @@
     <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
   </div>
 
-  <div class='label-container adventurers'>
-    <label for='adventurers'>{{localize 'swSaga.species.adventurers' }}</label>
-    <input id='adventurers' name="data.adventurers" type='text' value="{{data.adventurers}}"/>
-  </div>
-
-  <div class='label-container average_weight_height'>
-    <label for='average_weight_height'>{{localize 'swSaga.species.average_weight_height' }}</label>
-    <input id='average_weight_height' name="data.average_weight_height" type='text' value="{{data.average_weight_height}}"/>
+  <div class='label-container homeworld'>
+    <label for='homeworld'>{{localize 'swSaga.species.homeworld' }}</label>
+    <input id='homeworld' name="data.homeworld" type='text' value="{{data.homeworld}}"/>
   </div>
 
   <div class='label-container ageGroup'>
@@ -27,9 +22,19 @@
     <input id='ageGroup' name="data.ageGroup" type='text' value="{{data.ageGroup}}"/>
   </div>
 
-  <div class='label-container homeworld'>
-    <label for='homeworld'>{{localize 'swSaga.species.homeworld' }}</label>
-    <input id='homeworld' name="data.homeworld" type='text' value="{{data.homeworld}}"/>
+  <div class='label-container speed'>
+    <label for='speed'>{{localize 'swSaga.species.speed' }}</label>
+    <input id='speed' name="data.speed" type='text' value="{{data.speed}}"/>
+  </div>
+
+  <div class='label-container size'>
+    <label for='size'>{{localize 'swSaga.species.size' }}</label>
+    <input id='size' name="data.size" type='text' value="{{data.size}}"/>
+  </div>
+
+  <div class='label-container ex_names'>
+    <label for='languages'>{{localize 'swSaga.species.ex_names' }}</label>
+    <input id='ex_names' name="data.ex_names" type='text' value="{{data.ex_names}}"/>
   </div>
 
   <div class='label-container languages'>
@@ -40,16 +45,6 @@
   <div class='label-container modifiers'>
     <label for='modifiers'>{{localize 'swSaga.species.modifiers' }}</label>
     <input id='modifiers' name="data.modifiers" type='text' value="{{data.modifiers}}"/>
-  </div>
-
-  <div class='label-container languages'>
-    <label for='size'>{{localize 'swSaga.species.size' }}</label>
-    <input id='size' name="data.size" type='text' value="{{data.size}}"/>
-  </div>
-
-  <div class='label-container speed'>
-    <label for='speed'>{{localize 'swSaga.species.speed' }}</label>
-    <input id='speed' name="data.speed" type='text' value="{{data.speed}}"/>
   </div>
 
   <div class='label-container traits'>
@@ -71,9 +66,10 @@
     <label for='personality'>{{localize 'swSaga.species.personality' }}</label>
     <input id='personality' name="data.personality" type='text' value="{{data.personality}}"/>
   </div>
-
-  <div class='label-container physical_desc'>
-    <label for='physical_desc'>{{localize 'swSaga.species.physical_desc' }}</label>
-    <input id='physical_desc' name="data.physical_desc" type='text' value="{{data.physical_desc}}"/>
+  
+  <div class='label-container adventurers'>
+    <label for='adventurers'>{{localize 'swSaga.species.adventurers' }}</label>
+    <input id='adventurers' name="data.adventurers" type='text' value="{{data.adventurers}}"/>
   </div>
+
 </form>
