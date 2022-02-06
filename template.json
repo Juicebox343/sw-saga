@@ -303,7 +303,7 @@
 
 },
   "Item": {
-    "types": ["weapon", "armor", "equipment", "consumable", "class", "feat", "talent", "species", "forcePower", "language"],
+    "types": ["weapon", "armor", "equipment", "consumable", "class", "feat", "talent", "species", "forcePower"],
     "templates": {
       "itemDescription": {
         "description": "",
@@ -340,6 +340,7 @@
     "feat": {
       "templates": ["itemDescription"],
       "bonus": [],
+      "class": "",
       "prerequisite": {
         "required": false,
         "value": []
@@ -365,7 +366,10 @@
       "special": "",
       "effects": []
     },
-    "consumables":{
+    "consumable":{
+      "templates": ["itemDescription"]
+    },
+    "language":{
       "templates": ["itemDescription"]
     },
     "weapon": {
@@ -399,9 +403,6 @@
       "bonus": [],
       "cost": 0,
       "weight": 0
-    },
-    "language": {
-      "templates": ["itemDescription"]
     }
   }
 }
