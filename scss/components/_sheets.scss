@@ -31,6 +31,14 @@
     color: var(--text-color);
   }
 
+  h5{
+    font-size: 1.25rem;
+    letter-spacing: .75px;
+    margin: 0;
+    font-family: var(--main-heading-font);
+    color: var(--text-color);
+  }
+
   ::-webkit-scrollbar-thumb {
     border: none;
     background: #2694d4;
@@ -369,6 +377,21 @@
     border: 1px solid var(--background-color);
   }
 
+  form.character .character-page .force{
+    border: 1px solid var(--background-color);
+  }
+
+  form.character .character-page .force-suite{
+    border: 1px solid var(--background-color);
+  }
+
+  form.character .character-page .inventory{
+    .item-card{
+
+    }
+  }
+
+
   form.character .character-page .tab.active {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -441,9 +464,6 @@
 
   // ITEMS
   .item.swsaga.sheet{
-
-    
-
     form{
       display: grid;
       grid-template-columns: 255px 75px auto;
@@ -455,7 +475,6 @@
       grid-column: 1 / 4;
       grid-row: 1 / 2;
       display: flex;
-
     }
 
     .to-hit, .weapon-damage{
@@ -673,5 +692,38 @@
   .adventurers{
     grid-row: 14 / 17;
     grid-column: 1 / 13;
+  }
+}
+
+.item.swsaga.sheet form.minimal-sheet{
+  display: grid;
+  grid-template-columns: 255px 75px auto;
+  grid-template-rows: 75px 135px auto;
+  gap: 1rem;
+  header{
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    display: flex;
+    .header-extra{
+      display: flex;
+      .label-container:not(:first-of-type){
+        width: 75px;
+      }
+      .label-container.prereq-field{
+        width: initial;
+      }
+    }
+  }
+  .image-container{
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .description-field{
+    grid-row: 2 / 3;
+    grid-column: 2 / 4;
   }
 }

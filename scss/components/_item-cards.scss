@@ -1,4 +1,4 @@
-.current-equipment .item-card {
+ .item-card.big {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -25,7 +25,7 @@
     height: 100px;
   }
 
-    .current-equipment .item-card:hover::after {
+  .item-card.big:hover::after {
     content: "";
     -webkit-animation: shine 3s ease-in-out;
     animation: shine 3s ease-in-out;
@@ -44,35 +44,35 @@
     background: linear-gradient(to right, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.13) 77%, rgba(255, 255, 255, 0.774) 92%, rgba(255, 255, 255, 0) 100%);
   }
 
-  .current-equipment .item-card:active::after {
+   .item-card.big:active::after {
     opacity: 0;
   }
 
-  .current-equipment .item-card .buttons {
+   .item-card.big .buttons {
     opacity: 0;
   }
 
-  .current-equipment .item-card:hover .buttons {
+   .item-card.big:hover .buttons {
     opacity: 1;
   }
 
-  .current-equipment .item-card:hover .item-detail {
+   .item-card.big:hover .item-detail {
     -webkit-transform: translateY(0%);
     -ms-transform: translateY(0%);
     transform: translateY(0%);
   }
 
-  .current-equipment .item-card:hover .item-name {
+   .item-card.big:hover .item-name {
     -webkit-transform: translateY(200%);
     -ms-transform: translateY(200%);
     transform: translateY(200%);
   }
 
-  .current-equipment .item-card img.weapon{
+   .item-card.big img.weapon{
     transition: opacity .2s linear;
   }
 
-  .current-equipment .item-card img.weapon {
+   .item-card.big img.weapon {
     border: none;
     width: 80%;
     max-width: initial;
@@ -82,7 +82,7 @@
     margin-bottom: 10px;
   }
 
-  .current-equipment .item-card img.armor {
+   .item-card.big img.armor {
     border: none;
     width: 100%;
     height: auto;
@@ -90,18 +90,18 @@
     top: 15px;
   }
 
-  .current-equipment .item-card:hover img.weapon{
+   .item-card.big:hover img.weapon{
     opacity: 0;
   }
 
-  .current-equipment .item-card p {
+   .item-card.big p {
     margin: 0;
     font-weight: bold;
     text-transform: uppercase;
+    color: white;
   }
 
-
-  .current-equipment .item-card .item-name {
+   .item-card.big .item-name {
     position: absolute;
     bottom: 0;
     height: 30px;
@@ -120,11 +120,11 @@
     transition: transform .2s linear, -webkit-transform .2s linear;
   }
 
-  .current-equipment .item-card p.item-detail{
+  .swsaga.sheet .item-card.big p{
     color: white;
   }
 
-  .current-equipment .item-card .item-detail {
+   .item-card.big .item-detail {
     position: absolute;
     bottom: 2px;
     font-size: 1.25rem;
@@ -139,7 +139,7 @@
     transform: translateY(200%);
   }
 
-  .current-equipment .item-card .buttons {
+   .item-card.big .buttons {
     height: 24px;
     width: 100%;
     display: -webkit-box;
@@ -160,7 +160,7 @@
     padding: 2px;
   }
 
-  .current-equipment .item-card .buttons button {
+   .item-card.big .buttons button {
     -webkit-box-shadow: none;
     box-shadow: none;
     background-color: white;
@@ -177,14 +177,14 @@
     font-weight: bold;
   }
 
-  .current-equipment .item-card #context-menu.expand-down {
+   .item-card.big #context-menu.expand-down {
     top: 0;
     -webkit-transform: translateX(12%);
     -ms-transform: translateX(12%);
     transform: translateX(12%);
   }
 
-  .current-equipment .item-card #context-menu {
+   .item-card.big #context-menu {
     width: 80%;
     min-width: initial;
     background: var(--text-color);
@@ -192,54 +192,54 @@
     z-index: 100;
   }
 
-  .current-equipment .item-card #context-menu li.context-item {
+   .item-card.big #context-menu li.context-item {
     border: solid transparent 2px;
   }
 
-  .current-equipment .item-card #context-menu li.context-item:hover {
+   .item-card.big #context-menu li.context-item:hover {
     text-shadow: 0 0 4px #2694d4;
     border: solid white 2px;
   }
 
-  .current-equipment .item-card.armor-card:hover {
+   .item-card.big.armor-card:hover {
     -webkit-box-shadow: 0px 0px 7px #257A8C;
     box-shadow: 0px 0px 7px #257A8C;
   }
 
-  .current-equipment .item-card.armor-card button {
+   .item-card.big.armor-card button {
     border: 2px solid #257A8C;
     color: #257A8C;
   }
 
-  .current-equipment .item-card.armor-card button:hover {
+   .item-card.big.armor-card button:hover {
     background: #257A8C;
     color: white;
   }
 
-  .current-equipment .item-card.weapon-card:hover {
+   .item-card.big.weapon-card:hover {
  
   }
 
-  .current-equipment .item-card.weapon-card button {
+   .item-card.big.weapon-card button {
     border: 2px solid #B44242;
     color: #B44242;
   }
 
   
-.current-equipment .item-card.weapon-card button:hover {
+ .item-card.big.weapon-card button:hover {
     background: #B44242;
     box-shadow: 0 0 2px #ec7777;
     color: white;
     transition: all .25s;
   }
 
-  .current-equipment .item-card.weapon-card button:active {
+   .item-card.big.weapon-card button:active {
     background: #ffffff;
     box-shadow: 0 0 2px #ec7777;
     color: white;
   }
 
-  .item-card .hover-info{
+  .item-card.big .hover-info{
     transform: translate(0, -150px);
     width: 200px;
     height: 150px;
@@ -249,7 +249,7 @@
     background-color: green;
   }
 
-  .current-equipment .item-card:hover .hover-info{
+   .item-card.big:hover .hover-info{
     animation-name: fadeMeIn;
     animation-duration: 1s;
     animation-delay: 2s;

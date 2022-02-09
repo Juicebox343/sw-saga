@@ -17,7 +17,8 @@
       "cost": "Price",
       "weight": "Weight",
       "size": "Size",
-      "use_details": "Details"
+      "use_details": "Details",
+      "prerequisite": "Prerequisites"
     },
     "species":{
       "size" : "Size",

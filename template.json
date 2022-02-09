@@ -335,36 +335,28 @@
       "bonusFeats": [],
       "talentTrees": [],
       "trainedSkills": "",
-      "startingCredits": ""
+      "startingCredits": "",
+      "prerequisite": ""
     },
     "feat": {
       "templates": ["itemDescription"],
       "bonus": [],
       "class": "",
-      "prerequisite": {
-        "required": false,
-        "value": []
-      }
+      "prerequisite": ""
     },
     "talent":{
       "templates": ["itemDescription"],
       "class": "",
       "talentTree": "",
       "bonus": [],
-      "prerequisite": {
-        "required": false,
-        "value": []
-      }
+      "prerequisite": ""
     },
     "forcePower": {
-      "prerequisite": {
-        "required": false,
-        "value": []
-      },
       "time": "",
       "target": "",
       "special": "",
-      "effects": []
+      "effects": [],
+      "prerequisite": ""
     },
     "consumable":{
       "templates": ["itemDescription"]

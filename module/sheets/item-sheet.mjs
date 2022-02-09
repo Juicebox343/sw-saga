@@ -15,7 +15,7 @@ export default class swSagaItemSheet extends ItemSheet {
     const path = "systems/swSaga/templates/item";
     if(this.item.data.type === 'weapon' || this.item.data.type === 'armor'){
       return `${path}/item-sheet.hbs`;
-    } else if(this.item.data.type === 'forcePower' || this.item.data.type === 'class' || this.item.data.type === 'species') {
+    } else if(this.item.data.type === 'class' || this.item.data.type === 'species') {
       return `${path}/item-${this.item.data.type}-sheet.hbs`;
     } else {
       return `${path}/item-minimal-sheet.hbs`;

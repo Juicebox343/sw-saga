@@ -1,13 +1,37 @@
- <form class="{{item.type}}" autocomplete="off">
+ <form class="{{item.type}} minimal-sheet" autocomplete="off">
   <header class="sheet-header">
     <div class="header-fields">
       <div>
         <h5><input name="name" id="itemName" type="text" value="{{item.name}}" placeholder="Name"/></h5>
-        <div>
+        <div class='header-extra'>
           <div class='label-container'>
             <label for='itemType'>{{localize "swSaga.item.variety" }}</label>
             <input id='itemType' name="item.variety" type='text' value="{{item.type}}"/>
           </div>
+          {{#if data.availability}}
+          <div class='label-container availability-field'>
+            <label for='itemAvailability'>{{localize "swSaga.item.availability" }}</label>
+            <input id='itemAvailability' name="item.availability" type='text' value="{{data.availability}}"/>
+          </div>
+          {{/if}}
+          {{#if data.prerequisite}}
+          <div class='label-container prereq-field'>
+            <label for='itemPrereq'>{{localize "swSaga.item.prerequisite" }}</label>
+            <input id='itemPrereq' name="data.prerequisite" type='text' value="{{data.prerequisite}}"/>
+          </div>
+          {{/if}}
+          {{#if data.cost}}
+          <div class='label-container cost-field'>
+            <label for='itemCost'>{{localize "swSaga.item.cost" }}</label>
+            <input id='itemCostitemCost' name="item.cost" type='text' value="{{data.cost}}"/>
+          </div>
+          {{/if}}
+          {{#if data.weight}}
+            <div class='label-container weight-field'>
+            <label for='itemWeight'>{{localize "swSaga.item.weight" }}</label>
+            <input id='itemWeight' name="item.weight" type='text' value="{{data.weight}}"/>
+          </div>
+          {{/if}}
         </div>
     </div>
   </header>
@@ -15,31 +39,8 @@
   <div class="image-container">
     <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
   </div>
-  {{#if item.availability}}<div class='label-container'>
-    <label for='itemAvailability'>{{localize "swSaga.item.availability" }}</label>
-    <input id='itemAvailability' name="item.availability" type='text' value="{{item.availability}}"/>
-  </div>
-  {{/if}}
-  {{#if item.cost}}
-  <div class='label-container'>
-    <label for='itemCost'>{{localize "swSaga.item.cost" }}</label>
-    <input id='itemCostitemCost' name="item.cost" type='text' value="{{item.cost}}"/>
-  </div>
-  {{/if}}
-  {{#if item.weight}}
-    <div class='label-container'>
-    <label for='itemWeight'>{{localize "swSaga.item.weight" }}</label>
-    <input id='itemWeight' name="item.weight" type='text' value="{{item.weight}}"/>
-  </div>
-  {{/if}}
-  {{#if item.prerequisite}}
-    <div class='label-container'>
-    <label for='itemWeight'>{{localize "swSaga.item.weight" }}</label>
-    <input id='itemWeight' name="item.weight" type='text' value="{{item.weight}}"/>
-  </div>
-  {{/if}}
   <div class='label-container description-field'>
     <label for='itemDescription'>{{localize "swSaga.item.description" }}</label>
-    <textarea id='itemDescription' name="item.description">{{item.description}}</textarea>
+    <textarea id='itemDescription' name="item.description">{{data.description}}</textarea>
   </div>
 </form>

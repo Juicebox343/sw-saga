@@ -10,7 +10,8 @@ import { swSaga } from "./module/config.mjs";
 async function preloadHandlebarsTemplates(){
   const templatePaths = [
     "systems/swSaga/templates/item/partials/components/armor-card.hbs",
-    "systems/swSaga/templates/item/partials/components/weapon-card.hbs"
+    "systems/swSaga/templates/item/partials/components/weapon-card.hbs",
+    "systems/swSaga/templates/item/partials/components/force-card.hbs"
 
   ];
   return loadTemplates(templatePaths);
@@ -47,11 +48,8 @@ Hooks.once('init', async function() {
     return null;
   })
 
-  Handlebars.registerHelper('conditional', (firstItem, secondItem) =>{
-    if (firstItem === secondItem){
-      return true;
-    }
-    return false;
+  Handlebars.registerHelper('hasProperty', (objectToSpy, propertyToFind) =>{
+    return objectToSpy.hasOwnProperty(propertyToFind);
   })
   
 });

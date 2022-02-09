@@ -16,7 +16,7 @@
           placeholder="Level" />
       </div>
 
-      <div class='label-container character-form item-card item row-item' data-item-id={{species.[0]._id}}>
+      <div class='label-container character-form item-card small item row-item' data-item-id={{species.[0]._id}}>
         <label for='speciesName'>Species</label>
         <a class='item-edit' title="{{localize " swsaga.sheet.editItem"}}">{{ species.[0].name }}</a>
       </div>
@@ -46,17 +46,17 @@
     <div class='sub-container'>
       <div class='label-container character-form row-item'>
         <label for='fortDef'>Fort</label>
-        <p>{{ data.fort }}</p>
+        <span>{{ data.fort }}</span>
       </div>
 
       <div class='label-container character-form row-item'>
         <label for='refDef'>Ref</label>
-        <p>{{ data.ref }}</p>
+        <span>{{ data.ref }}</span>
       </div>
 
       <div class='label-container character-form row-item'>
         <label for='willDef'>Will</label>
-        <p>{{ data.will }}</p>
+        <span>{{ data.will }}</span>
       </div>
     </div>
 
@@ -159,10 +159,10 @@
 
   <section class="character-page">
     <nav class="sheet-tabs tabs" data-group="primary">
-      <a class="item active" data-tab="skills">Skills</a>
-      <a class="item" data-tab="force">Force Powers</a>
-      <a class="item" data-tab="inventory">Inventory</a>
-      <a class="item" data-tab="bio">Bio and Class</a>
+      <a class="item active" data-tab="skills"><h4>Skills</h4></a>
+      <a class="item" data-tab="force"><h4>Force Powers</h4></a>
+      <a class="item" data-tab="inventory"><h4>Inventory</h4></a>
+      <a class="item" data-tab="bio"><h4>Bio and Class</h4></a>
     </nav>
     <section class='sheet-body'>
       <section class="tab skills" data-group="primary" data-tab="skills">
@@ -186,34 +186,37 @@
       </section>
 
       <section class="tab force" data-group="primary" data-tab="force">
-        {{#each force as |force id|}}
-        <div class='item-card item' data-item-id="{{_id}}">
-          <p>{{name}}</p><a class='item-delete'><i class="fas fa-times"></i></a>
+        <div class='force-suite'>
+          <h5>Force Suite</h5>
+            {{#each force as |force id|}}
+            {{> "systems/swSaga/templates/item/partials/components/force-card.hbs" force}}
+            {{/each}}
+          <button>Refresh All Force Powers</button>
         </div>
-        {{/each}}
+      
       </section>
 
       <section class="tab inventory" data-group="primary" data-tab="inventory">
         <a class="item-create" data-type="skill" title="{{localize " swsaga.sheet.newItem"}}">
           <i class="fas fa-plus"></i>Add Item</a>
         {{#each weapons as |weapon id|}}
-        <div class='item-card item' data-item-id="{{_id}}">
-          <p>{{name}}</p><a class='item-delete'><i class="fas fa-times"></i></a>
+        <div class='item-card big item' data-item-id="{{_id}}">
+          <span>{{name}}</span><a class='item-delete'><i class="fas fa-times"></i></a>
         </div>
         {{/each}}
         {{#each armor as |armor id|}}
-        <div class='item-card item' data-item-id="{{_id}}">
-          <p>{{name}}</p><a class='item-delete'><i class="fas fa-times"></i></a>
+        <div class='item-card big item' data-item-id="{{_id}}">
+          <span>{{name}}</span><a class='item-delete'><i class="fas fa-times"></i></a>
         </div>
         {{/each}}
         {{#each consumables as |consumable id|}}
-        <div class='item-card item' data-item-id="{{_id}}">
-          <p>{{name}}</p><a class='item-delete'><i class="fas fa-times"></i></a>
+        <div class='item-card big item' data-item-id="{{_id}}">
+          <span>{{name}}</span><a class='item-delete'><i class="fas fa-times"></i></a>
         </div>
         {{/each}}
         {{#each equipment as |equipment id|}}
-        <div class='item-card item' data-item-id="{{_id}}">
-          <p>{{name}}</p><a class='item-delete'><i class="fas fa-times"></i></a>
+        <div class='item-card big item' data-item-id="{{_id}}">
+          <span>{{name}}</span><a class='item-delete'><i class="fas fa-times"></i></a>
         </div>
         {{/each}}
       </section>
@@ -240,8 +243,8 @@
 
         <div class='label-container row-item player-form'>
           {{#each class as |class id|}}
-          <div class='item-card item' data-item-id="{{_id}}">
-            <p>{{name}} {{id}}</p><a class='item-delete'><i class="fas fa-times"></i></a>
+          <div class='item-card big item' data-item-id="{{_id}}">
+            <span>{{name}} {{id}}</span><a class='item-delete'><i class="fas fa-times"></i></a>
           </div>
           {{/each}}
         </div>
@@ -274,8 +277,8 @@
       <label for='feats'>Feats</label>
       <div id='feats'>
         {{#each feats as |feat id|}}
-        <div class='item-card item' data-item-id="{{_id}}">
-          <p>{{name}}</p><a class='item-delete'><i class="fas fa-times"></i></a>
+        <div class='item-card big item' data-item-id="{{_id}}">
+          <span>{{name}}</span><a class='item-delete'><i class="fas fa-times"></i></a>
         </div>
         {{/each}}
       </div>
@@ -285,8 +288,8 @@
       <div id='talents'>
         {{#each talents as |talent id|}}
         {{log id}}
-        <div class='item-card item' data-item-id="{{_id}}">
-          <p>{{name}}</p><a class='item-delete'><i class="fas fa-times"></i></a>
+        <div class='item-card big item' data-item-id="{{_id}}">
+          <span>{{name}}</span><a class='item-delete'><i class="fas fa-times"></i></a>
         </div>
         {{/each}}
       </div>
