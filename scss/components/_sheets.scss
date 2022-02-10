@@ -383,6 +383,9 @@
 
   form.character .character-page .force-suite{
     border: 1px solid var(--background-color);
+    display: flex; 
+    flex-wrap: wrap;
+    gap: .5rem;
   }
 
   form.character .character-page .inventory{
@@ -423,13 +426,8 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 50%;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
+    width: 50%;
     padding: 1rem;
   }
 
@@ -437,12 +435,6 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: .5rem;

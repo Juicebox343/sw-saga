@@ -98,12 +98,12 @@
     <div>
       <div class='label-container character-form'>
         <label for='forcePoint'>Force</label>
-        <input name="" id="forcePoint" type="text" value="" placeholder="" />
+        <input name="" id="data.attributes.forcePoint" type="text" value="{{data.attributes.forcePoint}}" placeholder="" />
       </div>
 
       <div class='label-container character-form '>
-        <label for='destPoint'>Dest.</label>
-        <input name="" id="destPoint" type="text" value="" placeholder="" />
+        <label for='destinyPoint'>Dest.</label>
+        <input name="data.attributes.destinyPoint" id="destinyPoint" type="text" value="{{data.attributes.destinyPoint}}" placeholder="" />
       </div>
     </div>
 
@@ -186,8 +186,8 @@
       </section>
 
       <section class="tab force" data-group="primary" data-tab="force">
+        <h5>Force Suite</h5>
         <div class='force-suite'>
-          <h5>Force Suite</h5>
             {{#each force as |force id|}}
             {{> "systems/swSaga/templates/item/partials/components/force-card.hbs" force}}
             {{/each}}
@@ -200,22 +200,22 @@
         <a class="item-create" data-type="skill" title="{{localize " swsaga.sheet.newItem"}}">
           <i class="fas fa-plus"></i>Add Item</a>
         {{#each weapons as |weapon id|}}
-        <div class='item-card big item' data-item-id="{{_id}}">
+        <div class='item-card small item' data-item-id="{{_id}}">
           <span>{{name}}</span><a class='item-delete'><i class="fas fa-times"></i></a>
         </div>
         {{/each}}
         {{#each armor as |armor id|}}
-        <div class='item-card big item' data-item-id="{{_id}}">
+        <div class='item-card small item' data-item-id="{{_id}}">
           <span>{{name}}</span><a class='item-delete'><i class="fas fa-times"></i></a>
         </div>
         {{/each}}
         {{#each consumables as |consumable id|}}
-        <div class='item-card big item' data-item-id="{{_id}}">
+        <div class='item-card small item' data-item-id="{{_id}}">
           <span>{{name}}</span><a class='item-delete'><i class="fas fa-times"></i></a>
         </div>
         {{/each}}
         {{#each equipment as |equipment id|}}
-        <div class='item-card big item' data-item-id="{{_id}}">
+        <div class='item-card small item' data-item-id="{{_id}}">
           <span>{{name}}</span><a class='item-delete'><i class="fas fa-times"></i></a>
         </div>
         {{/each}}

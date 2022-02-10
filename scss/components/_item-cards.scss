@@ -1,17 +1,4 @@
  .item-card.big {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
     border-radius: 3px;
     -webkit-transition: all .2s;
     -o-transition: all .2s;
@@ -21,8 +8,8 @@
     margin: 0;
     position: relative;
     overflow: hidden;
-    width: 125px;
-    height: 100px;
+    width: 100px;
+    height: 80px;
   }
 
   .item-card.big:hover::after {
@@ -68,18 +55,43 @@
     transform: translateY(200%);
   }
 
+  .item-card.big.force-card.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .item-card.big.force-card .item-name{
+    font-size: .75rem;
+    position: initial;
+    height: unset;
+  }
+
+  .swsaga.sheet .item-card.big p.item-name{
+    color: var(--text-color);
+    line-height: 15px;
+  }
+  
+
+  .item-card.big.force-card:hover .item-name{
+    -webkit-transform: unset;
+    -ms-transform: unset;
+    transform: unset;
+  }
+
    .item-card.big img.weapon{
     transition: opacity .2s linear;
   }
 
    .item-card.big img.weapon {
     border: none;
-    width: 80%;
+    width: 60%;
     max-width: initial;
     max-height: 35px;
     position: absolute;
+    top: 20px;
+    left: 25px;
     align-self: center;
-    margin-bottom: 10px;
   }
 
    .item-card.big img.armor {
@@ -104,9 +116,9 @@
    .item-card.big .item-name {
     position: absolute;
     bottom: 0;
-    height: 30px;
-    width: 125px;
-    line-height: 30px;
+    height: 25px;
+    width: 100px;
+    line-height: 25px;
     color: white;
     display: inline-block;
     text-align: center;
@@ -127,7 +139,10 @@
    .item-card.big .item-detail {
     position: absolute;
     bottom: 2px;
-    font-size: 1.25rem;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
     -webkit-transition: -webkit-transform .2s linear;
     transition: -webkit-transform .2s linear;
     -o-transition: transform .2s linear;
@@ -155,7 +170,8 @@
     -o-transition: all .2s linear;
     transition: all .2s linear;
     position: absolute;
-    top: 30px;
+    top: 20px;
+    margin: auto;
     z-index: 100;
     padding: 2px;
   }
@@ -168,8 +184,8 @@
     width: 40%;
     margin: 0;
     font-weight: bold;
-    font-size: 0.75rem;
-    line-height: 0.75rem;
+    font-size: 0.6rem;
+    line-height: 0.6rem;
     text-align: center;
     border: 2px solid #B44242;
     color: #B44242;
