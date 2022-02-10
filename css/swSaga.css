@@ -475,7 +475,7 @@
 }
 
 .actor.swsaga.sheet form.character .character-page .sheet-body {
-  height: calc(100% - 52px);
+  height: calc(100% - 64px);
 }
 
 .actor.swsaga.sheet form.character .character-page .skills {
@@ -999,7 +999,7 @@
   height: unset;
 }
 
-.swsaga.sheet .item-card.big p.item-name {
+.swsaga.sheet .item-card.big.force-card p.item-name {
   color: var(--text-color);
   line-height: 15px;
 }
