@@ -70,7 +70,6 @@ export default class swSagaActorSheet extends ActorSheet {
     // Roll handlers, click handlers, etc. would go here.
     html.find(".rollable").click(Dice.rollD20.bind(this));
     html.find(".item-create").click(this._onItemCreate.bind(this));
-    // html.find(".item-edit").click(this._onItemEdit.bind(this));
     html.find(".item-roll").click(Dice.rollD20.bind(this));
     html.find(".item-damage").click(Dice.rollDamage.bind(this));
     html.find(".item-delete").click(this._onItemDelete.bind(this));

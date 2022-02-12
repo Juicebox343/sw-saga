@@ -1,7 +1,9 @@
 export function rollD20(event){
     event.preventDefault();
+   
     const element = event.currentTarget;
     const dataset = element.dataset;
+    console.log(dataset)
     if (dataset.roll) {
       if(dataset.label === 'Lightsaber'){
         console.log(event)
@@ -24,7 +26,7 @@ export function rollDamage(event){
   const dataset = element.dataset;
   console.log(dataset)
   if (dataset.roll) {
-    let label = dataset.label ? `What is this ${dataset.label}` : '';
+    let label = dataset.label ? `${this.actor.name}'s ${dataset.label} hits!` : '';
     let roll = new Roll(dataset.roll, this.actor.getRollData());
     roll.toMessage({
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
