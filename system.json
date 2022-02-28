@@ -2,7 +2,7 @@
   "name": "swSaga",
   "title": "Star Wars Saga Edition",
   "description": "The Star Wars Saga Edition system for FoundryVTT!",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "minimumCoreVersion": "0.8.5",
   "compatibleCoreVersion": "0.8.6",
   "author": "Joe Heiser",
@@ -22,6 +22,6 @@
   "secondaryTokenAttribute": "condition",
   "url": "https://gitlab.com/Juicebox343/foundry-sw-saga",
   "manifest": "https://gitlab.com/Juicebox343/foundry-sw-saga/-/raw/main/system.json",
-  "download": "https://gitlab.com/Juicebox343/foundry-sw-saga/-/archive/v0.0.1/foundry-sw-saga-v0.0.1.zip",
+  "download": "https://gitlab.com/Juicebox343/foundry-sw-saga/-/archive/v0.0.2/foundry-sw-saga-v0.0.2.zip",
   "license": "LICENSE.txt"
 }
