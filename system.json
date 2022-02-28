@@ -21,7 +21,7 @@
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "condition",
   "url": "https://gitlab.com/Juicebox343/foundry-sw-saga",
-  "manifest": "https://gitlab.com/Juicebox343/foundry-sw-saga/-/blob/8cc9b54b6d3bf9f38298e5d0c959b8589f509785/system.json",
+  "manifest": "https://gitlab.com/Juicebox343/foundry-sw-saga/-/raw/8cc9b54b6d3bf9f38298e5d0c959b8589f509785/system.json",
   "download": "https://gitlab.com/Juicebox343/foundry-sw-saga/-/archive/main/foundry-sw-saga-main.zip",
   "license": "LICENSE.txt"
 }
